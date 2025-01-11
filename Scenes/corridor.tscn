@@ -1,11 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://brafu80c2vuoa"]
-[gd_scene load_steps=6 format=3 uid="uid://brafu80c2vuoa"]
 
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
-[ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
-[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 [ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 [ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
+[ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
+[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
@@ -40,7 +39,6 @@ script = ExtResource("3_sytxj")
 position = Vector2(2322, -364)
 shape = SubResource("RectangleShape2D_vye68")
 
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [node name="Moveable_box" parent="." instance=ExtResource("2_g4s0v")]
 position = Vector2(300, -89)
-
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
