@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbnihcs711dka"
-path="res://.godot/imported/demon 2.png-1ee054a82ec8a2cdff822f2ee7dba38b.ctex"
+uid="uid://xcljel81p1ws"
+path="res://.godot/imported/toiletA.png-2d90a56968a498928df755b1b372e53b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/demon assets/demon 2.png"
-dest_files=["res://.godot/imported/demon 2.png-1ee054a82ec8a2cdff822f2ee7dba38b.ctex"]
+source_file="res://Sprites/furniture/toiletA.png"
+dest_files=["res://.godot/imported/toiletA.png-2d90a56968a498928df755b1b372e53b.ctex"]
 
 [params]
 

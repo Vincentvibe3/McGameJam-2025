@@ -8,7 +8,7 @@
 
 [sub_resource type="Animation" id="Animation_vc8vu"]
 resource_name = "LEFT LEGS"
-length = 5.0
+length = 10.0
 loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -87,7 +87,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_2leqk"]
 resource_name = "RIGHT LEGS"
-length = 2.5
+length = 10.0
+loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -97,7 +98,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.0666699, 0.46667, 0.66667, 1.23334, 1.4, 2.06667)
+"times": PackedFloat32Array(6.1, 6.5, 6.7, 7.26667, 7.43333, 8.1)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -108,7 +109,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -39, -0.25, 0, 0.25, 0, -37, -0.25, 0, 0.25, 0, 55, -0.25, 0, 0.25, 0, 26, -0.133333, 27, 0.166667, -20, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.0666699, 0.46667, 1, 1.23334, 1.56667, 2.06667)
+"times": PackedFloat32Array(6.1, 6.5, 7.03333, 7.26667, 7.6, 8.1)
 }
 
 [sub_resource type="Animation" id="Animation_as5ux"]
@@ -187,7 +188,7 @@ libraries = {
 autoplay = "LEFT_ARM"
 
 [node name="DangerArmL2" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-437.999, -247.001)
+position = Vector2(-410, -235)
 
 [node name="RightArms" type="Node2D" parent="."]
 rotation = 3.14159
@@ -201,44 +202,21 @@ autoplay = "RIGHT_ARM"
 [node name="DangerArmR" parent="RightArms" instance=ExtResource("3_g4d8p")]
 position = Vector2(-644, -232)
 
-[node name="DangerArmR2" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-1049, -249.003)
-
 [node name="RightLegs" type="Node2D" parent="."]
 
 [node name="RightLegsAnim" type="AnimationPlayer" parent="RightLegs"]
 libraries = {
 "": SubResource("AnimationLibrary_rudsk")
 }
+autoplay = "RIGHT LEGS"
 
 [node name="DangerLegR" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(952, -262)
-
-[node name="DangerLegR2" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(237, -189)
-
-[node name="DangerLegR3" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1294, -86.9999)
-
-[node name="DangerLegR4" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1126, -215)
-
-[node name="DangerLegR5" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(837, -195)
+position = Vector2(258, -228)
 
 [node name="LeftLegs" type="Node2D" parent="."]
 
 [node name="DangerLegL" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
 position = Vector2(480, -247)
-
-[node name="DangerLegL2" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1409, -180)
-
-[node name="DangerLegL3" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(653, -214)
-
-[node name="DangerLegL4" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(769, -166)
 
 [node name="LeftLegsAnim" type="AnimationPlayer" parent="LeftLegs"]
 libraries = {

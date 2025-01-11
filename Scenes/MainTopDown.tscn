@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgfwyd3n5edpj"]
+
+[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="1_oxohe"]
+[ext_resource type="PackedScene" uid="uid://c0w23mi6tcdkn" path="res://Scenes/BedroomA.tscn" id="2_f4tav"]
+
+[node name="MainTopDown" type="Node2D"]
+
+[node name="TopDownPlayerController" parent="." instance=ExtResource("1_oxohe")]
+z_index = 1
+position = Vector2(984, 189)
+scale = Vector2(0.1, 0.1)
+
+[node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
+zoom = Vector2(0.91, 0.91)
+
+[node name="Node2D" parent="." instance=ExtResource("2_f4tav")]
+position = Vector2(1460, 300)

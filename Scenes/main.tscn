@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dslxyo0q6slp4"]
+[gd_scene load_steps=6 format=3 uid="uid://csm7mux247bqd"]
 
 [ext_resource type="Texture2D" uid="uid://b2b2vsdn6chp7" path="res://Placeholder/Tileset.png" id="1_rlbhp"]
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="2_de78i"]
@@ -277,4 +277,3 @@ position = Vector2(101, -224)
 
 [node name="Door" parent="." instance=ExtResource("3_8jbkm")]
 position = Vector2(39, 99)
-room = null

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbnihcs711dka"
-path="res://.godot/imported/demon 2.png-1ee054a82ec8a2cdff822f2ee7dba38b.ctex"
+uid="uid://5ngjlb04rr3j"
+path="res://.godot/imported/wall_front_100x100.png-e494b3bfca801705ea1b85a007c9af39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/demon assets/demon 2.png"
-dest_files=["res://.godot/imported/demon 2.png-1ee054a82ec8a2cdff822f2ee7dba38b.ctex"]
+source_file="res://Sprites/floor/wall_front_100x100.png"
+dest_files=["res://.godot/imported/wall_front_100x100.png-e494b3bfca801705ea1b85a007c9af39.ctex"]
 
 [params]
 
