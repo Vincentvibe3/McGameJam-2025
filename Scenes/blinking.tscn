@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xwqrbn1aj3l4"]
 
-[ext_resource type="Script" path="res://blinking.gd" id="1_kykcw"]
-[ext_resource type="Texture2D" uid="uid://c3ovntodefa0p" path="res://Sprites/darkness4eyelids.png" id="2_ne1d7"]
+[ext_resource type="Script" path="res://Scripts/blinking.gd" id="1_kykcw"]
+[ext_resource type="Texture2D" uid="uid://c3q0gccnea4tb" path="res://Sprites/darkness4eyelids.png" id="2_ne1d7"]
 
 [node name="Blinking" type="Node2D"]
 script = ExtResource("1_kykcw")
