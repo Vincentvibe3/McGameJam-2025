@@ -5,7 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const sprint_multiplier = 2
 
-var Leg_enabled = 0
+var Leg_enabled = 1
 @onready var legs: AnimatedSprite2D = $Legs
 
 
