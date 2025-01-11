@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8vtf0wtb5ixp"]
+[gd_scene load_steps=6 format=3 uid="uid://b8lva6106chd6"]
 
 [ext_resource type="Script" path="res://Scripts/top_down_movement.gd" id="1_4uorj"]
 [ext_resource type="Texture2D" uid="uid://csyr0khkh01r4" path="res://Sprites/player_sprite_everything/player_body_whole.png" id="2_blr7p"]
