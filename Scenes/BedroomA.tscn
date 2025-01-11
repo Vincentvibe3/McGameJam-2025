@@ -354,8 +354,15 @@ sources/0 = SubResource("TileSetAtlasSource_q4wiy")
 sources/3 = SubResource("TileSetAtlasSource_vpxp0")
 sources/4 = SubResource("TileSetAtlasSource_q1n28")
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_tgigp")
+[node name="Node2D2" type="Node2D"]
+
+[node name="TopDownPlayerController" parent="." instance=ExtResource("1_utnmm")]
+z_index = 1
+position = Vector2(-361, 103)
+scale = Vector2(0.1, 0.1)
+
+[node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
+zoom = Vector2(0.91, 0.91)
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_6ah28")
