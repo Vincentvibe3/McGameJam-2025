@@ -37,6 +37,7 @@ script = ExtResource("1_equc0")
 position = Vector2(37, 22)
 scale = Vector2(0.297567, 0.213235)
 sprite_frames = SubResource("SpriteFrames_fdixc")
+frame_progress = 0.680059
 
 [node name="Face" type="Node2D" parent="."]
 visible = false
