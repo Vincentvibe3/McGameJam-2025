@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cehd56sc07rd6"]
 
-[ext_resource type="Script" path="res://Scripts/pushing_area.gd" id="1_ax2bw"]
 [ext_resource type="Texture2D" uid="uid://ca3jud8dv3ms3" path="res://Sprites/temp_box.png" id="1_nyeho"]
+[ext_resource type="Script" path="res://Scenes/pushing_area.gd" id="2_1clgl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2xh1"]
 size = Vector2(112, 76)
@@ -10,7 +10,6 @@ size = Vector2(112, 76)
 size = Vector2(140, 83)
 
 [node name="Moveable_box" type="RigidBody2D"]
-script = ExtResource("1_ax2bw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(38, 33.25)
@@ -22,6 +21,7 @@ position = Vector2(38, 36)
 shape = SubResource("RectangleShape2D_r2xh1")
 
 [node name="pushing area" type="Area2D" parent="."]
+script = ExtResource("2_1clgl")
 
 [node name="collision_for_pushing" type="CollisionShape2D" parent="pushing area"]
 visible = false
