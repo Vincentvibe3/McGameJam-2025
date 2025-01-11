@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dp1b68bkh12ix"]
+[gd_scene load_steps=10 format=3 uid="uid://dp1b68bkh12ix"]
 
 [ext_resource type="Script" path="res://Scripts/torso_scene.gd" id="1_lh36g"]
 [ext_resource type="Texture2D" uid="uid://b280sdnuc3td3" path="res://Sprites/temp_torso.png" id="2_65rjd"]
 [ext_resource type="PackedScene" uid="uid://bpq1fjb2hmim2" path="res://Scenes/selectable_obj.tscn" id="3_ms45g"]
 [ext_resource type="Texture2D" uid="uid://do5i5bv2cbu0o" path="res://Sprites/tempstrings/string1.png" id="4_aedb2"]
+[ext_resource type="Texture2D" uid="uid://bmh7uiu6lf8kg" path="res://Sprites/tempstrings/string1Highlighted.png" id="5_527l3"]
+[ext_resource type="Texture2D" uid="uid://dhwabmwt45f8v" path="res://Sprites/tempstrings/string2.png" id="6_tqwbm"]
+[ext_resource type="Texture2D" uid="uid://6kth5mp33gc8" path="res://Sprites/tempstrings/string2highlighted.png" id="7_426av"]
+[ext_resource type="Texture2D" uid="uid://c5vqrcq1u74sh" path="res://Sprites/tempstrings/string3.png" id="8_vsm8t"]
+[ext_resource type="Texture2D" uid="uid://sfs3atuqvc6w" path="res://Sprites/tempstrings/string3HIGHLIGHTED.png" id="9_efcmw"]
 
 [node name="TorsoScene" type="Node2D"]
 script = ExtResource("1_lh36g")
@@ -12,11 +17,39 @@ script = ExtResource("1_lh36g")
 texture = ExtResource("2_65rjd")
 
 [node name="String1" parent="." instance=ExtResource("3_ms45g")]
-position = Vector2(-81, 3)
+position = Vector2(-30, 66)
+scale = Vector2(0.6, 0.6)
 
-[node name="Sprite2D" parent="String1" index="0"]
-position = Vector2(56.5, 89)
-scale = Vector2(0.517094, 0.473373)
+[node name="NormalSprite" parent="String1" index="0"]
 texture = ExtResource("4_aedb2")
 
+[node name="SelectedSprite" parent="String1" index="1"]
+texture = ExtResource("5_527l3")
+
+[node name="String2" parent="." instance=ExtResource("3_ms45g")]
+position = Vector2(4, 59)
+scale = Vector2(0.636, 0.636)
+
+[node name="NormalSprite" parent="String2" index="0"]
+texture = ExtResource("6_tqwbm")
+
+[node name="SelectedSprite" parent="String2" index="1"]
+texture = ExtResource("7_426av")
+
+[node name="String3" parent="." instance=ExtResource("3_ms45g")]
+position = Vector2(-22, 59)
+scale = Vector2(0.65, 0.65)
+
+[node name="NormalSprite" parent="String3" index="0"]
+texture = ExtResource("8_vsm8t")
+
+[node name="SelectedSprite" parent="String3" index="1"]
+texture = ExtResource("9_efcmw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(9, -8)
+zoom = Vector2(1.65, 1.65)
+
 [editable path="String1"]
+[editable path="String2"]
+[editable path="String3"]
