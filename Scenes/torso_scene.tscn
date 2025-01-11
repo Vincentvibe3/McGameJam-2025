@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp1b68bkh12ix"]
+
+[ext_resource type="Script" path="res://Scripts/torso_scene.gd" id="1_lh36g"]
+[ext_resource type="Texture2D" uid="uid://b280sdnuc3td3" path="res://Sprites/temp_torso.png" id="2_65rjd"]
+[ext_resource type="PackedScene" uid="uid://bpq1fjb2hmim2" path="res://Scenes/selectable_obj.tscn" id="3_ms45g"]
+[ext_resource type="Texture2D" uid="uid://do5i5bv2cbu0o" path="res://Sprites/tempstrings/string1.png" id="4_aedb2"]
+
+[node name="TorsoScene" type="Node2D"]
+script = ExtResource("1_lh36g")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_65rjd")
+
+[node name="String1" parent="." instance=ExtResource("3_ms45g")]
+position = Vector2(-81, 3)
+
+[node name="Sprite2D" parent="String1" index="0"]
+position = Vector2(56.5, 89)
+scale = Vector2(0.517094, 0.473373)
+texture = ExtResource("4_aedb2")
+
+[editable path="String1"]

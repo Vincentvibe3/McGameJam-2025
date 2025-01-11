@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpq1fjb2hmim2"]
+
+[ext_resource type="Script" path="res://Scenes/selectable_obj.gd" id="1_2j4il"]
+
+[node name="SelectableObj" type="Node2D"]
+script = ExtResource("1_2j4il")
+
+[node name="NormalSprite" type="Sprite2D" parent="."]
+
+[node name="SelectedSprite" type="Sprite2D" parent="."]
+visible = false
