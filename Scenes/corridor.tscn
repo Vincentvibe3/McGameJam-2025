@@ -1,15 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://brafu80c2vuoa"]
 
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
-[ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
-[ext_resource type="Texture2D" uid="uid://c24mpjgalsadl" path="res://Sprites/temp_background.png" id="3_q6leg"]
+[ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vye68"]
 
 [node name="Corridor" type="Node2D"]
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_war38")]
-position = Vector2(-71, -319)
+position = Vector2(-75, -317)
 
 [node name="Camera2D" type="Camera2D" parent="MainCharacter"]
 position = Vector2(89, 59)
@@ -22,11 +23,11 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_rypva")
 
-[node name="Moveable_box" parent="." instance=ExtResource("2_g4s0v")]
-position = Vector2(325, -82)
+[node name="Enemy" parent="." instance=ExtResource("2_gmkme")]
+position = Vector2(-597, -168)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(-0.999998, -121)
-scale = Vector2(39.0109, 18.6325)
-texture = ExtResource("3_q6leg")
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vye68")
