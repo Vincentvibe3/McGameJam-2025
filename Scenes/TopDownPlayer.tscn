@@ -1,12 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8lva6106chd6"]
+[gd_scene load_steps=6 format=3 uid="uid://c8vtf0wtb5ixp"]
 
 [ext_resource type="Script" path="res://Scripts/top_down_movement.gd" id="1_4uorj"]
+[ext_resource type="Texture2D" uid="uid://csyr0khkh01r4" path="res://Sprites/player_sprite_everything/player_body_whole.png" id="2_blr7p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c83b0"]
-size = Vector2(20, 37)
+size = Vector2(902, 284)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52b3d"]
+atlas = ExtResource("2_blr7p")
+region = Rect2(0, 0, 1140, 3064)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvaxj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52b3d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="TopDownPlayerController" type="CharacterBody2D"]
 script = ExtResource("1_4uorj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 1341)
 shape = SubResource("RectangleShape2D_c83b0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tvaxj")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0wiqw60m1bol"
-path="res://.godot/imported/darkness4eyelids.png-bd7137f53abfe6533d99e3c105198f27.ctex"
+uid="uid://347k08vc76qc"
+path="res://.godot/imported/corner.png-75976b26a1caecd59865eed215c20c72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tempstrings/darkness4eyelids.png"
-dest_files=["res://.godot/imported/darkness4eyelids.png-bd7137f53abfe6533d99e3c105198f27.ctex"]
+source_file="res://Sprites/walls/corner.png"
+dest_files=["res://.godot/imported/corner.png-75976b26a1caecd59865eed215c20c72.ctex"]
 
 [params]
 
