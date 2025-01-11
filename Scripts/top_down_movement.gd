@@ -1,5 +1,5 @@
 
-extends CharacterBody2D
+extends Player
 
 class_name TopDownPlayerController
 

@@ -1,19 +1,18 @@
 extends Area2D
 
+class_name Interactable
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var label:Label = $Control/Label
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _on_interact():
 	pass
 
-
 func _on_body_entered(body:Node2D) -> void:
-	pass # Replace with function body.
-
+	if body is Player:
+		body.interact.connect(_on_interact)
+		label.visible = true
 
 func _on_body_exited(body:Node2D) -> void:
-	pass # Replace with function body.
+	if body is Player:
+		body.interact.disconnect(_on_interact)
+		label.visible = false

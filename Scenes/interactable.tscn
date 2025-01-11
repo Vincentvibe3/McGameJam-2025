@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://bosolwaqsd64g"]
+[gd_scene load_steps=2 format=3 uid="uid://bosolwaqsd64g"]
+
+[ext_resource type="Script" path="res://Scripts/Interactable.gd" id="1_p00cq"]
 
 [node name="Interactable" type="Area2D"]
+script = ExtResource("1_p00cq")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -13,7 +16,16 @@ offset_bottom = 40.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_right = 70.0
 offset_bottom = 23.0
+grow_horizontal = 2
 text = "Press e to interact"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
