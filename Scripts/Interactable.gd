@@ -4,7 +4,7 @@ class_name Interactable
 
 @onready var label:Label = $Control/Label
 
-func _on_interact():
+func _on_interact(_interaction_name:String):
 	pass
 
 func _on_body_entered(body:Node2D) -> void:
