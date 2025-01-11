@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://brafu80c2vuoa"]
+[gd_scene load_steps=5 format=3 uid="uid://brafu80c2vuoa"]
 
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
 [ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
+[ext_resource type="Texture2D" uid="uid://c24mpjgalsadl" path="res://Sprites/temp_background.png" id="3_q6leg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
@@ -23,3 +24,9 @@ shape = SubResource("WorldBoundaryShape2D_rypva")
 
 [node name="Moveable_box" parent="." instance=ExtResource("2_g4s0v")]
 position = Vector2(325, -82)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-0.999998, -121)
+scale = Vector2(39.0109, 18.6325)
+texture = ExtResource("3_q6leg")

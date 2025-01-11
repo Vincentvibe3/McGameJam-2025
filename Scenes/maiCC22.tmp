@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7t4we2jtyqiq"]
+[gd_scene load_steps=8 format=3 uid="uid://7t4we2jtyqiq"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_equc0"]
 [ext_resource type="Texture2D" uid="uid://or3qxwm1xxc7" path="res://Sprites/temp_eye.png" id="2_sna5k"]
@@ -27,9 +27,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adb0e"]
 size = Vector2(162, 78)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_22tvr"]
-size = Vector2(162, 323)
-
 [node name="MainCharacter" type="CharacterBody2D"]
 script = ExtResource("1_equc0")
 
@@ -51,6 +48,7 @@ shape = SubResource("RectangleShape2D_25yto")
 visible = false
 
 [node name="LegsSprite" type="AnimatedSprite2D" parent="Legs"]
+visible = false
 
 [node name="LegsCollision" type="CollisionShape2D" parent="Legs"]
 position = Vector2(71, 257)
@@ -64,7 +62,3 @@ sprite_frames = SubResource("SpriteFrames_fdixc")
 [node name="EyesCollision" type="CollisionShape2D" parent="."]
 position = Vector2(71, 29)
 shape = SubResource("RectangleShape2D_adb0e")
-
-[node name="FullBodyCollision" type="CollisionShape2D" parent="."]
-position = Vector2(71, 151.5)
-shape = SubResource("RectangleShape2D_22tvr")

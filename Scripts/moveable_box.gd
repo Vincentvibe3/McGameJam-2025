@@ -1,13 +1,11 @@
 extends RigidBody2D
-@onready var main_character: CharacterBody2D = $"."
+
+@onready var main_character: CharacterBody2D = $main_character
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	#enabling pushing
-	if main_character.position < position and main_character
+func _on_pushing_area_area_entered(area: Area2D) -> void:
+	print("tryna push")
+	if main_character.position.x < position.x:
+		position.x += 1
+	else:
+		position.x -= 1
