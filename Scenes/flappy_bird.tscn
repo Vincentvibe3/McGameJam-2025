@@ -1,3 +1,230 @@
-[gd_scene format=3 uid="uid://h5q0vfi7hewt"]
+[gd_scene load_steps=13 format=3 uid="uid://h5q0vfi7hewt"]
+
+[ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_tykm8"]
+[ext_resource type="PackedScene" uid="uid://ckh1onhh1c6tn" path="res://Scenes/danger_armL.tscn" id="2_tmpv7"]
+[ext_resource type="PackedScene" uid="uid://b552rnbooexf1" path="res://Scenes/danger_armR.tscn" id="3_g4d8p"]
+[ext_resource type="PackedScene" uid="uid://cktgjyo7rvgk8" path="res://Scenes/danger_LegL.tscn" id="3_gg1hs"]
+[ext_resource type="PackedScene" uid="uid://n6w6sc8g47p0" path="res://Scenes/danger_LegR.tscn" id="4_gmagp"]
+
+[sub_resource type="Animation" id="Animation_vc8vu"]
+resource_name = "LEFT LEGS"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.06667, 2.46667, 2.66667, 3.23333, 3.4, 4.06667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -39, -0.25, 0, 0.25, 0, -37, -0.25, 0, 0.25, 0, 55, -0.25, 0, 0.25, 0, 26, -0.133333, 27, 0.166667, -20, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.06667, 2.46667, 3, 3.23333, 3.56667, 4.06667)
+}
+
+[sub_resource type="Animation" id="Animation_phf5m"]
+resource_name = "LEFT_ARM"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.2, 4.6, 4.8, 5.36667, 5.53333, 6.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 39, -0.25, 0, 0.25, 0, 37, -0.25, 0, 0.25, 0, -55, -0.25, 0, 0.25, 0, -34, -0.0999999, -11, 0.2, 21, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.2, 4.6, 5.13333, 5.36667, 5.7, 6.2)
+}
+
+[sub_resource type="Animation" id="Animation_k5m5o"]
+length = 10.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(5.76667, 6.16667, 6.36667, 6.93333, 7.1, 7.76667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 39, -0.25, 0, 0.25, 0, 37, -0.25, 0, 0.25, 0, -55, -0.25, 0, 0.25, 0, -26, -0.133333, 27, 0.166667, -20, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(5.76667, 6.16667, 6.7, 6.93333, 7.26667, 7.76667)
+}
+
+[sub_resource type="Animation" id="Animation_2leqk"]
+resource_name = "RIGHT LEGS"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(6.1, 6.5, 6.7, 7.26667, 7.43333, 8.1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -39, -0.25, 0, 0.25, 0, -37, -0.25, 0, 0.25, 0, 55, -0.25, 0, 0.25, 0, 26, -0.133333, 27, 0.166667, -20, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(6.1, 6.5, 7.03333, 7.26667, 7.6, 8.1)
+}
+
+[sub_resource type="Animation" id="Animation_as5ux"]
+resource_name = "RIGHT_ARM"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(7.96667, 8.36667, 8.56667, 9.13333, 9.3, 9.96667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 39, -0.25, 0, 0.25, 0, 37, -0.25, 0, 0.25, 0, -55, -0.25, 0, 0.25, 0, -40, -0.2, -16, 0.133333, 23, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(7.96667, 8.36667, 8.9, 9.13333, 9.5, 9.96667)
+}
+
+[sub_resource type="Animation" id="Animation_5va5d"]
+resource_name = "Rotate"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.2, 2.6, 2.8, 3.36667, 3.53333, 4.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -39, -0.25, 0, 0.25, 0, -37, -0.25, 0, 0.25, 0, 55, -0.25, 0, 0.25, 0, 26, -0.133333, 27, 0.166667, -20, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.2, 2.6, 3.13333, 3.36667, 3.7, 4.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rudsk"]
+_data = {
+"LEFT LEGS": SubResource("Animation_vc8vu"),
+"LEFT_ARM": SubResource("Animation_phf5m"),
+"RESET": SubResource("Animation_k5m5o"),
+"RIGHT LEGS": SubResource("Animation_2leqk"),
+"RIGHT_ARM": SubResource("Animation_as5ux"),
+"Rotate": SubResource("Animation_5va5d")
+}
 
 [node name="FlappyBird" type="Node2D"]
+
+[node name="MainCharacter" parent="." instance=ExtResource("1_tykm8")]
+
+[node name="LeftArms" type="Node2D" parent="."]
+rotation = 3.14159
+
+[node name="LeftArmsAnim" type="AnimationPlayer" parent="LeftArms"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+autoplay = "LEFT_ARM"
+
+[node name="DangerArmL2" parent="LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-410, -235)
+
+[node name="RightArms" type="Node2D" parent="."]
+rotation = 3.14159
+
+[node name="RightArmsAnim" type="AnimationPlayer" parent="RightArms"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+autoplay = "RIGHT_ARM"
+
+[node name="DangerArmR" parent="RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-644, -232)
+
+[node name="RightLegs" type="Node2D" parent="."]
+
+[node name="RightLegsAnim" type="AnimationPlayer" parent="RightLegs"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+autoplay = "RIGHT LEGS"
+
+[node name="DangerLegR" parent="RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(258, -228)
+
+[node name="LeftLegs" type="Node2D" parent="."]
+
+[node name="DangerLegL" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(480, -247)
+
+[node name="LeftLegsAnim" type="AnimationPlayer" parent="LeftLegs"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+autoplay = "LEFT LEGS"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(331, 0)

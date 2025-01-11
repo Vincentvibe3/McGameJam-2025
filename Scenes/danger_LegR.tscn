@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://n6w6sc8g47p0"]
+
+[ext_resource type="Texture2D" uid="uid://g33t71mq8wh5" path="res://Sprites/player_sprite_everything/player_leg_r.png" id="1_luykx"]
+[ext_resource type="Texture2D" uid="uid://ctur1tckxubyo" path="res://Sprites/player_sprite_everything/player_foot_r.png" id="2_o67lv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsaup"]
+size = Vector2(248.868, 1643.34)
+
+[node name="DangerLegR" type="Node2D"]
+scale = Vector2(0.145, 0.145)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(91.3553, 1017.8)
+shape = SubResource("RectangleShape2D_nsaup")
+
+[node name="PlayerLegR" type="Sprite2D" parent="."]
+position = Vector2(328.621, 352.69)
+texture = ExtResource("1_luykx")
+
+[node name="PlayerFootR" type="Sprite2D" parent="."]
+position = Vector2(336.515, 376.374)
+texture = ExtResource("2_o67lv")
