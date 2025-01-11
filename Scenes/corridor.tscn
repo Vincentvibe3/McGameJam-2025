@@ -1,33 +1,65 @@
-[gd_scene load_steps=7 format=3 uid="uid://brafu80c2vuoa"]
+[gd_scene load_steps=10 format=3 uid="uid://brafu80c2vuoa"]
 
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
 [ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
-[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="2_gmkme"]
+[ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 [ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
+[ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="5_yiubt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vye68"]
 size = Vector2(184, 728)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1xqy"]
+texture = ExtResource("5_yiubt")
+texture_region_size = Vector2i(100, 100)
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/animation_frame_0/duration = 0.5
+0:0/animation_frame_1/duration = 0.5
+0:0/animation_frame_2/duration = 0.5
+0:0/animation_frame_3/duration = 0.5
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 30)
+0:0/0/z_index = -1
+0:4/size_in_atlas = Vector2i(4, 4)
+0:4/next_alternative_id = 2
+0:4/animation_frame_0/duration = 0.5
+0:4/animation_frame_1/duration = 0.5
+0:4/animation_frame_2/duration = 0.5
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, 30)
+0:4/0/z_index = -1
+0:4/1 = 1
+0:4/1/texture_origin = Vector2i(0, 30)
+0:4/1/modulate = Color(1, 1, 1, 0.407843)
+0:4/1/z_index = 1
+
+[sub_resource type="TileSet" id="TileSet_wxt4o"]
+tile_size = Vector2i(100, 100)
+sources/1 = SubResource("TileSetAtlasSource_q1xqy")
+
 [node name="Corridor" type="Node2D"]
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_war38")]
-position = Vector2(-75, -317)
+visibility_layer = 2
+position = Vector2(8, -104)
 
 [node name="Camera2D" type="Camera2D" parent="MainCharacter"]
-position = Vector2(89, 59)
-zoom = Vector2(0.79, 0.79)
-limit_bottom = 1
+position = Vector2(72, 73)
+limit_bottom = 400
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -148)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 191)
 shape = SubResource("WorldBoundaryShape2D_rypva")
 
 [node name="Enemy" parent="." instance=ExtResource("2_gmkme")]
 visible = false
+visibility_layer = 2
 position = Vector2(1129, -171)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -35,10 +67,22 @@ position = Vector2(500, 0)
 script = ExtResource("3_sytxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2322, -364)
+position = Vector2(3894, -361)
 shape = SubResource("RectangleShape2D_vye68")
 
 [node name="Moveable_box" parent="." instance=ExtResource("2_g4s0v")]
 position = Vector2(300, -89)
+
+[node name="BackDoors" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray(0, 0, 7, 0, 254, 255, 1, 0, 0, 0, 4, 0, 0, 0, 20, 0, 254, 255, 1, 0, 0, 0, 4, 0, 0, 0, 31, 0, 254, 255, 1, 0, 0, 0, 4, 0, 0, 0)
+tile_set = SubResource("TileSet_wxt4o")
+
+[node name="FrontDoors" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(0, 80)
+scale = Vector2(1.3, 1.3)
+tile_map_data = PackedByteArray(0, 0, 10, 0, 254, 255, 1, 0, 0, 0, 4, 0, 1, 0, 20, 0, 254, 255, 1, 0, 0, 0, 4, 0, 1, 0)
+tile_set = SubResource("TileSet_wxt4o")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

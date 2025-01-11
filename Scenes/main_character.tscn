@@ -22,20 +22,20 @@ animations = [{
 size = Vector2(160.5, 137)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0kh0"]
-size = Vector2(160, 108)
+size = Vector2(160, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adb0e"]
 size = Vector2(162, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhnud"]
-size = Vector2(160, 319)
+size = Vector2(160, 114.5)
 
 [node name="MainCharacter" type="CharacterBody2D"]
 script = ExtResource("1_equc0")
 
 [node name="Eyes" type="AnimatedSprite2D" parent="."]
-position = Vector2(114, 36)
-scale = Vector2(0.338496, 0.411765)
+position = Vector2(109.375, 22.5)
+scale = Vector2(0.297567, 0.213235)
 sprite_frames = SubResource("SpriteFrames_fdixc")
 
 [node name="Face" type="Node2D" parent="."]
@@ -57,7 +57,7 @@ shape = SubResource("RectangleShape2D_25yto")
 [node name="LegsSprite" type="AnimatedSprite2D" parent="Legs"]
 
 [node name="LegsCollision" type="CollisionShape2D" parent="Legs"]
-position = Vector2(71, 257)
+position = Vector2(71, 116.5)
 shape = SubResource("RectangleShape2D_h0kh0")
 
 [node name="EyesCollision" type="CollisionShape2D" parent="."]
@@ -65,5 +65,5 @@ position = Vector2(71, 29)
 shape = SubResource("RectangleShape2D_adb0e")
 
 [node name="FullBodyCollision" type="CollisionShape2D" parent="."]
-position = Vector2(70, 149.5)
+position = Vector2(83, 64)
 shape = SubResource("RectangleShape2D_hhnud")
