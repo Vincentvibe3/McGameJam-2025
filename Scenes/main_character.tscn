@@ -30,6 +30,7 @@ scale = Vector2(0.338496, 0.411765)
 sprite_frames = SubResource("SpriteFrames_fdixc")
 
 [node name="Legs" type="AnimatedSprite2D" parent="."]
+visible = false
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 position = Vector2(70.5, 151)
