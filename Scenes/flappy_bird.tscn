@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://h5q0vfi7hewt"]
+
+[node name="FlappyBird" type="Node2D"]
