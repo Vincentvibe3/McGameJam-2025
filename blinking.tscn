@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://xwqrbn1aj3l4"]
+
+[ext_resource type="Script" path="res://blinking.gd" id="1_kykcw"]
+[ext_resource type="Texture2D" uid="uid://c3ovntodefa0p" path="res://Sprites/darkness4eyelids.png" id="2_ne1d7"]
+
+[node name="Blinking" type="Node2D"]
+script = ExtResource("1_kykcw")
+
+[node name="EyeLids" type="Sprite2D" parent="."]
+visible = false
+z_index = 700
+position = Vector2(1, -2)
+scale = Vector2(402.34, 402.34)
+texture = ExtResource("2_ne1d7")
+
+[node name="TimerForCounter" type="Timer" parent="."]
+wait_time = 1.509
+one_shot = true
+
+[node name="TimeToBlink" type="Timer" parent="."]
+wait_time = 0.334
+one_shot = true
+
+[connection signal="timeout" from="TimerForCounter" to="." method="_on_timer_for_counter_timeout"]
+[connection signal="timeout" from="TimeToBlink" to="." method="_on_time_to_blink_timeout"]
