@@ -29,6 +29,7 @@ position = Vector2(4, -111)
 scale = Vector2(0.338496, 0.411765)
 sprite_frames = SubResource("SpriteFrames_fdixc")
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+[node name="EnemyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_adb0e")
+disabled = true

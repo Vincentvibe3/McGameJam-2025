@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://brafu80c2vuoa"]
+[gd_scene load_steps=6 format=3 uid="uid://brafu80c2vuoa"]
 
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
 [ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
+[ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vye68"]
+size = Vector2(184, 728)
 
 [node name="Corridor" type="Node2D"]
 
@@ -24,10 +26,15 @@ position_smoothing_enabled = true
 shape = SubResource("WorldBoundaryShape2D_rypva")
 
 [node name="Enemy" parent="." instance=ExtResource("2_gmkme")]
-position = Vector2(-597, -168)
+visible = false
+position = Vector2(1129, -171)
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(200, 0)
+position = Vector2(500, 0)
+script = ExtResource("3_sytxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2322, -364)
 shape = SubResource("RectangleShape2D_vye68")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
