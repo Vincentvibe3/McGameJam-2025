@@ -33,12 +33,12 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -SPEED
 		movementSet = true
 	elif Input.is_action_just_released("move_up"):
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.y, 0, SPEED)
 	if Input.is_action_pressed("move_down"):
 		velocity.y = SPEED
 		movementSet = true
 	elif Input.is_action_just_released("move_down"):
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.y, 0, SPEED)
 		
 	if !movementSet:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
