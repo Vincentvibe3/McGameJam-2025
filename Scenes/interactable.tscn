@@ -22,8 +22,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -70.0
+offset_top = -57.0
 offset_right = 70.0
-offset_bottom = 23.0
+offset_bottom = -34.0
 grow_horizontal = 2
 text = "Press e to interact"
 
