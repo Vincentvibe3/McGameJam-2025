@@ -7,13 +7,15 @@
 [ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="5_rbmnj"]
 [ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="5_yiubt"]
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="6_qjosj"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="6_qjosj"]
 [ext_resource type="Texture2D" uid="uid://bxqfw4nc3cgad" path="res://Sprites/floor/floor_corridor_100x100.png" id="6_tlm4p"]
 [ext_resource type="Texture2D" uid="uid://dl6chqbcyie3q" path="res://Sprites/floor/floor_corridor_foreground_100x100.png" id="7_huwqh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vye68"]
+size = Vector2(184, 1163)
 size = Vector2(184, 1163)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1xqy"]
@@ -54,9 +56,25 @@ texture_region_size = Vector2i(100, 100)
 0:0/0/texture_origin = Vector2i(0, -10)
 0:0/0/modulate = Color(1, 1, 1, 0.407843)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uj0s4"]
+texture = ExtResource("6_tlm4p")
+texture_region_size = Vector2i(100, 100)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5lk2"]
+texture = ExtResource("7_huwqh")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -10)
+0:0/0/modulate = Color(1, 1, 1, 0.407843)
+
 [sub_resource type="TileSet" id="TileSet_wxt4o"]
 tile_size = Vector2i(100, 100)
 sources/1 = SubResource("TileSetAtlasSource_q1xqy")
+sources/2 = SubResource("TileSetAtlasSource_uj0s4")
+sources/3 = SubResource("TileSetAtlasSource_x5lk2")
 sources/2 = SubResource("TileSetAtlasSource_uj0s4")
 sources/3 = SubResource("TileSetAtlasSource_x5lk2")
 
@@ -76,6 +94,7 @@ position = Vector2(8, -39)
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
 position = Vector2(72, 73)
 limit_left = -300
+limit_left = -300
 limit_bottom = 400
 position_smoothing_enabled = true
 
@@ -88,18 +107,22 @@ shape = SubResource("WorldBoundaryShape2D_rypva")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(4343, 3)
+position = Vector2(4343, 3)
 script = ExtResource("3_sytxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -143)
 position = Vector2(1, -143)
 shape = SubResource("RectangleShape2D_vye68")
 
 [node name="Moveable_box" parent="." instance=ExtResource("2_g4s0v")]
 visible = false
+visible = false
 position = Vector2(300, -89)
 
 [node name="BackDoors" type="TileMapLayer" parent="."]
 z_index = -1
+tile_map_data = PackedByteArray("AAAHAP7/AQAAAAQAAAAUAP7/AQAAAAQAAAAfAP7/AQAAAAQAAAACAP//AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AgAAAAAAAAAJAP//AgAAAAAAAAAKAP//AgAAAAAAAAALAP//AgAAAAAAAAAMAP//AgAAAAAAAAANAP//AgAAAAAAAAAOAP//AgAAAAAAAAAPAP//AgAAAAAAAAAQAP//AgAAAAAAAAARAP//AgAAAAAAAAASAP//AgAAAAAAAAATAP//AgAAAAAAAAAUAP//AgAAAAAAAAAVAP//AgAAAAAAAAAWAP//AgAAAAAAAAAXAP//AgAAAAAAAAAYAP//AgAAAAAAAAAZAP//AgAAAAAAAAAaAP//AgAAAAAAAAAbAP//AwAAAAAAAAAcAP//AgAAAAAAAAAdAP//AgAAAAAAAAAeAP//AgAAAAAAAAAfAP//AgAAAAAAAAAgAP//AgAAAAAAAAAhAP//AgAAAAAAAAAiAP//AgAAAAAAAAAjAP//AgAAAAAAAAAkAP//AgAAAAAAAAAlAP//AgAAAAAAAAAmAP//AgAAAAAAAAAnAP//AgAAAAAAAAAoAP//AgAAAAAAAAApAP//AgAAAAAAAAAqAP//AgAAAAAAAAArAP//AgAAAAAAAAAsAP//AgAAAAAAAAAtAP//AgAAAAAAAAAuAP//AgAAAAAAAAAvAP//AgAAAAAAAAAwAP//AgAAAAAAAAAxAP//AgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD9////AgAAAAAAAAD8////AgAAAAAAAAD7////AgAAAAAAAAD6////AgAAAAAAAAD5////AgAAAAAAAAD4////AgAAAAAAAAD3////AgAAAAAAAAD2////AgAAAAAAAAD1////AgAAAAAAAAD0////AgAAAAAAAADz////AgAAAAAAAADy////AgAAAAAAAADx////AgAAAAAAAADw////AgAAAAAAAADv////AgAAAAAAAADu////AgAAAAAAAADt////AgAAAAAAAADs////AgAAAAAAAADr////AgAAAAAAAADq////AgAAAAAAAAAyAP//AgAAAAAAAAAzAP//AgAAAAAAAAA0AP//AgAAAAAAAAA1AP//AgAAAAAAAAA2AP//AgAAAAAAAAA3AP//AgAAAAAAAAA4AP//AgAAAAAAAAA5AP//AgAAAAAAAAA6AP//AgAAAAAAAAA7AP//AgAAAAAAAAA8AP//AgAAAAAAAAA9AP//AgAAAAAAAAA+AP//AgAAAAAAAAA/AP//AgAAAAAAAABAAP//AgAAAAAAAABBAP//AgAAAAAAAABCAP//AgAAAAAAAABDAP//AgAAAAAAAABEAP//AgAAAAAAAABFAP//AgAAAAAAAABGAP//AgAAAAAAAABHAP//AgAAAAAAAABIAP//AgAAAAAAAABJAP//AgAAAAAAAABKAP//AgAAAAAAAABLAP//AgAAAAAAAAA=")
 tile_map_data = PackedByteArray("AAAHAP7/AQAAAAQAAAAUAP7/AQAAAAQAAAAfAP7/AQAAAAQAAAACAP//AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AgAAAAAAAAAJAP//AgAAAAAAAAAKAP//AgAAAAAAAAALAP//AgAAAAAAAAAMAP//AgAAAAAAAAANAP//AgAAAAAAAAAOAP//AgAAAAAAAAAPAP//AgAAAAAAAAAQAP//AgAAAAAAAAARAP//AgAAAAAAAAASAP//AgAAAAAAAAATAP//AgAAAAAAAAAUAP//AgAAAAAAAAAVAP//AgAAAAAAAAAWAP//AgAAAAAAAAAXAP//AgAAAAAAAAAYAP//AgAAAAAAAAAZAP//AgAAAAAAAAAaAP//AgAAAAAAAAAbAP//AwAAAAAAAAAcAP//AgAAAAAAAAAdAP//AgAAAAAAAAAeAP//AgAAAAAAAAAfAP//AgAAAAAAAAAgAP//AgAAAAAAAAAhAP//AgAAAAAAAAAiAP//AgAAAAAAAAAjAP//AgAAAAAAAAAkAP//AgAAAAAAAAAlAP//AgAAAAAAAAAmAP//AgAAAAAAAAAnAP//AgAAAAAAAAAoAP//AgAAAAAAAAApAP//AgAAAAAAAAAqAP//AgAAAAAAAAArAP//AgAAAAAAAAAsAP//AgAAAAAAAAAtAP//AgAAAAAAAAAuAP//AgAAAAAAAAAvAP//AgAAAAAAAAAwAP//AgAAAAAAAAAxAP//AgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD9////AgAAAAAAAAD8////AgAAAAAAAAD7////AgAAAAAAAAD6////AgAAAAAAAAD5////AgAAAAAAAAD4////AgAAAAAAAAD3////AgAAAAAAAAD2////AgAAAAAAAAD1////AgAAAAAAAAD0////AgAAAAAAAADz////AgAAAAAAAADy////AgAAAAAAAADx////AgAAAAAAAADw////AgAAAAAAAADv////AgAAAAAAAADu////AgAAAAAAAADt////AgAAAAAAAADs////AgAAAAAAAADr////AgAAAAAAAADq////AgAAAAAAAAAyAP//AgAAAAAAAAAzAP//AgAAAAAAAAA0AP//AgAAAAAAAAA1AP//AgAAAAAAAAA2AP//AgAAAAAAAAA3AP//AgAAAAAAAAA4AP//AgAAAAAAAAA5AP//AgAAAAAAAAA6AP//AgAAAAAAAAA7AP//AgAAAAAAAAA8AP//AgAAAAAAAAA9AP//AgAAAAAAAAA+AP//AgAAAAAAAAA/AP//AgAAAAAAAABAAP//AgAAAAAAAABBAP//AgAAAAAAAABCAP//AgAAAAAAAABDAP//AgAAAAAAAABEAP//AgAAAAAAAABFAP//AgAAAAAAAABGAP//AgAAAAAAAABHAP//AgAAAAAAAABIAP//AgAAAAAAAABJAP//AgAAAAAAAABKAP//AgAAAAAAAABLAP//AgAAAAAAAAA=")
 tile_set = SubResource("TileSet_wxt4o")
 

@@ -2,16 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1feslxffu2ae"
-path="res://.godot/imported/bathtubA.png-c85cc91bb277cb192b030bc4ad525048.ctex"
+<<<<<<< Updated upstream
+uid="uid://lm0gd3htqm4k"
+=======
+<<<<<<< HEAD
+uid="uid://bx1u5k846uxee"
+=======
+uid="uid://lm0gd3htqm4k"
+>>>>>>> 32f6e6e71daf447de20092960a3b4739a1485056
+>>>>>>> Stashed changes
+path="res://.godot/imported/floor_corridor3.png-1baf319a590475372d41973c33471f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/furniture/bathtubA.png"
-dest_files=["res://.godot/imported/bathtubA.png-c85cc91bb277cb192b030bc4ad525048.ctex"]
+source_file="res://Sprites/floor/floor_corridor3.png"
+dest_files=["res://.godot/imported/floor_corridor3.png-1baf319a590475372d41973c33471f19.ctex"]
 
 [params]
 

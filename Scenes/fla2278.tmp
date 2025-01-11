@@ -185,34 +185,7 @@ libraries = {
 }
 
 [node name="DangerArmL2" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-468.999, -213.001)
-
-[node name="DangerArmL3" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-1773, -174.004)
-
-[node name="DangerArmL5" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-2874, -219.007)
-
-[node name="DangerArmL7" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3699, -193.009)
-
-[node name="DangerArmL9" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-4500, -314.011)
-
-[node name="DangerArmL10" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-4243, -461.011)
-
-[node name="DangerArmL11" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3970, -304.01)
-
-[node name="DangerArmL8" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3382, -235.009)
-
-[node name="DangerArmL6" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-2276, -205.006)
-
-[node name="DangerArmL4" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-1352, -223.003)
+position = Vector2(-437.999, -247.001)
 
 [node name="RightArms" type="Node2D" parent="."]
 rotation = 3.14159
@@ -223,25 +196,10 @@ libraries = {
 }
 
 [node name="DangerArmR" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-624, -165.002)
+position = Vector2(-644, -232)
 
 [node name="DangerArmR2" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-772, -206.002)
-
-[node name="DangerArmR3" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-917, -152.002)
-
-[node name="DangerArmR4" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2002, -180.005)
-
-[node name="DangerArmR6" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2944, -109.007)
-
-[node name="DangerArmR7" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2633, -160.007)
-
-[node name="DangerArmR5" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-1084, -259.003)
+position = Vector2(-1049, -249.003)
 
 [node name="RightLegs" type="Node2D" parent="."]
 
@@ -251,75 +209,33 @@ libraries = {
 }
 
 [node name="DangerLegR" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1038, -335)
+position = Vector2(952, -262)
 
 [node name="DangerLegR2" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(324, -261)
+position = Vector2(237, -189)
 
 [node name="DangerLegR3" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1300, -321)
-
-[node name="DangerLegR6" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(2519, -310)
-
-[node name="DangerLegR7" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3604, -279)
-
-[node name="DangerLegR10" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(4449, -207)
-
-[node name="DangerLegR11" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(4238, -12)
-
-[node name="DangerLegR12" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(4083, -116)
-
-[node name="DangerLegR13" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3925, -314)
-
-[node name="DangerLegR8" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3380, -271)
-
-[node name="DangerLegR9" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3198, -188)
+position = Vector2(1294, -86.9999)
 
 [node name="DangerLegR4" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1160, -210)
+position = Vector2(1126, -215)
 
 [node name="DangerLegR5" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(872, -318)
+position = Vector2(837, -195)
 
 [node name="LeftLegs" type="Node2D" parent="."]
 
 [node name="DangerLegL" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(544, -321)
+position = Vector2(480, -247)
 
 [node name="DangerLegL2" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1486, -217)
-
-[node name="DangerLegL5" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2086, -324)
-
-[node name="DangerLegL7" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2401, -384)
-
-[node name="DangerLegL9" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(3054, -336)
-
-[node name="DangerLegL10" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2751, -346)
-
-[node name="DangerLegL8" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2267, -261)
-
-[node name="DangerLegL6" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1866, -325)
+position = Vector2(1409, -180)
 
 [node name="DangerLegL3" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(714, -336)
+position = Vector2(653, -214)
 
 [node name="DangerLegL4" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1592, -262)
+position = Vector2(769, -166)
 
 [node name="LeftLegsAnim" type="AnimationPlayer" parent="LeftLegs"]
 libraries = {

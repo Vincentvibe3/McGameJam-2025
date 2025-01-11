@@ -10,12 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://cnn4upu631owr" path="res://Sprites/walls/tilemapwhitebottomborder.png" id="7_lksef"]
 [ext_resource type="Script" path="res://Scenes/BackToCorridor.gd" id="9_p2nxl"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxas6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4wiy"]
 texture = ExtResource("2_prqif")
 texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxfbk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teobe"]
 texture = ExtResource("2_5qnhy")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -283,14 +283,14 @@ texture_region_size = Vector2i(64, 64)
 20:11/0 = 0
 21:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy5bb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyclo"]
 texture = ExtResource("3_3wccq")
 texture_region_size = Vector2i(100, 100)
 0:0/next_alternative_id = 2
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s48k4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vpxp0"]
 texture = ExtResource("5_v30ux")
 texture_region_size = Vector2i(100, 100)
 0:0/next_alternative_id = 4
@@ -303,25 +303,29 @@ texture_region_size = Vector2i(100, 100)
 0:0/3/flip_h = true
 0:0/3/flip_v = true
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kcy3v"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1n28"]
 texture = ExtResource("6_eswqu")
 texture_region_size = Vector2i(100, 100)
 0:0/next_alternative_id = 4
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 0:0/1 = 1
 0:0/1/flip_h = true
 0:0/1/flip_v = true
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 0:0/2 = 2
 0:0/2/flip_h = true
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 0:0/3 = 3
 0:0/3/flip_v = true
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jnht"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utu27"]
 texture = ExtResource("4_tc1uo")
 texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8c75m"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g4g0u"]
 texture = ExtResource("7_lksef")
 texture_region_size = Vector2i(100, 100)
 0:0/next_alternative_id = 4
@@ -330,29 +334,36 @@ texture_region_size = Vector2i(100, 100)
 0:0/1 = 1
 0:0/1/flip_v = true
 0:0/1/transpose = true
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 0:0/2 = 2
 0:0/2/flip_h = true
 0:0/2/flip_v = true
 0:0/2/transpose = true
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 0:0/3 = 3
 0:0/3/flip_v = true
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
 
 [sub_resource type="TileSet" id="TileSet_6ah28"]
 tile_size = Vector2i(100, 100)
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_hxfbk")
-sources/2 = SubResource("TileSetAtlasSource_yy5bb")
-sources/5 = SubResource("TileSetAtlasSource_2jnht")
-sources/9 = SubResource("TileSetAtlasSource_8c75m")
-sources/0 = SubResource("TileSetAtlasSource_wxas6")
-sources/3 = SubResource("TileSetAtlasSource_s48k4")
-sources/4 = SubResource("TileSetAtlasSource_kcy3v")
+sources/1 = SubResource("TileSetAtlasSource_teobe")
+sources/2 = SubResource("TileSetAtlasSource_lyclo")
+sources/5 = SubResource("TileSetAtlasSource_utu27")
+sources/9 = SubResource("TileSetAtlasSource_g4g0u")
+sources/0 = SubResource("TileSetAtlasSource_q4wiy")
+sources/3 = SubResource("TileSetAtlasSource_vpxp0")
+sources/4 = SubResource("TileSetAtlasSource_q1n28")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_17p2g"]
-size = Vector2(299, 26)
+[node name="Node2D2" type="Node2D"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_tgigp")
+[node name="TopDownPlayerController" parent="." instance=ExtResource("1_utnmm")]
+z_index = 1
+position = Vector2(-361, 103)
+scale = Vector2(0.1, 0.1)
+
+[node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
+zoom = Vector2(0.91, 0.91)
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_6ah28")
