@@ -1,22 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cplfr7w27bkyu"]
+[gd_scene load_steps=9 format=3 uid="uid://cplfr7w27bkyu"]
 
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_k1d3o"]
-
-[sub_resource type="Animation" id="Animation_qbkhe"]
-resource_name = "zoom_out"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:zoom")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.433333, 1.86667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(8, 8), Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_d0uhq"]
 length = 0.001
@@ -33,6 +17,22 @@ tracks/0/keys = {
 "values": [Vector2(8, 8)]
 }
 
+[sub_resource type="Animation" id="Animation_qbkhe"]
+resource_name = "zoom_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.03333, 2.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(8, 8), Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sy5bi"]
 _data = {
 "RESET": SubResource("Animation_d0uhq"),
@@ -41,6 +41,42 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvaea"]
 size = Vector2(224, 27)
+
+[sub_resource type="Animation" id="Animation_gg01h"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bpp04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xg5ao"]
+_data = {
+"RESET": SubResource("Animation_bpp04"),
+"fade": SubResource("Animation_gg01h")
+}
 
 [node name="Intro" type="Node2D"]
 
@@ -59,8 +95,19 @@ libraries = {
 autoplay = "zoom_out"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(363, 453)
+position = Vector2(377, 453)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-43, -4)
+position = Vector2(-29, -191)
 shape = SubResource("RectangleShape2D_kvaea")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 696.0
+offset_bottom = 498.0
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_xg5ao")
+}
+autoplay = "fade"
