@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://cjxn5ip14swtc"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://bpud7rap6w3q4"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_xdwi2"]
+[ext_resource type="Texture2D" uid="uid://cfwte2aweyl5j" path="res://Sprites/furniture/door_hole_100x100.png" id="3_7v2jt"]
 [ext_resource type="Texture2D" uid="uid://b5sjk5ce5rd8j" path="res://Sprites/wall assets/wall edge outer corner_100x100.png" id="3_rv60f"]
 [ext_resource type="Texture2D" uid="uid://8t6l6e1okx8d" path="res://Sprites/wall assets/wall edge corner_100x100.png" id="5_nuxyr"]
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="7_txgdd"]
@@ -24,6 +25,11 @@ texture_region_size = Vector2i(100, 100)
 0:0/2/flip_v = true
 0:0/3 = 3
 0:0/3/flip_h = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7gbi"]
+texture = ExtResource("3_7v2jt")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78fii"]
 texture = ExtResource("5_nuxyr")
@@ -77,3 +83,4 @@ sources/3 = SubResource("TileSetAtlasSource_78fii")
 sources/8 = SubResource("TileSetAtlasSource_kfrbj")
 sources/11 = SubResource("TileSetAtlasSource_rqyow")
 sources/1 = SubResource("TileSetAtlasSource_fx06s")
+sources/2 = SubResource("TileSetAtlasSource_q7gbi")
