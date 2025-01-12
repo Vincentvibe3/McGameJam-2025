@@ -302,37 +302,37 @@ libraries = {
 }
 
 [node name="DangerArmL2" parent="LimbsAPlenty/LeftArms" node_paths=PackedStringArray("death_anim") instance=ExtResource("2_tmpv7")]
-position = Vector2(-468.999, -213.001)
+position = Vector2(-423.999, -356.001)
 death_anim = NodePath("../../DeathAnim")
 
 [node name="DangerArmL3" parent="LimbsAPlenty/LeftArms" node_paths=PackedStringArray("death_anim") instance=ExtResource("2_tmpv7")]
-position = Vector2(-1773, -174.004)
+position = Vector2(-1728, -317.004)
 death_anim = NodePath("../../DeathAnim")
 
 [node name="DangerArmL5" parent="LimbsAPlenty/LeftArms" node_paths=PackedStringArray("death_anim") instance=ExtResource("2_tmpv7")]
-position = Vector2(-2874, -219.007)
+position = Vector2(-2829, -362.007)
 death_anim = NodePath("../../DeathAnim")
 
 [node name="DangerArmL7" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3699, -193.009)
+position = Vector2(-3669, -336.009)
 
 [node name="DangerArmL9" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-4500, -314.011)
+position = Vector2(-4576, -654.012)
 
 [node name="DangerArmL10" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-4243, -461.011)
+position = Vector2(-4251, -718.011)
 
 [node name="DangerArmL11" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3970, -304.01)
+position = Vector2(-3985, -538.01)
 
 [node name="DangerArmL8" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3382, -235.009)
+position = Vector2(-3359, -454.009)
 
 [node name="DangerArmL6" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-2276, -205.006)
+position = Vector2(-2231, -348.006)
 
 [node name="DangerArmL4" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-1352, -223.003)
+position = Vector2(-1307, -366.003)
 
 [node name="RightArms" type="Node2D" parent="LimbsAPlenty"]
 rotation = 3.14159
@@ -343,25 +343,25 @@ libraries = {
 }
 
 [node name="DangerArmR" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-624, -165.002)
+position = Vector2(-579, -308.002)
 
 [node name="DangerArmR2" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-772, -206.002)
+position = Vector2(-727, -349.002)
 
 [node name="DangerArmR3" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-917, -152.002)
+position = Vector2(-872, -295.002)
 
 [node name="DangerArmR4" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2002, -180.005)
+position = Vector2(-1957, -323.005)
 
 [node name="DangerArmR6" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2944, -109.007)
+position = Vector2(-2899, -252.007)
 
 [node name="DangerArmR7" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2633, -160.007)
+position = Vector2(-2588, -303.007)
 
 [node name="DangerArmR5" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-1084, -259.003)
+position = Vector2(-1039, -402.003)
 
 [node name="RightLegs" type="Node2D" parent="LimbsAPlenty"]
 
@@ -450,6 +450,7 @@ libraries = {
 autostart = true
 
 [node name="BlackToFadeTo" type="Sprite2D" parent="LimbsAPlenty"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 4
 position = Vector2(5166, -245)

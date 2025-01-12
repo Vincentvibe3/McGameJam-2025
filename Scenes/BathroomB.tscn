@@ -1,14 +1,14 @@
 [gd_scene load_steps=18 format=4 uid="uid://vvo4dypp2cpj"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_rm44e"]
-[ext_resource type="TileSet" uid="uid://l6pifweja1oj" path="res://Scenes/top_down_tileset.tres" id="1_yue1p"]
+[ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="1_yue1p"]
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_hbus0"]
 [ext_resource type="Texture2D" uid="uid://cy852wx3ctfrl" path="res://Sprites/walls/tilemapwhite.png" id="3_ekwjf"]
 [ext_resource type="Texture2D" uid="uid://347k08vc76qc" path="res://Sprites/walls/corner.png" id="4_nmplt"]
 [ext_resource type="Texture2D" uid="uid://ivdx803dopou" path="res://Sprites/walls/outercorner.png" id="5_773aq"]
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="6_0f1sk"]
 [ext_resource type="Texture2D" uid="uid://cnn4upu631owr" path="res://Sprites/walls/tilemapwhitebottomborder.png" id="7_68sk8"]
-[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_ywumu"]
+[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="8_ywumu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vg5ol"]
 texture = ExtResource("1_rm44e")
