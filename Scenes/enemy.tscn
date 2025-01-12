@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk8g2frejwe5e"]
+[gd_scene load_steps=8 format=3 uid="uid://dk8g2frejwe5e"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_ai0pl"]
 [ext_resource type="Texture2D" uid="uid://d0dkiye6wsa01" path="res://Sprites/demon assets/demon 1.png" id="2_27elg"]
 [ext_resource type="Texture2D" uid="uid://cbnihcs711dka" path="res://Sprites/demon assets/demon 2.png" id="3_18dxm"]
 [ext_resource type="Texture2D" uid="uid://b283af78n8e4f" path="res://Sprites/demon assets/demon 3.png" id="4_d862w"]
+[ext_resource type="AudioStream" uid="uid://c3txrplcw35qc" path="res://Audio/Whisper.mp3" id="5_wix34"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fdixc"]
 animations = [{
@@ -44,3 +45,8 @@ shape = SubResource("RectangleShape2D_adb0e")
 position = Vector2(-824, -32)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(500, 1000, -500, 1000, -500, -1000, 500, -1000)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_wix34")
+autoplay = true
+parameters/looping = true

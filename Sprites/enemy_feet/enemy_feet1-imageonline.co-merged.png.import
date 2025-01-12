@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gnbmpvo1m06n"
-path="res://.godot/imported/mannequin sprite.png-5bce09851687b31871ac869ed17bbdee.ctex"
+uid="uid://bnw66asnb8h0g"
+path="res://.godot/imported/enemy_feet1-imageonline.co-merged.png-440307f755e419ddb07a551f4a933764.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mannequin sprite.png"
-dest_files=["res://.godot/imported/mannequin sprite.png-5bce09851687b31871ac869ed17bbdee.ctex"]
+source_file="res://Sprites/enemy_feet/enemy_feet1-imageonline.co-merged.png"
+dest_files=["res://.godot/imported/enemy_feet1-imageonline.co-merged.png-440307f755e419ddb07a551f4a933764.ctex"]
 
 [params]
 

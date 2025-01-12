@@ -3,7 +3,8 @@ extends Player
 
 class_name TopDownPlayerController
 
-const SPEED = 300.0
+const  BASE_SPEED = 300.0
+const LEG_SPEED = 400
 const JUMP_VELOCITY = -400.0
 
 @onready var legs: Node2D = $Legs
@@ -13,11 +14,13 @@ const JUMP_VELOCITY = -400.0
 @onready var arms: Node2D = $arms
 
 func _physics_process(delta: float) -> void:
+	var SPEED = 1
 	if not PlayerProgress.ears_enabled:
 		ears.visible = false
 	if not PlayerProgress.arms_enabled:
 		arms.visible = false
 	if not PlayerProgress.Leg_enabled:
+		SPEED = BASE_SPEED
 		legs.visible = false
 	if not PlayerProgress.Face_enabled:
 		face.visible = false
@@ -28,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	if PlayerProgress.arms_enabled:
 		arms.visible = true
 	if PlayerProgress.Leg_enabled:
+		SPEED = LEG_SPEED
 		legs.visible = true
 	if PlayerProgress.Face_enabled:
 		face.visible = true

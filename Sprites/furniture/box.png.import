@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gnbmpvo1m06n"
-path="res://.godot/imported/mannequin sprite.png-5bce09851687b31871ac869ed17bbdee.ctex"
+uid="uid://d2rx36scyl30o"
+path="res://.godot/imported/box.png-97e6ff53c6a7e580e47029193c845566.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mannequin sprite.png"
-dest_files=["res://.godot/imported/mannequin sprite.png-5bce09851687b31871ac869ed17bbdee.ctex"]
+source_file="res://Sprites/furniture/box.png"
+dest_files=["res://.godot/imported/box.png-97e6ff53c6a7e580e47029193c845566.ctex"]
 
 [params]
 

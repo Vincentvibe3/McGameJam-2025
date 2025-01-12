@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gnbmpvo1m06n"
-path="res://.godot/imported/mannequin sprite.png-5bce09851687b31871ac869ed17bbdee.ctex"
+uid="uid://co6k502vxqhww"
+path="res://.godot/imported/mannequin sprite without rope.png-d87fa48bc18b431edc8fdbe7ccfcf573.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mannequin sprite.png"
-dest_files=["res://.godot/imported/mannequin sprite.png-5bce09851687b31871ac869ed17bbdee.ctex"]
+source_file="res://Sprites/mannequin sprite without rope.png"
+dest_files=["res://.godot/imported/mannequin sprite without rope.png-d87fa48bc18b431edc8fdbe7ccfcf573.ctex"]
 
 [params]
 

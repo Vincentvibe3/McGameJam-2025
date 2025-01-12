@@ -12,6 +12,22 @@ var first_kill_done = 0
 var spawn = "Default"
 var lastPosition:Vector2 = Vector2(0,0)
 
+var global_music:AudioStreamPlayer
+var mainMusicEars = load("res://Audio/MainAmbience.mp3")
+var mainMusicNoEars = load("res://Audio/MainAmbience.mp3")
+var mazeMusic = load("res://Audio/MazeAmbience.mp3")
+
+func _ready():
+	print("child added")
+	var audio = AudioStreamPlayer.new()
+	global_music = audio
+	audio.autoplay = true
+	audio.stream = mainMusicEars
+	add_child(audio)
+
+func pause_music():
+	global_music.stop()
+
 func kill():
 	spawn = "Default"
 	get_tree().change_scene_to_file("res://Scenes/corridor.tscn")
@@ -19,12 +35,3 @@ func kill():
 func move_to(spawn_name, scene):
 	spawn = spawn_name
 	get_tree().change_scene_to_file(scene)
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
