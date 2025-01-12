@@ -6,17 +6,22 @@ class_name TopDownPlayerController
 const  BASE_SPEED = 300.0
 const LEG_SPEED = 400
 const JUMP_VELOCITY = -400.0
-
+@onready var animated_sprite_2d: AnimatedSprite2D = $animations/AnimatedSprite2D
+@onready var SPEED
+@onready var animations: Node2D = $animations
 @onready var legs: Node2D = $Legs
 @onready var torso: Node2D = $Torso
 @onready var face: Node2D = $Face
 @onready var ears: Node2D = $ears
 @onready var arms: Node2D = $arms
-
-func _physics_process(delta: float) -> void:
-	var SPEED = 1
+func _ready() -> void:
+	animations.visible = false
 	if not PlayerProgress.ears_enabled:
 		ears.visible = false
+	if PlayerProgress.Face_enabled:
+		face.visible = true
+	if PlayerProgress.ears_enabled:
+		ears.visible = true
 	if not PlayerProgress.arms_enabled:
 		arms.visible = false
 	if not PlayerProgress.Leg_enabled:
@@ -26,21 +31,30 @@ func _physics_process(delta: float) -> void:
 		face.visible = false
 	if not PlayerProgress.Torso_enabled:
 		torso.visible = false
-	if PlayerProgress.ears_enabled:
-		ears.visible = true
+
 	if PlayerProgress.arms_enabled:
 		arms.visible = true
 	if PlayerProgress.Leg_enabled:
 		SPEED = LEG_SPEED
 		legs.visible = true
-	if PlayerProgress.Face_enabled:
-		face.visible = true
+
 	if PlayerProgress.Torso_enabled:
 		torso.visible = true
+		
+func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	# if not is_on_floor():
 	# 	velocity += get_gravity() * delta
-
+	if Input.is_action_just_pressed("move_left"):
+		for child in get_children():
+			for subchild in child.get_children():
+				if subchild is AnimatedSprite2D or Sprite2D:
+					subchild.flip_h = true
+	if Input.is_action_just_pressed("move_right"):
+		for child in get_children():
+			for subchild in child.get_children():
+				if subchild is AnimatedSprite2D or Sprite2D:
+					subchild.flip_h = false
 	# # Handle jump.
 	# if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 	# 	velocity.y = JUMP_VELOCITY
@@ -68,7 +82,36 @@ func _physics_process(delta: float) -> void:
 		movementSet = true
 	elif Input.is_action_just_released("move_down"):
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-		
+	if not (velocity == Vector2(0,0)):
+		torso.visible=false
+		arms.visible = false
+		legs.visible = false
+		if PlayerProgress.arms_enabled and not PlayerProgress.Leg_enabled and not PlayerProgress.Torso_enabled:
+			animations.visible = true
+			animated_sprite_2d.play("justarms")
+		elif PlayerProgress.arms_enabled and PlayerProgress.Leg_enabled and not PlayerProgress.Torso_enabled:
+			animations.visible = true
+			animated_sprite_2d.play("withNoTorso")
+		elif PlayerProgress.arms_enabled and not PlayerProgress.Leg_enabled and PlayerProgress.Torso_enabled:
+			animations.visible = true
+			animated_sprite_2d.play("arms+torso")
+		elif not PlayerProgress.arms_enabled and PlayerProgress.Leg_enabled and not PlayerProgress.Torso_enabled:
+			animations.visible = true
+			animated_sprite_2d.play("justlegs")
+		elif PlayerProgress.arms_enabled and PlayerProgress.Leg_enabled and PlayerProgress.Torso_enabled:
+			animations.visible = true
+			animated_sprite_2d.play("withTorso")
+		elif not PlayerProgress.arms_enabled and PlayerProgress.Leg_enabled and PlayerProgress.Torso_enabled:
+			animations.visible = true
+			animated_sprite_2d.play("legstorso")
+	else:
+		animations.visible = false
+		if PlayerProgress.arms_enabled:
+				arms.visible = true
+		if PlayerProgress.Leg_enabled:
+			legs.visible = true
+		if PlayerProgress.Torso_enabled:
+			torso.visible=true
 	# if !movementSet:
 	# 	velocity.x = move_toward(velocity.x, 0, SPEED)
 	# 	velocity.y = move_toward(velocity.y, 0, SPEED)

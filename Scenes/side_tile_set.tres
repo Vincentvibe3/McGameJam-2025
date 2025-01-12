@@ -1,9 +1,19 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://duy4w4dkxc0cg"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://bnen0y6a4la4a"]
 
 [ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="1_0ip2i"]
+[ext_resource type="Texture2D" uid="uid://dgsm5l1ylff7r" path="res://Sprites/mirror/mirror_sheet_100x100.png" id="1_mq8gb"]
 [ext_resource type="Texture2D" uid="uid://bxqfw4nc3cgad" path="res://Sprites/floor/floor_corridor_100x100.png" id="2_qp266"]
 [ext_resource type="Texture2D" uid="uid://dl6chqbcyie3q" path="res://Sprites/floor/floor_corridor_foreground_100x100.png" id="3_6w3vv"]
 [ext_resource type="Texture2D" uid="uid://bbvc7glrepxgn" path="res://Sprites/floor/platform_100x100.png" id="4_2s8el"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hoqib"]
+texture = ExtResource("1_mq8gb")
+texture_region_size = Vector2i(100, 100)
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/animation_frame_0/duration = 0.2
+0:0/animation_frame_1/duration = 0.2
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 40)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1xqy"]
 texture = ExtResource("1_0ip2i")
@@ -58,3 +68,4 @@ sources/1 = SubResource("TileSetAtlasSource_q1xqy")
 sources/2 = SubResource("TileSetAtlasSource_uj0s4")
 sources/3 = SubResource("TileSetAtlasSource_x5lk2")
 sources/4 = SubResource("TileSetAtlasSource_e7ueg")
+sources/0 = SubResource("TileSetAtlasSource_hoqib")
