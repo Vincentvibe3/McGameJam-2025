@@ -45,7 +45,16 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	# if not is_on_floor():
 	# 	velocity += get_gravity() * delta
-
+	if Input.is_action_just_pressed("move_left"):
+		for child in get_children():
+			for subchild in child.get_children():
+				if subchild is AnimatedSprite2D or Sprite2D:
+					subchild.flip_h = true
+	if Input.is_action_just_pressed("move_right"):
+		for child in get_children():
+			for subchild in child.get_children():
+				if subchild is AnimatedSprite2D or Sprite2D:
+					subchild.flip_h = false
 	# # Handle jump.
 	# if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 	# 	velocity.y = JUMP_VELOCITY

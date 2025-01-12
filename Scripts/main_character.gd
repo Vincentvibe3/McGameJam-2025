@@ -49,7 +49,16 @@ func _ready() -> void:
 		torso_collision.disabled = false
 
 func _physics_process(delta: float) -> void:
-	
+	if Input.is_action_just_pressed("move_left"):
+		for child in get_children():
+			for subchild in child.get_children():
+				if subchild is AnimatedSprite2D or Sprite2D:
+					subchild.flip_h = true
+	if Input.is_action_just_pressed("move_right"):
+		for child in get_children():
+			for subchild in child.get_children():
+				if subchild is AnimatedSprite2D or Sprite2D:
+					subchild.flip_h = false
 	
 	# Add the gravity.
 	if not is_on_floor():
