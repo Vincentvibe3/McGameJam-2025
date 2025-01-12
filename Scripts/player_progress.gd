@@ -1,6 +1,6 @@
 extends Node
 
-var Leg_enabled = 0
+var Leg_enabled = 1
 var Face_enabled = 0
 var Torso_enabled = 0
 

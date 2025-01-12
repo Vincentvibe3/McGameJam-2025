@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cehd56sc07rd6"]
+[gd_scene load_steps=4 format=3 uid="uid://cehd56sc07rd6"]
 
+[ext_resource type="Script" path="res://Scenes/moveable_box.gd" id="1_4eucd"]
 [ext_resource type="Texture2D" uid="uid://ca3jud8dv3ms3" path="res://Sprites/temp_box.png" id="1_nyeho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2xh1"]
@@ -7,9 +8,8 @@ size = Vector2(112, 83)
 
 [node name="Moveable_box" type="RigidBody2D"]
 collision_layer = 2
-collision_mask = 3
-mass = 1.08
 can_sleep = false
+script = ExtResource("1_4eucd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(38, 33.25)

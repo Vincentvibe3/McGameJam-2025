@@ -7,8 +7,6 @@ size = Vector2(112, 83)
 
 [node name="Moveable_box" type="RigidBody2D"]
 collision_layer = 2
-collision_mask = 3
-mass = 1.08
 can_sleep = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
