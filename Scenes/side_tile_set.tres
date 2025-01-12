@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://bnen0y6a4la4a"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://csgbt5biwh7qg"]
 
 [ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="1_0ip2i"]
 [ext_resource type="Texture2D" uid="uid://bxqfw4nc3cgad" path="res://Sprites/floor/floor_corridor_100x100.png" id="2_qp266"]
 [ext_resource type="Texture2D" uid="uid://dl6chqbcyie3q" path="res://Sprites/floor/floor_corridor_foreground_100x100.png" id="3_6w3vv"]
+[ext_resource type="Texture2D" uid="uid://bbvc7glrepxgn" path="res://Sprites/floor/platform_100x100.png" id="4_2s8el"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1xqy"]
 texture = ExtResource("1_0ip2i")
@@ -34,6 +35,7 @@ texture_region_size = Vector2i(100, 100)
 0:0/next_alternative_id = 2
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, 50, 50, 50, 50.0278, 57.2757, -51.0885, 56.215, -50, 50)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5lk2"]
 texture = ExtResource("3_6w3vv")
@@ -41,9 +43,18 @@ texture_region_size = Vector2i(100, 100)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
 0:0/0/modulate = Color(1, 1, 1, 0.407843)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, 50, 50, 50, 50.0278, 57.2757, -51.0885, 56.215, -50, 45.6084)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7ueg"]
+texture = ExtResource("4_2s8el")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, -25.8094, -50, -25.4558, -50, -25.1023)
 
 [resource]
 tile_size = Vector2i(100, 100)
+physics_layer_0/collision_layer = 4
 sources/1 = SubResource("TileSetAtlasSource_q1xqy")
 sources/2 = SubResource("TileSetAtlasSource_uj0s4")
 sources/3 = SubResource("TileSetAtlasSource_x5lk2")
+sources/4 = SubResource("TileSetAtlasSource_e7ueg")

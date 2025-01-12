@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://cth38oqlrxa2s"]
+[gd_scene load_steps=29 format=4 uid="uid://c0w23mi6tcdkn"]
 
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_5qnhy"]
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="2_prqif"]
@@ -7,14 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://347k08vc76qc" path="res://Sprites/walls/corner.png" id="5_v30ux"]
 [ext_resource type="Texture2D" uid="uid://ivdx803dopou" path="res://Sprites/walls/outercorner.png" id="6_eswqu"]
 [ext_resource type="Texture2D" uid="uid://cnn4upu631owr" path="res://Sprites/walls/tilemapwhitebottomborder.png" id="7_lksef"]
-[ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="8_bjvka"]
+[ext_resource type="TileSet" uid="uid://cjxn5ip14swtc" path="res://Scenes/top_down_tileset.tres" id="8_bjvka"]
 [ext_resource type="Texture2D" uid="uid://1feslxffu2ae" path="res://Sprites/furniture/bathtubA.png" id="8_ern76"]
 [ext_resource type="Script" path="res://Scenes/BackToCorridor.gd" id="9_p2nxl"]
 [ext_resource type="Texture2D" uid="uid://dl2njonth84iu" path="res://Sprites/furniture/sinkA.png" id="9_w1rd7"]
 [ext_resource type="Texture2D" uid="uid://xcljel81p1ws" path="res://Sprites/furniture/toiletA.png" id="10_n5oby"]
 [ext_resource type="Texture2D" uid="uid://dge556056omd" path="res://Sprites/furniture/bed_idle.png" id="11_e7gvt"]
 [ext_resource type="Texture2D" uid="uid://cd8ubvtdnxcxg" path="res://Sprites/furniture/pianoA.png" id="12_eomly"]
-[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
+[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4wiy"]
 texture = ExtResource("2_prqif")
