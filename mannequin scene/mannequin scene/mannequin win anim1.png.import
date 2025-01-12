@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd1oc73g3rbht"
-path="res://.godot/imported/tilemapwhitebottomborder _100x100.png-16c9ef3c58d609ccd6d99a6352b7d351.ctex"
+uid="uid://bmtm1jdlu6vck"
+path="res://.godot/imported/mannequin win anim1.png-682ce2bcbdfa8ad7c4bcc10e159bf28e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/walls/tilemapwhitebottomborder _100x100.png"
-dest_files=["res://.godot/imported/tilemapwhitebottomborder _100x100.png-16c9ef3c58d609ccd6d99a6352b7d351.ctex"]
+source_file="res://mannequin scene/mannequin scene/mannequin win anim1.png"
+dest_files=["res://.godot/imported/mannequin win anim1.png-682ce2bcbdfa8ad7c4bcc10e159bf28e.ctex"]
 
 [params]
 

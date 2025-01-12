@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2vvdva5yg811"
-path="res://.godot/imported/tilemapwhite _100x100.png-8d74758fad7c5f6e8038c69fa8d2c615.ctex"
+uid="uid://b7cgp614737ut"
+path="res://.godot/imported/selection1_loss.png-d3e5ff30a7bcf68b30a7bcb4abe66ecf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/walls/tilemapwhite _100x100.png"
-dest_files=["res://.godot/imported/tilemapwhite _100x100.png-8d74758fad7c5f6e8038c69fa8d2c615.ctex"]
+source_file="res://mannequin scene/mannequin scene/selection1_loss.png"
+dest_files=["res://.godot/imported/selection1_loss.png-d3e5ff30a7bcf68b30a7bcb4abe66ecf.ctex"]
 
 [params]
 

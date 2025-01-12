@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpjxf4d6f5bb4"
-path="res://.godot/imported/corner _100x100.png-0f6e690fe3afb298fdd1cdb4f3ba17ce.ctex"
+uid="uid://dli7d1wy2kmho"
+path="res://.godot/imported/mannequin game scene.png-0301504abd8ea3a9a69d75990afc9d5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/walls/corner _100x100.png"
-dest_files=["res://.godot/imported/corner _100x100.png-0f6e690fe3afb298fdd1cdb4f3ba17ce.ctex"]
+source_file="res://mannequin scene/mannequin scene/mannequin game scene.png"
+dest_files=["res://.godot/imported/mannequin game scene.png-0301504abd8ea3a9a69d75990afc9d5f.ctex"]
 
 [params]
 
