@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://c0w23mi6tcdkn"]
+[gd_scene load_steps=28 format=4 uid="uid://c0w23mi6tcdkn"]
 
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_5qnhy"]
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="2_prqif"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://xcljel81p1ws" path="res://Sprites/furniture/toiletA.png" id="10_n5oby"]
 [ext_resource type="Texture2D" uid="uid://dge556056omd" path="res://Sprites/furniture/bed_idle.png" id="11_e7gvt"]
 [ext_resource type="Texture2D" uid="uid://cd8ubvtdnxcxg" path="res://Sprites/furniture/pianoA.png" id="12_eomly"]
-[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4wiy"]
 texture = ExtResource("2_prqif")
@@ -414,15 +413,6 @@ position = Vector2(-1334.73, -95.225)
 scale = Vector2(5.345, 5.345)
 shape = SubResource("RectangleShape2D_74v21")
 
-[node name="TopDownPlayerController" parent="AssetLayer" instance=ExtResource("16_yqsvm")]
-z_index = 1
-position = Vector2(-316, 49)
-scale = Vector2(0.1, 0.1)
-collision_mask = 3
-
-[node name="Camera2D" type="Camera2D" parent="AssetLayer/TopDownPlayerController"]
-zoom = Vector2(0.91, 0.91)
-
 [node name="ToiletA" type="StaticBody2D" parent="AssetLayer"]
 visibility_layer = 2
 
@@ -443,7 +433,7 @@ shape = SubResource("RectangleShape2D_n8soc")
 
 [node name="Piano" type="StaticBody2D" parent="AssetLayer"]
 position = Vector2(703, 120)
-collision_layer = 2
+collision_layer = 3
 metadata/_edit_group_ = true
 
 [node name="PianoA" type="Sprite2D" parent="AssetLayer/Piano"]
