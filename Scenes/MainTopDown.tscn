@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dgfwyd3n5edpj"]
 
 [ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_h2lf4"]
-[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="1_oxohe"]
+[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="1_oxohe"]
 [ext_resource type="PackedScene" uid="uid://c0w23mi6tcdkn" path="res://Scenes/BedroomA.tscn" id="2_f4tav"]
 [ext_resource type="PackedScene" uid="uid://c3luqnp1sfr4" path="res://Scenes/Garage.tscn" id="3_my3lt"]
 [ext_resource type="PackedScene" uid="uid://b5wv0xm04fr0v" path="res://Scenes/maze.tscn" id="4_16x46"]
@@ -15,7 +15,7 @@ script = ExtResource("1_h2lf4")
 [node name="BathroomA" parent="." instance=ExtResource("2_f4tav")]
 position = Vector2(1392, 283)
 
-[node name="Node2D5" parent="." instance=ExtResource("3_my3lt")]
+[node name="Garage" parent="." instance=ExtResource("3_my3lt")]
 position = Vector2(5896, 2987)
 
 [node name="Spawns" type="Node2D" parent="."]
@@ -57,5 +57,5 @@ position = Vector2(886.998, -5130.2)
 [node name="BathroomB" parent="." instance=ExtResource("6_hs84q")]
 position = Vector2(-3595.94, -1869.89)
 
-[node name="Node2D4" parent="." instance=ExtResource("8_s5eqv")]
+[node name="Multiroom" parent="." instance=ExtResource("8_s5eqv")]
 position = Vector2(6457, -21)
