@@ -1,13 +1,14 @@
 [gd_scene load_steps=13 format=4 uid="uid://brafu80c2vuoa"]
 
-[ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_qvvno"]
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
 [ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
 [ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 [ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="5_rbmnj"]
-[ext_resource type="TileSet" uid="uid://bnen0y6a4la4a" path="res://Scenes/side_tile_set.tres" id="5_s7xt2"]
+[ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="5_yiubt"]
 [ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="6_qjosj"]
+[ext_resource type="Texture2D" uid="uid://bxqfw4nc3cgad" path="res://Sprites/floor/floor_corridor_100x100.png" id="6_tlm4p"]
+[ext_resource type="Texture2D" uid="uid://dl6chqbcyie3q" path="res://Sprites/floor/floor_corridor_foreground_100x100.png" id="7_huwqh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
@@ -21,13 +22,12 @@ size = Vector2(242, 469)
 size = Vector2(316, 431)
 
 [node name="Corridor" type="Node2D"]
-script = ExtResource("1_qvvno")
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_war38")]
+[node name="MainCharacter" parent="." instance=ExtResource("1_war38")]
 visibility_layer = 2
-position = Vector2(8, -39)
+position = Vector2(8, -104)
 
-[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+[node name="Camera2D" type="Camera2D" parent="MainCharacter"]
 position = Vector2(72, 73)
 limit_left = -300
 limit_bottom = 400
