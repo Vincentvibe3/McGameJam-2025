@@ -1,9 +1,8 @@
 extends Player
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-const sprint_multiplier = 2
+const BASE_SPEED = 300.0
+const LEG_SPEED = 400
 
 @onready var legs: Node2D = $Legs
 @onready var torso: Node2D = $Torso
@@ -14,11 +13,13 @@ const sprint_multiplier = 2
 @onready var arms: Node2D = $arms
 
 func _physics_process(delta: float) -> void:
+	var SPEED = 1
 	if not PlayerProgress.ears_enabled:
 		ears.visible = false
 	if not PlayerProgress.arms_enabled:
 		arms.visible = false
 	if not PlayerProgress.Leg_enabled:
+		SPEED = BASE_SPEED
 		legs.visible = false
 		legs_collision.disabled = true
 	if not PlayerProgress.Face_enabled:
@@ -31,6 +32,7 @@ func _physics_process(delta: float) -> void:
 	if PlayerProgress.arms_enabled:
 		arms.visible = true
 	if PlayerProgress.Leg_enabled:
+		SPEED = LEG_SPEED
 		legs.visible = true
 		legs_collision.disabled = false
 	if PlayerProgress.Face_enabled:
