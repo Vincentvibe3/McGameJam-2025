@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://dyhw85pq8xlqc"]
+[gd_scene load_steps=29 format=4 uid="uid://dyhw85pq8xlqc"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_vhcbo"]
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_nhw6l"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ac0fsj05w85" path="res://Sprites/furniture/chairA.png" id="12_4jcn6"]
 [ext_resource type="Texture2D" uid="uid://c0rnbeifu6ssj" path="res://Sprites/furniture/windowB.png" id="13_qeslt"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="14_m2eu6"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="15_4lod7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_08js3"]
 texture = ExtResource("1_vhcbo")
@@ -369,6 +370,12 @@ size = Vector2(147.5, 344.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xdy7"]
 size = Vector2(126, 135)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kihtj"]
+size = Vector2(87, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rchyp"]
+size = Vector2(115, 40)
+
 [node name="Node2D2" type="Node2D"]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
@@ -439,3 +446,19 @@ texture = ExtResource("13_qeslt")
 position = Vector2(25, -121)
 scale = Vector2(0.182713, 0.182713)
 texture = ExtResource("14_m2eu6")
+
+[node name="InteractDoor" parent="." instance=ExtResource("15_4lod7")]
+
+[node name="Area2D" type="Area2D" parent="InteractDoor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDoor/Area2D"]
+position = Vector2(28, 54)
+shape = SubResource("RectangleShape2D_kihtj")
+
+[node name="InteractComputer" parent="." instance=ExtResource("15_4lod7")]
+
+[node name="Area2D" type="Area2D" parent="InteractComputer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComputer/Area2D"]
+position = Vector2(598, 298)
+shape = SubResource("RectangleShape2D_rchyp")
