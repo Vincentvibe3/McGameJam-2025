@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://g33t71mq8wh5" path="res://Sprites/player_sprite_everything/player_leg_r.png" id="1_luykx"]
 [ext_resource type="Script" path="res://Scenes/danger_limb_script.gd" id="1_r65s1"]
 [ext_resource type="Texture2D" uid="uid://ctur1tckxubyo" path="res://Sprites/player_sprite_everything/player_foot_r.png" id="2_o67lv"]
-[ext_resource type="PackedScene" uid="uid://w8fwoifjira4" path="res://Scenes/limb_area.tscn" id="3_pphgh"]
+[ext_resource type="PackedScene" path="res://Scenes/limb_area.tscn" id="3_pphgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0nph"]
 size = Vector2(235.933, 1620.69)
