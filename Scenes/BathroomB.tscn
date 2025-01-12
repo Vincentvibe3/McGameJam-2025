@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=4 uid="uid://vvo4dypp2cpj"]
 
-[ext_resource type="TileSet" uid="uid://cjxn5ip14swtc" path="res://Scenes/top_down_tileset.tres" id="1_yue1p"]
-[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_ywumu"]
+[ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="1_yue1p"]
+[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="8_ywumu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,3 +20,5 @@ scale = Vector2(0.1, 0.1)
 
 [node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
 zoom = Vector2(0.91, 0.91)
+
+[node name="AssetLayer" type="Node2D" parent="."]
