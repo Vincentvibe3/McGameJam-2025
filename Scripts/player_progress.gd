@@ -1,10 +1,10 @@
 extends Node
 
-var Leg_enabled = 1
+var Leg_enabled = 0
 var Face_enabled = 0
-var Torso_enabled = 1
+var Torso_enabled = 0
 var ears_enabled = 0
-var arms_enabled = 1
+var arms_enabled = 0
 var piano_broken = 0
 var piano_hands_gone = 0
 var first_kill_done = 0
