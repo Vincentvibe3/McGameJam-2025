@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://c0w23mi6tcdkn"]
+[gd_scene load_steps=30 format=4 uid="uid://c0w23mi6tcdkn"]
 
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_5qnhy"]
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="2_prqif"]
@@ -363,7 +363,16 @@ sources/3 = SubResource("TileSetAtlasSource_vpxp0")
 sources/4 = SubResource("TileSetAtlasSource_q1n28")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7om12"]
-size = Vector2(3454, 669.945)
+size = Vector2(3372.58, 669.945)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74v21"]
+size = Vector2(18.6062, 38.2507)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dxgu"]
+size = Vector2(84.4939, 52.915)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8soc"]
+size = Vector2(25.231, 21.4856)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur0yc"]
 size = Vector2(226, 20)
@@ -380,25 +389,10 @@ tile_set = SubResource("TileSet_6ah28")
 
 [node name="AssetLayer" type="Node2D" parent="."]
 
-[node name="SinkA" type="Sprite2D" parent="AssetLayer"]
-position = Vector2(-1332, -101)
-scale = Vector2(0.0625363, 0.0625363)
-texture = ExtResource("9_w1rd7")
-
-[node name="ToiletA" type="Sprite2D" parent="AssetLayer"]
-position = Vector2(-1270, 99)
-scale = Vector2(0.0764331, 0.0764331)
-texture = ExtResource("10_n5oby")
-
 [node name="BedIdle" type="Sprite2D" parent="AssetLayer"]
 position = Vector2(-280, -739)
 scale = Vector2(0.1478, 0.1478)
 texture = ExtResource("11_e7gvt")
-
-[node name="PianoA" type="Sprite2D" parent="AssetLayer"]
-position = Vector2(-261, -121)
-scale = Vector2(0.137811, 0.137811)
-texture = ExtResource("12_eomly")
 
 [node name="DeskA" type="Sprite2D" parent="AssetLayer"]
 position = Vector2(497, -78)
@@ -410,18 +404,72 @@ position = Vector2(326, -122)
 scale = Vector2(0.109149, 0.109149)
 texture = ExtResource("14_kw8lj")
 
-[node name="BathtubA" type="Area2D" parent="."]
+[node name="BathtubA" type="StaticBody2D" parent="AssetLayer"]
 collision_layer = 2
 
-[node name="BathtubA" type="Sprite2D" parent="BathtubA"]
+[node name="BathtubA" type="Sprite2D" parent="AssetLayer/BathtubA"]
 position = Vector2(-1176, -280)
 scale = Vector2(0.116676, 0.116676)
 texture = ExtResource("8_ern76")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BathtubA"]
-position = Vector2(-1184.5, -215)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/BathtubA"]
+position = Vector2(-1183.75, -236)
 scale = Vector2(0.116676, 0.116676)
 shape = SubResource("RectangleShape2D_7om12")
+
+[node name="SinkA" type="StaticBody2D" parent="AssetLayer"]
+collision_layer = 2
+
+[node name="SinkA" type="Sprite2D" parent="AssetLayer/SinkA"]
+position = Vector2(-1332, -101)
+scale = Vector2(0.0625363, 0.0625363)
+texture = ExtResource("9_w1rd7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/SinkA"]
+position = Vector2(-1334.73, -95.225)
+scale = Vector2(5.345, 5.345)
+shape = SubResource("RectangleShape2D_74v21")
+
+[node name="TopDownPlayerController" parent="AssetLayer" instance=ExtResource("16_yqsvm")]
+z_index = 1
+position = Vector2(-240, 156)
+scale = Vector2(0.1, 0.1)
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="AssetLayer/TopDownPlayerController"]
+zoom = Vector2(0.91, 0.91)
+
+[node name="ToiletA" type="StaticBody2D" parent="AssetLayer"]
+visibility_layer = 2
+
+[node name="ToiletA" type="Sprite2D" parent="AssetLayer/ToiletA"]
+position = Vector2(-1270, 99)
+scale = Vector2(0.0764331, 0.0764331)
+texture = ExtResource("10_n5oby")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/ToiletA"]
+position = Vector2(-1281.35, 157.35)
+scale = Vector2(2.47, 2.47)
+shape = SubResource("RectangleShape2D_2dxgu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AssetLayer/ToiletA"]
+position = Vector2(-1336.53, 49.975)
+scale = Vector2(4.005, 4.005)
+shape = SubResource("RectangleShape2D_n8soc")
+
+[node name="Piano" type="StaticBody2D" parent="AssetLayer"]
+collision_layer = 2
+
+[node name="PianoA" type="Sprite2D" parent="AssetLayer/Piano"]
+position = Vector2(-261, -121)
+scale = Vector2(0.137811, 0.137811)
+texture = ExtResource("12_eomly")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AssetLayer/Piano"]
+scale = Vector2(1.93, 1.93)
+polygon = PackedVector2Array(-214.508, -173.575, -63.2124, -173.057, -40.4145, -141.451, -40.4145, -112.953, -47.1503, -67.3575, -57.513, -25.3886, -71.5026, 21.7617, -177.202, 20.7254, -177.202, 59.0674, -220.207, 59.0674)
+
+[node name="Bedroom" type="StaticBody2D" parent="AssetLayer"]
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-97, 540)
@@ -431,13 +479,5 @@ node_name = "Door1"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(6, -3)
 shape = SubResource("RectangleShape2D_ur0yc")
-
-[node name="TopDownPlayerController" parent="." instance=ExtResource("16_yqsvm")]
-z_index = 1
-position = Vector2(-240, 156)
-scale = Vector2(0.1, 0.1)
-
-[node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
-zoom = Vector2(0.91, 0.91)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
