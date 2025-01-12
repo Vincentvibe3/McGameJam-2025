@@ -5,7 +5,5 @@
 [node name="SelectableObj" type="Node2D"]
 script = ExtResource("1_2j4il")
 
-[node name="NormalSprite" type="Sprite2D" parent="."]
-
 [node name="SelectedSprite" type="Sprite2D" parent="."]
 visible = false

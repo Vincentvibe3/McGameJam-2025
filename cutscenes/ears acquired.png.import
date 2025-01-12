@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmtm1jdlu6vck"
-path="res://.godot/imported/mannequin win anim1.png-682ce2bcbdfa8ad7c4bcc10e159bf28e.ctex"
+uid="uid://bi70iw3hi05kg"
+path="res://.godot/imported/ears acquired.png-93e20dc088b47ec96a5a715218df692f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mannequin scene/mannequin scene/mannequin win anim1.png"
-dest_files=["res://.godot/imported/mannequin win anim1.png-682ce2bcbdfa8ad7c4bcc10e159bf28e.ctex"]
+source_file="res://cutscenes/ears acquired.png"
+dest_files=["res://.godot/imported/ears acquired.png-93e20dc088b47ec96a5a715218df692f.ctex"]
 
 [params]
 

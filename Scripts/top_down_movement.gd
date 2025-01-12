@@ -44,29 +44,29 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var movementSet = false
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_just_pressed("move_left"):
 		velocity.x = -SPEED
 		movementSet = true
 	elif Input.is_action_just_released("move_left"):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_just_pressed("move_right"):
 		velocity.x = SPEED
 		movementSet = true
 	elif Input.is_action_just_released("move_right"):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_just_pressed("move_up"):
 		velocity.y = -SPEED
 		movementSet = true
 	elif Input.is_action_just_released("move_up"):
-		velocity.x = move_toward(velocity.y, 0, SPEED)
-	if Input.is_action_pressed("move_down"):
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+	if Input.is_action_just_pressed("move_down"):
 		velocity.y = SPEED
 		movementSet = true
 	elif Input.is_action_just_released("move_down"):
-		velocity.x = move_toward(velocity.y, 0, SPEED)
-		
-	if !movementSet:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		
+	# if !movementSet:
+	# 	velocity.x = move_toward(velocity.x, 0, SPEED)
+	# 	velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()

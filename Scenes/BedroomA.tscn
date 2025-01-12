@@ -719,7 +719,7 @@ shape = SubResource("RectangleShape2D_n8soc")
 
 [node name="Piano" type="StaticBody2D" parent="AssetLayer"]
 position = Vector2(703, 120)
-collision_layer = 2
+collision_layer = 3
 metadata/_edit_group_ = true
 
 [node name="PianoA" type="Sprite2D" parent="AssetLayer/Piano"]

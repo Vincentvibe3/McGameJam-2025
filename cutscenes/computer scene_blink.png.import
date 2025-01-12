@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rjam4dkvvvl"
-path="res://.godot/imported/selection3_loss.png-3c9217d7caa8ecfab7bb767acc39024e.ctex"
+uid="uid://dqe06d7fgqhoy"
+path="res://.godot/imported/computer scene_blink.png-bd7a327753157f4e4aec85d5a3b47775.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mannequin scene/mannequin scene/selection3_loss.png"
-dest_files=["res://.godot/imported/selection3_loss.png-3c9217d7caa8ecfab7bb767acc39024e.ctex"]
+source_file="res://cutscenes/computer scene_blink.png"
+dest_files=["res://.godot/imported/computer scene_blink.png-bd7a327753157f4e4aec85d5a3b47775.ctex"]
 
 [params]
 
