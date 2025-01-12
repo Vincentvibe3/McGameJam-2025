@@ -81,10 +81,11 @@ tile_set = SubResource("TileSet_g4qlk")
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-97, 540)
 script = ExtResource("5_tg4sn")
-node_name = "Door1"
+node_name = "Door4"
+scene_name = "res://Scenes/corridor.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(112, -527)
+position = Vector2(101, -527)
 shape = SubResource("RectangleShape2D_sbtta")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
