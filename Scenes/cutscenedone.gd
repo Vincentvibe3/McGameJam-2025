@@ -6,6 +6,7 @@ class_name CutsceneListener
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$VideoStreamPlayer.play()
 	pass # Replace with function body.
 
 
@@ -16,3 +17,4 @@ func _process(delta: float) -> void:
 
 func _on_video_stream_player_finished() -> void:
 	PlayerProgress.call_deferred("move_to",null,null, scene, true)
+	

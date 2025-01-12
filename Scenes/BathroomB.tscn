@@ -36,7 +36,7 @@ size = Vector2(28.5592, 57.3749)
 size = Vector2(46.635, 26.5536)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd221"]
-size = Vector2(152.75, 245.5)
+size = Vector2(151.75, 55)
 
 [node name="Node2D" type="Node2D"]
 
@@ -95,5 +95,5 @@ minigame = true
 minigameExit = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-position = Vector2(0.625, -227.75)
+position = Vector2(9, -55)
 shape = SubResource("RectangleShape2D_nd221")
