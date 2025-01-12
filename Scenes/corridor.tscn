@@ -104,8 +104,8 @@ shape = SubResource("RectangleShape2D_s01p6")
 [node name="Door4" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(2666, -363)
 script = ExtResource("5_rbmnj")
-node_name = ""
-scene_name = ""
+node_name = "MazeSpawn"
+scene_name = "res://Scenes/MainTopDown.tscn"
 
 [node name="Label" parent="Door4/Control" index="0"]
 text = "Press e to open door"
