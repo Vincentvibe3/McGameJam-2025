@@ -16,7 +16,7 @@ position = Vector2(1392, 283)
 [node name="Spawns" type="Node2D" parent="."]
 
 [node name="BathroomASpawn" type="Node2D" parent="Spawns"]
-position = Vector2(1295.31, 644.419)
+position = Vector2(1295.31, 533.544)
 
 [node name="MazeSpawn" type="Node2D" parent="Spawns"]
 position = Vector2(4248.18, -3223.54)
