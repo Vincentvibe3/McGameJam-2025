@@ -258,6 +258,7 @@ animations = [{
 }]
 
 [node name="MainCharacter" type="CharacterBody2D"]
+scale = Vector2(2.89, 2.89)
 collision_mask = 3
 script = ExtResource("1_equc0")
 
@@ -293,6 +294,7 @@ scale = Vector2(0.04, 0.04)
 
 [node name="rightleg" type="AnimatedSprite2D" parent="Legs"]
 z_index = 2
+scale = Vector2(1.18, 1)
 sprite_frames = SubResource("SpriteFrames_sdref")
 
 [node name="leftleg" type="AnimatedSprite2D" parent="Legs"]
