@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://5ua6v0ngm7a"]
+[gd_scene load_steps=17 format=4 uid="uid://5ua6v0ngm7a"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_7db4v"]
 [ext_resource type="Texture2D" uid="uid://dnquxcf0un6pl" path="res://Sprites/wall assets/wall_100x100.png" id="3_v3jce"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="6_plkha"]
 [ext_resource type="Texture2D" uid="uid://cksoa58e5ia52" path="res://Sprites/wall assets/wall edge_100x100.png" id="7_ba515"]
 [ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_bjhmj"]
+[ext_resource type="Texture2D" uid="uid://gnbmpvo1m06n" path="res://Sprites/mannequin sprite.png" id="8_c5cxq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntg8b"]
 texture = ExtResource("1_7db4v")
@@ -372,6 +373,9 @@ sources/0 = SubResource("TileSetAtlasSource_ntg8b")
 sources/3 = SubResource("TileSetAtlasSource_leic1")
 sources/4 = SubResource("TileSetAtlasSource_r084r")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgllb"]
+size = Vector2(13.4546, 10)
+
 [node name="Node2D2" type="Node2D"]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
@@ -389,3 +393,20 @@ scale = Vector2(0.1, 0.1)
 
 [node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
 zoom = Vector2(0.91, 0.91)
+
+[node name="AssetLayer" type="Node2D" parent="."]
+
+[node name="Mannequin" type="StaticBody2D" parent="AssetLayer"]
+z_index = 1
+position = Vector2(145, -8)
+collision_layer = 2
+
+[node name="MannequinSprite" type="Sprite2D" parent="AssetLayer/Mannequin"]
+position = Vector2(845.5, -251.5)
+scale = Vector2(0.097568, 0.097568)
+texture = ExtResource("8_c5cxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/Mannequin"]
+position = Vector2(847, -128.5)
+scale = Vector2(5.5, 5.5)
+shape = SubResource("RectangleShape2D_tgllb")
