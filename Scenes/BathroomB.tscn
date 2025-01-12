@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_7ylgw"]
 [ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="1_yue1p"]
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="3_n3th5"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="3_n3th5"]
 [ext_resource type="Script" path="res://Scripts/InteractGoTo.gd" id="4_is8de"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd221"]

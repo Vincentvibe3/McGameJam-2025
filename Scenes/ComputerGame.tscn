@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci0vo01lvl28h"]
+
+[ext_resource type="Script" path="res://Scenes/computer_game.gd" id="1_vkli0"]
+[ext_resource type="Texture2D" uid="uid://d1mtw2tghj7af" path="res://cutscenes/computer scene.png" id="2_mgikd"]
+[ext_resource type="Texture2D" uid="uid://dqe06d7fgqhoy" path="res://cutscenes/computer scene_blink.png" id="3_1k3rx"]
+[ext_resource type="Texture2D" uid="uid://bi70iw3hi05kg" path="res://cutscenes/ears acquired.png" id="4_rlob6"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vkli0")
+
+[node name="ComputerScene" type="Sprite2D" parent="."]
+position = Vector2(575.444, 321)
+scale = Vector2(0.598148, 0.598148)
+texture = ExtResource("2_mgikd")
+
+[node name="ComputerSceneBlink" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 323)
+scale = Vector2(0.595139, 0.595139)
+texture = ExtResource("3_1k3rx")
+
+[node name="EarsAcquired" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577.667, 328.75)
+scale = Vector2(0.600463, 0.600463)
+texture = ExtResource("4_rlob6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
