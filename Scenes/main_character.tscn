@@ -1,7 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://7t4we2jtyqiq"]
+[gd_scene load_steps=22 format=3 uid="uid://7t4we2jtyqiq"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_equc0"]
-[ext_resource type="Texture2D" uid="uid://csyr0khkh01r4" path="res://Sprites/player_sprite_everything/player_body_whole.png" id="2_1d4kh"]
 [ext_resource type="Texture2D" uid="uid://indmyita6fxb" path="res://Sprites/player_sprite_everything/player_ears.png" id="3_encc5"]
 [ext_resource type="Texture2D" uid="uid://dw0sot8cmc85f" path="res://Sprites/player_sprite_everything/player_torso.png" id="3_xjx8w"]
 [ext_resource type="Texture2D" uid="uid://do42rwuf7tc7s" path="res://Sprites/player_sprite_everything/player_face.png" id="4_scisn"]
@@ -83,12 +82,6 @@ animations = [{
 collision_mask = 3
 script = ExtResource("1_equc0")
 
-[node name="PlayerBodyWhole" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(38, 63)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("2_1d4kh")
-
 [node name="Torso" type="Node2D" parent="."]
 
 [node name="TorsoSprite" type="Sprite2D" parent="Torso"]
@@ -119,10 +112,11 @@ z_index = -1
 position = Vector2(38.007, 63.1977)
 scale = Vector2(0.04, 0.04)
 
-[node name="leftleg" type="AnimatedSprite2D" parent="Legs"]
+[node name="rightleg" type="AnimatedSprite2D" parent="Legs"]
+z_index = 2
 sprite_frames = SubResource("SpriteFrames_sdref")
 
-[node name="rightleg" type="AnimatedSprite2D" parent="Legs"]
+[node name="leftleg" type="AnimatedSprite2D" parent="Legs"]
 sprite_frames = SubResource("SpriteFrames_awrvj")
 
 [node name="leftfoot" type="AnimatedSprite2D" parent="Legs"]

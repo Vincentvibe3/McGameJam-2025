@@ -1,17 +1,13 @@
 extends Player
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const sprint_multiplier = 2
 const box_pushing = 60
 
-var top_down = 0 #use to make alternate controls for topdown
-var flappy_bird = 0 #use to make alternate controls for flappy_bird
 @onready var legs: Node2D = $Legs
 @onready var torso: Node2D = $Torso
 @onready var face: Node2D = $Face
-var need_to_float = 0
 @onready var torso_collision: CollisionShape2D = $TorsoCollision
 @onready var legs_collision: CollisionShape2D = $LegsCollision
 @onready var ears: Node2D = $ears
@@ -45,7 +41,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# Add the gravity.
-	if not is_on_floor() and not need_to_float:
+	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	# Handle jump.

@@ -1,20 +1,71 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8lva6106chd6"]
+[gd_scene load_steps=20 format=3 uid="uid://b8lva6106chd6"]
 
 [ext_resource type="Script" path="res://Scripts/top_down_movement.gd" id="1_4uorj"]
-[ext_resource type="Texture2D" uid="uid://csyr0khkh01r4" path="res://Sprites/player_sprite_everything/player_body_whole.png" id="2_blr7p"]
+[ext_resource type="Texture2D" uid="uid://dw0sot8cmc85f" path="res://Sprites/player_sprite_everything/player_torso.png" id="2_83ntv"]
+[ext_resource type="Texture2D" uid="uid://do42rwuf7tc7s" path="res://Sprites/player_sprite_everything/player_face.png" id="3_q5wyp"]
+[ext_resource type="Texture2D" uid="uid://indmyita6fxb" path="res://Sprites/player_sprite_everything/player_ears.png" id="4_m2qoq"]
+[ext_resource type="Texture2D" uid="uid://ccasuidg8egfp" path="res://Sprites/player_sprite_everything/player_leg_l.png" id="5_7r1vu"]
+[ext_resource type="Texture2D" uid="uid://g33t71mq8wh5" path="res://Sprites/player_sprite_everything/player_leg_r.png" id="6_bp8by"]
+[ext_resource type="Texture2D" uid="uid://dtahnwgmkafj7" path="res://Sprites/player_sprite_everything/player_foot_l.png" id="7_d48vs"]
+[ext_resource type="Texture2D" uid="uid://ctur1tckxubyo" path="res://Sprites/player_sprite_everything/player_foot_r.png" id="8_kwfdv"]
+[ext_resource type="Texture2D" uid="uid://1imdataxgk3a" path="res://Sprites/player_sprite_everything/player_eyes_forwards.png" id="9_clrga"]
+[ext_resource type="Texture2D" uid="uid://crdao2ari0ujn" path="res://Sprites/player_sprite_everything/player_hand_l.png" id="10_nsg12"]
+[ext_resource type="Texture2D" uid="uid://q31lbh3r5x1i" path="res://Sprites/player_sprite_everything/player_hand_r.png" id="11_diynx"]
+[ext_resource type="Texture2D" uid="uid://bnow5xhwohh0p" path="res://Sprites/player_sprite_everything/player_arm_l.png" id="12_im410"]
+[ext_resource type="Texture2D" uid="uid://c0ikoroq3ov7a" path="res://Sprites/player_sprite_everything/player_arm_r.png" id="13_jl3cp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c83b0"]
-size = Vector2(902, 284)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_52b3d"]
-atlas = ExtResource("2_blr7p")
-region = Rect2(0, 0, 1140, 3064)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_tvaxj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_l01iq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_52b3d")
+"texture": ExtResource("5_7r1vu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wr08e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bp8by")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82svh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_d48vs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pawcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kwfdv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es5jk"]
+size = Vector2(34, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4hjoc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_clrga")
 }],
 "loop": true,
 "name": &"default",
@@ -24,10 +75,84 @@ animations = [{
 [node name="TopDownPlayerController" type="CharacterBody2D"]
 script = ExtResource("1_4uorj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-20, -10)
-shape = SubResource("RectangleShape2D_c83b0")
+[node name="Torso" type="Node2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-38, -1351)
-sprite_frames = SubResource("SpriteFrames_tvaxj")
+[node name="TorsoSprite" type="Sprite2D" parent="Torso"]
+z_index = 1
+position = Vector2(37.7999, 63.0992)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_83ntv")
+
+[node name="Face" type="Node2D" parent="."]
+position = Vector2(39.1805, 13.5854)
+scale = Vector2(0.04, 0.04)
+
+[node name="FaceSprite" type="Sprite2D" parent="Face"]
+z_index = 1
+position = Vector2(-26.881, 1233.54)
+texture = ExtResource("3_q5wyp")
+
+[node name="ears" type="Node2D" parent="."]
+
+[node name="PlayerEars" type="Sprite2D" parent="ears"]
+z_index = 2
+position = Vector2(37.9675, 64.1383)
+scale = Vector2(0.0408, 0.0408)
+texture = ExtResource("4_m2qoq")
+
+[node name="Legs" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(38.007, 63.1977)
+scale = Vector2(0.04, 0.04)
+
+[node name="rightleg" type="AnimatedSprite2D" parent="Legs"]
+z_index = 2
+sprite_frames = SubResource("SpriteFrames_l01iq")
+
+[node name="leftleg" type="AnimatedSprite2D" parent="Legs"]
+sprite_frames = SubResource("SpriteFrames_wr08e")
+
+[node name="leftfoot" type="AnimatedSprite2D" parent="Legs"]
+z_index = -2
+sprite_frames = SubResource("SpriteFrames_82svh")
+
+[node name="rightfoot" type="AnimatedSprite2D" parent="Legs"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_pawcj")
+
+[node name="topdowncollision" type="CollisionShape2D" parent="."]
+position = Vector2(38, 115.5)
+shape = SubResource("RectangleShape2D_es5jk")
+
+[node name="eyes" type="Node2D" parent="."]
+position = Vector2(32.2609, 48.3539)
+scale = Vector2(0.135, 0.135)
+
+[node name="Eyes" type="AnimatedSprite2D" parent="eyes"]
+z_index = 2
+position = Vector2(41.7015, 7.86472)
+scale = Vector2(0.297567, 0.213235)
+sprite_frames = SubResource("SpriteFrames_4hjoc")
+
+[node name="arms" type="Node2D" parent="."]
+
+[node name="PlayerHandL" type="Sprite2D" parent="arms"]
+position = Vector2(37.7785, 62.8424)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("10_nsg12")
+
+[node name="PlayerHandR" type="Sprite2D" parent="arms"]
+position = Vector2(37.7785, 63.123)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("11_diynx")
+
+[node name="PlayerArmL" type="Sprite2D" parent="arms"]
+position = Vector2(37.7211, 62.6656)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("12_im410")
+
+[node name="PlayerArmR" type="Sprite2D" parent="arms"]
+z_index = 2
+position = Vector2(38.0171, 62.9307)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("13_jl3cp")
