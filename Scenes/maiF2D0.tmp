@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://7t4we2jtyqiq"]
+[gd_scene load_steps=47 format=3 uid="uid://7t4we2jtyqiq"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_equc0"]
 [ext_resource type="Texture2D" uid="uid://indmyita6fxb" path="res://Sprites/player_sprite_everything/player_ears.png" id="3_encc5"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://dnf7ocg8k3kqq" path="res://Sprites/player_animation runs/player_run_torso.png" id="15_sv2i4"]
 [ext_resource type="Texture2D" uid="uid://t53jvggrkfdo" path="res://Sprites/player_animation runs/player_run_arms.png" id="15_x1kpa"]
 [ext_resource type="Texture2D" uid="uid://dk17g544eusvk" path="res://Sprites/player_animation runs/player_run_legs.png" id="16_dnd7c"]
-[ext_resource type="Texture2D" uid="uid://b4r6ylsdjdqqc" path="res://Sprites/player_animation runs/player_run_legs_torso.png" id="17_uqdfj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sdref"]
 animations = [{
@@ -94,10 +93,6 @@ region = Rect2(0, 0, 3064, 3064)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gsi14"]
 atlas = ExtResource("16_dnd7c")
-region = Rect2(0, 0, 3064, 3064)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c7n4m"]
-atlas = ExtResource("17_uqdfj")
 region = Rect2(0, 0, 3064, 3064)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvrct"]
@@ -188,14 +183,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"justlegs",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c7n4m")
-}],
-"loop": true,
-"name": &"legstorso",
 "speed": 5.0
 }, {
 "frames": [{
@@ -359,4 +346,4 @@ scale = Vector2(0.04, 0.04)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animations"]
 sprite_frames = SubResource("SpriteFrames_tnrg7")
-animation = &"legstorso"
+animation = &"arms+torso"

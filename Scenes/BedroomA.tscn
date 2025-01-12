@@ -745,16 +745,6 @@ position = Vector2(-1334.73, -95.225)
 scale = Vector2(5.345, 5.345)
 shape = SubResource("RectangleShape2D_74v21")
 
-[node name="TopDownPlayerController" parent="AssetLayer" instance=ExtResource("16_yqsvm")]
-z_index = 1
-position = Vector2(-274, -145)
-scale = Vector2(0.1, 0.1)
-collision_layer = 5
-collision_mask = 7
-
-[node name="Camera2D" type="Camera2D" parent="AssetLayer/TopDownPlayerController"]
-zoom = Vector2(0.91, 0.91)
-
 [node name="ToiletA" type="StaticBody2D" parent="AssetLayer"]
 visibility_layer = 2
 
@@ -806,6 +796,13 @@ shape = SubResource("RectangleShape2D_48u62")
 position = Vector2(386, -516)
 scale = Vector2(0.170608, 0.170608)
 texture = ExtResource("15_rqjju")
+
+[node name="TopDownPlayerController2" parent="AssetLayer" instance=ExtResource("16_yqsvm")]
+position = Vector2(-274, -145)
+
+[node name="Camera2D" type="Camera2D" parent="AssetLayer/TopDownPlayerController2"]
+scale = Vector2(0.01, 0.01)
+zoom = Vector2(0.91, 0.91)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-97, 540)
