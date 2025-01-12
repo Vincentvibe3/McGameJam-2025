@@ -2,18 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bnow5xhwohh0p" path="res://Sprites/player_sprite_everything/player_arm_l.png" id="1_dbdrv"]
 [ext_resource type="Texture2D" uid="uid://crdao2ari0ujn" path="res://Sprites/player_sprite_everything/player_hand_l.png" id="2_mqcpi"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsaup"]
-size = Vector2(203, 1113)
+[ext_resource type="PackedScene" uid="uid://w8fwoifjira4" path="res://Scenes/limb_area.tscn" id="3_o8qjk"]
 
 [node name="DangerArmL" type="Node2D"]
 scale = Vector2(0.145, 0.145)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(168.5, 64.5)
-shape = SubResource("RectangleShape2D_nsaup")
 
 [node name="PlayerArmL" type="Sprite2D" parent="."]
 position = Vector2(-130, 403.053)
@@ -22,3 +14,6 @@ texture = ExtResource("1_dbdrv")
 [node name="PlayerHandL" type="Sprite2D" parent="."]
 position = Vector2(-122.105, 426.737)
 texture = ExtResource("2_mqcpi")
+
+[node name="LimbArea" parent="." instance=ExtResource("3_o8qjk")]
+position = Vector2(-937.931, 0)

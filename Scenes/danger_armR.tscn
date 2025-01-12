@@ -2,18 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c0ikoroq3ov7a" path="res://Sprites/player_sprite_everything/player_arm_r.png" id="1_071cm"]
 [ext_resource type="Texture2D" uid="uid://q31lbh3r5x1i" path="res://Sprites/player_sprite_everything/player_hand_r.png" id="2_dmqsv"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsaup"]
-size = Vector2(203, 1113)
+[ext_resource type="PackedScene" uid="uid://w8fwoifjira4" path="res://Scenes/limb_area.tscn" id="3_vovm0"]
 
 [node name="DangerArmR" type="Node2D"]
 scale = Vector2(0.145, 0.145)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(168.5, 64.5)
-shape = SubResource("RectangleShape2D_nsaup")
 
 [node name="PlayerArmR" type="Sprite2D" parent="."]
 position = Vector2(465, 389)
@@ -22,3 +14,12 @@ texture = ExtResource("1_071cm")
 [node name="PlayerHandR" type="Sprite2D" parent="."]
 position = Vector2(465, 389)
 texture = ExtResource("2_dmqsv")
+
+[node name="LimbArea" parent="." instance=ExtResource("3_vovm0")]
+position = Vector2(-958.621, -275.862)
+
+[node name="CollisionShape2D" parent="LimbArea" index="0"]
+position = Vector2(1112, 334.655)
+scale = Vector2(1, 1)
+
+[editable path="LimbArea"]
