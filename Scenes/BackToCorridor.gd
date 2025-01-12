@@ -9,7 +9,6 @@ class_name BackToCorridor
 
 func _on_body_entered(body:Node2D) -> void:
 	if body is Player:
-		print("heelp")
 		if !minigame:
 			PlayerProgress.call_deferred("move_to",node_name,body.position, scene_name, minigameExit)
 		else:
