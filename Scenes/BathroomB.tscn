@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ivdx803dopou" path="res://Sprites/walls/outercorner.png" id="5_773aq"]
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="6_0f1sk"]
 [ext_resource type="Texture2D" uid="uid://cnn4upu631owr" path="res://Sprites/walls/tilemapwhitebottomborder.png" id="7_68sk8"]
-[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="8_ywumu"]
+[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_ywumu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vg5ol"]
 texture = ExtResource("1_rm44e")

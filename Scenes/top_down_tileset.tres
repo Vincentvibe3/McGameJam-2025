@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=13 format=3 uid="uid://bpud7rap6w3q4"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_xdwi2"]
-[ext_resource type="Texture2D" uid="uid://bl633dp33xbe" path="res://Sprites/wall assets/wall edge outer corner_100x100.png" id="3_rv60f"]
-[ext_resource type="Texture2D" uid="uid://2ak64unub0i6" path="res://Sprites/wall assets/wall edge corner_100x100.png" id="5_nuxyr"]
+[ext_resource type="Texture2D" uid="uid://b5sjk5ce5rd8j" path="res://Sprites/wall assets/wall edge outer corner_100x100.png" id="3_rv60f"]
+[ext_resource type="Texture2D" uid="uid://8t6l6e1okx8d" path="res://Sprites/wall assets/wall edge corner_100x100.png" id="5_nuxyr"]
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="7_txgdd"]
-[ext_resource type="Texture2D" uid="uid://dyheuvyu3nywo" path="res://Sprites/wall assets/wall_100x100.png" id="8_3rhgf"]
-[ext_resource type="Texture2D" uid="uid://cwoht3sveqapn" path="res://Sprites/wall assets/wall edge_100x100.png" id="9_ykijh"]
+[ext_resource type="Texture2D" uid="uid://dnquxcf0un6pl" path="res://Sprites/wall assets/wall_100x100.png" id="8_3rhgf"]
+[ext_resource type="Texture2D" uid="uid://cksoa58e5ia52" path="res://Sprites/wall assets/wall edge_100x100.png" id="9_ykijh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fx06s"]
 texture = ExtResource("1_xdwi2")
@@ -73,7 +73,7 @@ tile_size = Vector2i(100, 100)
 physics_layer_0/collision_layer = 1
 sources/5 = SubResource("TileSetAtlasSource_oahtb")
 sources/9 = SubResource("TileSetAtlasSource_obv66")
-sources/0 = SubResource("TileSetAtlasSource_fx06s")
 sources/3 = SubResource("TileSetAtlasSource_78fii")
 sources/8 = SubResource("TileSetAtlasSource_kfrbj")
 sources/11 = SubResource("TileSetAtlasSource_rqyow")
+sources/1 = SubResource("TileSetAtlasSource_fx06s")

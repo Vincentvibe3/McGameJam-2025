@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_3mc8l"]
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_urjt1"]
 [ext_resource type="Texture2D" uid="uid://cy852wx3ctfrl" path="res://Sprites/walls/tilemapwhite.png" id="3_84sdl"]
-[ext_resource type="Texture2D" uid="uid://2ak64unub0i6" path="res://Sprites/wall assets/wall edge corner_100x100.png" id="4_e4qbn"]
-[ext_resource type="Texture2D" uid="uid://bl633dp33xbe" path="res://Sprites/wall assets/wall edge outer corner_100x100.png" id="5_dvaq5"]
+[ext_resource type="Texture2D" uid="uid://8t6l6e1okx8d" path="res://Sprites/wall assets/wall edge corner_100x100.png" id="4_e4qbn"]
+[ext_resource type="Texture2D" uid="uid://b5sjk5ce5rd8j" path="res://Sprites/wall assets/wall edge outer corner_100x100.png" id="5_dvaq5"]
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="6_0jtyc"]
 [ext_resource type="Texture2D" uid="uid://bi3psislukukc" path="res://Sprites/wall assets/wall edge outer corner.png" id="6_qset6"]
-[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="8_2oef2"]
-[ext_resource type="Texture2D" uid="uid://dyheuvyu3nywo" path="res://Sprites/wall assets/wall_100x100.png" id="8_gfy6c"]
-[ext_resource type="Texture2D" uid="uid://cwoht3sveqapn" path="res://Sprites/wall assets/wall edge_100x100.png" id="9_v53t0"]
+[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_2oef2"]
+[ext_resource type="Texture2D" uid="uid://dnquxcf0un6pl" path="res://Sprites/wall assets/wall_100x100.png" id="8_gfy6c"]
+[ext_resource type="Texture2D" uid="uid://cksoa58e5ia52" path="res://Sprites/wall assets/wall edge_100x100.png" id="9_v53t0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fx06s"]
 texture = ExtResource("1_3mc8l")
