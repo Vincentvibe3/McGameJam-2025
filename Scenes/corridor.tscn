@@ -8,6 +8,9 @@
 [ext_resource type="Script" path="res://Scripts/door.gd" id="5_rbmnj"]
 [ext_resource type="TileSet" uid="uid://bnen0y6a4la4a" path="res://Scenes/side_tile_set.tres" id="5_s7xt2"]
 [ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="6_qjosj"]
+[ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="5_yiubt"]
+[ext_resource type="Texture2D" uid="uid://bxqfw4nc3cgad" path="res://Sprites/floor/floor_corridor_100x100.png" id="6_tlm4p"]
+[ext_resource type="Texture2D" uid="uid://dl6chqbcyie3q" path="res://Sprites/floor/floor_corridor_foreground_100x100.png" id="7_huwqh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
@@ -68,6 +71,7 @@ tile_set = ExtResource("5_s7xt2")
 position = Vector2(752, -333)
 script = ExtResource("5_rbmnj")
 node_name = "BathroomASpawn"
+scene_name = "res://Scenes/MainTopDown.tscn"
 
 [node name="Label" parent="Door1/Control" index="0"]
 text = "Press e to open door"
@@ -79,7 +83,8 @@ shape = SubResource("RectangleShape2D_s01p6")
 [node name="Door2" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(1364, -363)
 script = ExtResource("5_rbmnj")
-node_name = "BathroomBSpawn"
+node_name = "theSpawn"
+scene_name = "res://Scenes/flappy_bird.tscn"
 
 [node name="Label" parent="Door2/Control" index="0"]
 text = "Press e to open door"
@@ -92,6 +97,7 @@ shape = SubResource("RectangleShape2D_k1li6")
 position = Vector2(2054, -333)
 script = ExtResource("5_rbmnj")
 node_name = ""
+scene_name = ""
 
 [node name="Label" parent="Door3/Control" index="0"]
 text = "Press e to open door"
@@ -104,6 +110,7 @@ shape = SubResource("RectangleShape2D_s01p6")
 position = Vector2(2666, -363)
 script = ExtResource("5_rbmnj")
 node_name = ""
+scene_name = ""
 
 [node name="Label" parent="Door4/Control" index="0"]
 text = "Press e to open door"
@@ -116,6 +123,7 @@ shape = SubResource("RectangleShape2D_k1li6")
 position = Vector2(3157, -333)
 script = ExtResource("5_rbmnj")
 node_name = ""
+scene_name = ""
 
 [node name="Label" parent="Door5/Control" index="0"]
 text = "Press e to open door"

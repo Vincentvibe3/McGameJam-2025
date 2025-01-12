@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckh1onhh1c6tn"]
+[gd_scene load_steps=5 format=3 uid="uid://ckh1onhh1c6tn"]
 
 [ext_resource type="Texture2D" uid="uid://bnow5xhwohh0p" path="res://Sprites/player_sprite_everything/player_arm_l.png" id="1_dbdrv"]
+[ext_resource type="Script" path="res://Scenes/danger_limb_script.gd" id="1_sxtg1"]
 [ext_resource type="Texture2D" uid="uid://crdao2ari0ujn" path="res://Sprites/player_sprite_everything/player_hand_l.png" id="2_mqcpi"]
 [ext_resource type="PackedScene" uid="uid://w8fwoifjira4" path="res://Scenes/limb_area.tscn" id="3_o8qjk"]
 
 [node name="DangerArmL" type="Node2D"]
 scale = Vector2(0.145, 0.145)
+script = ExtResource("1_sxtg1")
 
 [node name="PlayerArmL" type="Sprite2D" parent="."]
 position = Vector2(-130, 403.053)
