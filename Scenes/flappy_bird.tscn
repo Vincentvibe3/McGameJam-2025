@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b552rnbooexf1" path="res://Scenes/danger_armR.tscn" id="3_g4d8p"]
 [ext_resource type="PackedScene" uid="uid://cktgjyo7rvgk8" path="res://Scenes/danger_LegL.tscn" id="3_gg1hs"]
 [ext_resource type="PackedScene" uid="uid://n6w6sc8g47p0" path="res://Scenes/danger_LegR.tscn" id="4_gmagp"]
-[ext_resource type="PackedScene" uid="uid://dmolhf7aofnsx" path="res://Scenes/Flappy_bird_character.tscn" id="5_t2t5j"]
+[ext_resource type="PackedScene" uid="uid://dq6lo6ncyi6ss" path="res://Scenes/Flappy_bird_character.tscn" id="5_t2t5j"]
 [ext_resource type="Texture2D" uid="uid://c3q0gccnea4tb" path="res://Sprites/darkness4eyelids.png" id="8_flums"]
 
 [sub_resource type="Animation" id="Animation_vc8vu"]

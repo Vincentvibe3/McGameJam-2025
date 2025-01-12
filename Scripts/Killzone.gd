@@ -15,4 +15,4 @@ func _process(delta: float) -> void:
 func _on_body_entered(body:Node2D) -> void:
 	if body is Player:
 		enemy.spawned = true
-		enemy.position = body.position - Vector2(2000, -50)
+		enemy.position = body.position - Vector2(2000, -20)

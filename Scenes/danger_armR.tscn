@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/danger_limb_script.gd" id="1_6cjbq"]
 [ext_resource type="Texture2D" uid="uid://c0ikoroq3ov7a" path="res://Sprites/player_sprite_everything/player_arm_r.png" id="1_071cm"]
 [ext_resource type="Texture2D" uid="uid://q31lbh3r5x1i" path="res://Sprites/player_sprite_everything/player_hand_r.png" id="2_dmqsv"]
-[ext_resource type="PackedScene" uid="uid://w8fwoifjira4" path="res://Scenes/limb_area.tscn" id="3_vovm0"]
+[ext_resource type="PackedScene" uid="uid://cpmc3pg0am7ao" path="res://Scenes/limb_area.tscn" id="3_vovm0"]
 
 [node name="DangerArmR" type="Node2D"]
 scale = Vector2(0.145, 0.145)

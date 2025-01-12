@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmolhf7aofnsx"]
+[gd_scene load_steps=8 format=3 uid="uid://dq6lo6ncyi6ss"]
 
 [ext_resource type="Script" path="res://Scripts/Flappy_bird_main_character.gd" id="1_1u41w"]
 [ext_resource type="Texture2D" uid="uid://or3qxwm1xxc7" path="res://Sprites/temp_eye.png" id="2_ialkc"]
