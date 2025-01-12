@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://c0w23mi6tcdkn"]
+[gd_scene load_steps=58 format=4 uid="uid://c0w23mi6tcdkn"]
 
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_5qnhy"]
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="2_prqif"]
@@ -14,16 +14,19 @@
 [ext_resource type="Texture2D" uid="uid://xcljel81p1ws" path="res://Sprites/furniture/toiletA.png" id="10_n5oby"]
 [ext_resource type="Texture2D" uid="uid://dge556056omd" path="res://Sprites/furniture/bed_idle.png" id="11_e7gvt"]
 [ext_resource type="Texture2D" uid="uid://cd8ubvtdnxcxg" path="res://Sprites/furniture/pianoA.png" id="12_eomly"]
+[ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="15_rqjju"]
 [ext_resource type="PackedScene" uid="uid://dhpun4oxyckd3" path="res://Scenes/sound_zone.tscn" id="16_8fj31"]
 [ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
 [ext_resource type="AudioStream" uid="uid://d3s3aieix1ohy" path="res://Audio/piano-music.mp3" id="17_0nbvl"]
 [ext_resource type="Texture2D" uid="uid://dxu6vxr70faai" path="res://Sprites/hand_playing_piano.png" id="18_adupo"]
+[ext_resource type="Script" path="res://Scripts/piano_sound_zone.gd" id="18_vowox"]
 [ext_resource type="Script" path="res://Scenes/hand_job.gd" id="18_vtns5"]
 [ext_resource type="Texture2D" uid="uid://b2nk3p56cfok7" path="res://Sprites/hand_surprised.png" id="19_03cal"]
 [ext_resource type="Texture2D" uid="uid://ct3pchary0rir" path="res://Sprites/hand_running.png" id="20_nqcpe"]
 [ext_resource type="Script" path="res://Scripts/the_good_zone_4_hands.gd" id="22_qgfwh"]
-[ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="15_rqjju"]
-[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
+[ext_resource type="Script" path="res://Scripts/hands_to_collect.gd" id="24_u74p1"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="25_wro8x"]
+[ext_resource type="Script" path="res://Scripts/interactable4hands.gd" id="26_tltxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4wiy"]
 texture = ExtResource("2_prqif")
@@ -696,10 +699,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vanf"]
+size = Vector2(132.5, 117)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ariwj"]
-size = Vector2(321.5, 92.5)
+size = Vector2(217.75, 104)
 
 [node name="Node2D2" type="Node2D"]
+
 [node name="Node2D3" type="Node2D" parent="."]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
@@ -740,9 +747,10 @@ shape = SubResource("RectangleShape2D_74v21")
 
 [node name="TopDownPlayerController" parent="AssetLayer" instance=ExtResource("16_yqsvm")]
 z_index = 1
-position = Vector2(-316, 49)
+position = Vector2(-274, -145)
 scale = Vector2(0.1, 0.1)
-collision_mask = 3
+collision_layer = 5
+collision_mask = 7
 
 [node name="Camera2D" type="Camera2D" parent="AssetLayer/TopDownPlayerController"]
 zoom = Vector2(0.91, 0.91)
@@ -806,6 +814,7 @@ node_name = "Door1"
 
 [node name="PianoSoundZone" parent="." instance=ExtResource("16_8fj31")]
 position = Vector2(-84, 194)
+script = ExtResource("18_vowox")
 
 [node name="CollisionShape2D" parent="PianoSoundZone" index="0"]
 position = Vector2(-383, -562.5)
@@ -816,8 +825,8 @@ stream = ExtResource("17_0nbvl")
 parameters/looping = true
 
 [node name="PianoBadZone" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PianoBadZone"]
 position = Vector2(53, -78.25)
@@ -858,17 +867,32 @@ sprite_frames = SubResource("SpriteFrames_vfggc")
 autoplay = "default"
 frame_progress = 0.917177
 
+[node name="HandsToCollect" type="Node2D" parent="HandJob"]
+position = Vector2(469.389, 357.321)
+script = ExtResource("24_u74p1")
+
+[node name="Interactable" parent="HandJob/HandsToCollect" instance=ExtResource("25_wro8x")]
+script = ExtResource("26_tltxe")
+
+[node name="Label" parent="HandJob/HandsToCollect/Interactable/Control" index="0"]
+z_index = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandJob/HandsToCollect/Interactable"]
+position = Vector2(274, -46)
+shape = SubResource("RectangleShape2D_2vanf")
+
 [node name="TheGoodZone4Hands" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("22_qgfwh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TheGoodZone4Hands"]
-position = Vector2(341, -360)
+position = Vector2(392.875, -338)
 shape = SubResource("RectangleShape2D_ariwj")
-
-[node name="collecthandsarea" type="Area2D" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="PianoBadZone" to="HandJob" method="_on_piano_bad_zone_body_entered"]
 [connection signal="body_entered" from="TheGoodZone4Hands" to="TheGoodZone4Hands" method="_on_body_entered"]
 
 [editable path="PianoSoundZone"]
+[editable path="HandJob/HandsToCollect/Interactable"]
