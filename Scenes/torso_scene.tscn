@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dp1b68bkh12ix"]
+[gd_scene load_steps=10 format=3 uid="uid://d00i42lfhlnfa"]
 
 [ext_resource type="Script" path="res://Scripts/torso_scene.gd" id="1_lh36g"]
 [ext_resource type="Texture2D" uid="uid://b280sdnuc3td3" path="res://Sprites/temp_torso.png" id="2_65rjd"]
-[ext_resource type="PackedScene" uid="uid://bpq1fjb2hmim2" path="res://Scenes/selectable_obj.tscn" id="3_ms45g"]
+[ext_resource type="PackedScene" uid="uid://br8pla7f685og" path="res://Scenes/selectable_obj.tscn" id="3_ms45g"]
 [ext_resource type="Texture2D" uid="uid://do5i5bv2cbu0o" path="res://Sprites/tempstrings/string1.png" id="4_aedb2"]
 [ext_resource type="Texture2D" uid="uid://bmh7uiu6lf8kg" path="res://Sprites/tempstrings/string1Highlighted.png" id="5_527l3"]
 [ext_resource type="Texture2D" uid="uid://dhwabmwt45f8v" path="res://Sprites/tempstrings/string2.png" id="6_tqwbm"]
