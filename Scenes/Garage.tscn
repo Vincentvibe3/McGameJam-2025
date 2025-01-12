@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://c3luqnp1sfr4"]
+[gd_scene load_steps=28 format=4 uid="uid://c3luqnp1sfr4"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_3mc8l"]
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_urjt1"]
@@ -13,6 +13,8 @@
 [ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="10_o4ra1"]
 [ext_resource type="Texture2D" uid="uid://k5ch0itpcsac" path="res://Sprites/furniture/car.png" id="11_x3miq"]
 [ext_resource type="Texture2D" uid="uid://cb2xltttckf4j" path="res://Sprites/anim/hanged_feet.png" id="13_5ltxa"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="14_whmkc"]
+[ext_resource type="Script" path="res://Scripts/GiveLegs.gd" id="15_gffr3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fx06s"]
 texture = ExtResource("1_3mc8l")
@@ -664,7 +666,10 @@ sources/11 = SubResource("TileSetAtlasSource_rqyow")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nkmj"]
 size = Vector2(423, 638)
 
-[node name="Node2D4" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnjif"]
+size = Vector2(344, 447.5)
+
+[node name="Node2D5" type="Node2D"]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_5ihuw")
@@ -701,3 +706,11 @@ shape = SubResource("RectangleShape2D_5nkmj")
 position = Vector2(-30, -1095)
 scale = Vector2(0.083204, 0.083204)
 texture = ExtResource("13_5ltxa")
+
+[node name="Interactable" parent="." instance=ExtResource("14_whmkc")]
+position = Vector2(-34, -1190)
+script = ExtResource("15_gffr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(11, 240.25)
+shape = SubResource("RectangleShape2D_cnjif")

@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cd8ubvtdnxcxg" path="res://Sprites/furniture/pianoA.png" id="12_eomly"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="15_rqjju"]
 [ext_resource type="PackedScene" uid="uid://dhpun4oxyckd3" path="res://Scenes/sound_zone.tscn" id="16_8fj31"]
-[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
+[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
 [ext_resource type="AudioStream" uid="uid://d3s3aieix1ohy" path="res://Audio/piano-music.mp3" id="17_0nbvl"]
 [ext_resource type="Texture2D" uid="uid://dxu6vxr70faai" path="res://Sprites/hand_playing_piano.png" id="18_adupo"]
 [ext_resource type="Script" path="res://Scripts/piano_sound_zone.gd" id="18_vowox"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://ct3pchary0rir" path="res://Sprites/hand_running.png" id="20_nqcpe"]
 [ext_resource type="Script" path="res://Scripts/the_good_zone_4_hands.gd" id="22_qgfwh"]
 [ext_resource type="Script" path="res://Scripts/hands_to_collect.gd" id="24_u74p1"]
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="25_wro8x"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="25_wro8x"]
 [ext_resource type="Script" path="res://Scripts/interactable4hands.gd" id="26_tltxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4wiy"]
@@ -705,7 +705,7 @@ size = Vector2(132.5, 117)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ariwj"]
 size = Vector2(217.75, 104)
 
-[node name="Node2D3" type="Node2D"]
+[node name="Node2D5" type="Node2D"]
 
 [node name="Node2D3" type="Node2D" parent="."]
 
