@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://gnbmpvo1m06n" path="res://Sprites/mannequin sprite.png" id="8_c5cxq"]
 [ext_resource type="Texture2D" uid="uid://co6k502vxqhww" path="res://Sprites/mannequin sprite without rope.png" id="9_gqc48"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="10_auj83"]
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="10_f0cx1"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="10_f0cx1"]
 [ext_resource type="Script" path="res://Scripts/InteractGoTo.gd" id="11_5su8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntg8b"]

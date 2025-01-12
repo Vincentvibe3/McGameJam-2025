@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 [ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="5_rbmnj"]
-[ext_resource type="TileSet" uid="uid://bnen0y6a4la4a" path="res://Scenes/side_tile_set.tres" id="5_s7xt2"]
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="6_qjosj"]
+[ext_resource type="TileSet" uid="uid://duy4w4dkxc0cg" path="res://Scenes/side_tile_set.tres" id="5_s7xt2"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="6_qjosj"]
 [ext_resource type="Script" path="res://Scripts/end.gd" id="8_cw7xo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2dbhxn6r731"]
+[gd_scene load_steps=3 format=3 uid="uid://caku6q2r7mdt1"]
 
 [ext_resource type="VideoStream" path="res://Sprites/mannequin scene/mannequin torso acquired.ogv" id="1_663x5"]
 [ext_resource type="Script" path="res://Scenes/cutscenedone.gd" id="1_fa1p2"]
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fa1p2")
-scene = "res://Scenes/MainTopDown.tscn"
+scene = "res://Scenes/corridor.tscn"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
