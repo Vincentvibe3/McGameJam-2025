@@ -9,6 +9,6 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	sound_zone.get_node("Audio4Zone").stop()
+	piano_sound_zone.get_node("Audio4Zone").stop()
 	animation_player.play("ready2obtain")
 	piano_bad_zone.visible = false
