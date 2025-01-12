@@ -1,17 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgfwyd3n5edpj"]
+[gd_scene load_steps=4 format=3 uid="uid://dgfwyd3n5edpj"]
 
+[ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_h2lf4"]
 [ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="1_oxohe"]
 [ext_resource type="PackedScene" uid="uid://c0w23mi6tcdkn" path="res://Scenes/BedroomA.tscn" id="2_f4tav"]
 
 [node name="MainTopDown" type="Node2D"]
+script = ExtResource("1_h2lf4")
 
-[node name="TopDownPlayerController" parent="." instance=ExtResource("1_oxohe")]
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_oxohe")]
 z_index = 1
 position = Vector2(984, 189)
 scale = Vector2(0.1, 0.1)
 
-[node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
 zoom = Vector2(0.91, 0.91)
 
-[node name="Node2D" parent="." instance=ExtResource("2_f4tav")]
-position = Vector2(1460, 300)
+[node name="BathroomA" parent="." instance=ExtResource("2_f4tav")]
+position = Vector2(1392, 283)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="BathroomASpawn" type="Node2D" parent="Spawns"]
+position = Vector2(1306, 705)
+
+[node name="BathroomBSpawn" type="Node2D" parent="Spawns"]
+position = Vector2(3180, 36.0001)

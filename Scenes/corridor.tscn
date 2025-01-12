@@ -1,21 +1,19 @@
-[gd_scene load_steps=18 format=4 uid="uid://brafu80c2vuoa"]
-[gd_scene load_steps=18 format=4 uid="uid://brafu80c2vuoa"]
+[gd_scene load_steps=19 format=4 uid="uid://brafu80c2vuoa"]
 
+[ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_qvvno"]
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="1_war38"]
 [ext_resource type="PackedScene" uid="uid://cehd56sc07rd6" path="res://Scenes/moveable_box.tscn" id="2_g4s0v"]
 [ext_resource type="PackedScene" uid="uid://dk8g2frejwe5e" path="res://Scenes/enemy.tscn" id="2_gmkme"]
 [ext_resource type="Script" path="res://Scripts/Killzone.gd" id="3_sytxj"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="5_rbmnj"]
 [ext_resource type="Texture2D" uid="uid://bwkrdakshem8l" path="res://Sprites/door/door_animation_sheet_100x100.png" id="5_yiubt"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="6_qjosj"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="6_qjosj"]
 [ext_resource type="Texture2D" uid="uid://bxqfw4nc3cgad" path="res://Sprites/floor/floor_corridor_100x100.png" id="6_tlm4p"]
 [ext_resource type="Texture2D" uid="uid://dl6chqbcyie3q" path="res://Sprites/floor/floor_corridor_foreground_100x100.png" id="7_huwqh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rypva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vye68"]
-size = Vector2(184, 1163)
 size = Vector2(184, 1163)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1xqy"]
@@ -56,25 +54,9 @@ texture_region_size = Vector2i(100, 100)
 0:0/0/texture_origin = Vector2i(0, -10)
 0:0/0/modulate = Color(1, 1, 1, 0.407843)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uj0s4"]
-texture = ExtResource("6_tlm4p")
-texture_region_size = Vector2i(100, 100)
-0:0/next_alternative_id = 2
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -8)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5lk2"]
-texture = ExtResource("7_huwqh")
-texture_region_size = Vector2i(100, 100)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -10)
-0:0/0/modulate = Color(1, 1, 1, 0.407843)
-
 [sub_resource type="TileSet" id="TileSet_wxt4o"]
 tile_size = Vector2i(100, 100)
 sources/1 = SubResource("TileSetAtlasSource_q1xqy")
-sources/2 = SubResource("TileSetAtlasSource_uj0s4")
-sources/3 = SubResource("TileSetAtlasSource_x5lk2")
 sources/2 = SubResource("TileSetAtlasSource_uj0s4")
 sources/3 = SubResource("TileSetAtlasSource_x5lk2")
 
@@ -85,14 +67,14 @@ size = Vector2(242, 356)
 size = Vector2(316, 431)
 
 [node name="Corridor" type="Node2D"]
+script = ExtResource("1_qvvno")
 
-[node name="MainCharacter" parent="." instance=ExtResource("1_war38")]
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_war38")]
 visibility_layer = 2
-position = Vector2(8, -104)
+position = Vector2(8, -39)
 
-[node name="Camera2D" type="Camera2D" parent="MainCharacter"]
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
 position = Vector2(72, 73)
-limit_left = -300
 limit_left = -300
 limit_bottom = 400
 position_smoothing_enabled = true
@@ -106,22 +88,18 @@ shape = SubResource("WorldBoundaryShape2D_rypva")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(4343, 3)
-position = Vector2(4343, 3)
 script = ExtResource("3_sytxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, -143)
 position = Vector2(1, -143)
 shape = SubResource("RectangleShape2D_vye68")
 
 [node name="Moveable_box" parent="." instance=ExtResource("2_g4s0v")]
 visible = false
-visible = false
 position = Vector2(300, -89)
 
 [node name="BackDoors" type="TileMapLayer" parent="."]
 z_index = -1
-tile_map_data = PackedByteArray("AAAHAP7/AQAAAAQAAAAUAP7/AQAAAAQAAAAfAP7/AQAAAAQAAAACAP//AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AgAAAAAAAAAJAP//AgAAAAAAAAAKAP//AgAAAAAAAAALAP//AgAAAAAAAAAMAP//AgAAAAAAAAANAP//AgAAAAAAAAAOAP//AgAAAAAAAAAPAP//AgAAAAAAAAAQAP//AgAAAAAAAAARAP//AgAAAAAAAAASAP//AgAAAAAAAAATAP//AgAAAAAAAAAUAP//AgAAAAAAAAAVAP//AgAAAAAAAAAWAP//AgAAAAAAAAAXAP//AgAAAAAAAAAYAP//AgAAAAAAAAAZAP//AgAAAAAAAAAaAP//AgAAAAAAAAAbAP//AwAAAAAAAAAcAP//AgAAAAAAAAAdAP//AgAAAAAAAAAeAP//AgAAAAAAAAAfAP//AgAAAAAAAAAgAP//AgAAAAAAAAAhAP//AgAAAAAAAAAiAP//AgAAAAAAAAAjAP//AgAAAAAAAAAkAP//AgAAAAAAAAAlAP//AgAAAAAAAAAmAP//AgAAAAAAAAAnAP//AgAAAAAAAAAoAP//AgAAAAAAAAApAP//AgAAAAAAAAAqAP//AgAAAAAAAAArAP//AgAAAAAAAAAsAP//AgAAAAAAAAAtAP//AgAAAAAAAAAuAP//AgAAAAAAAAAvAP//AgAAAAAAAAAwAP//AgAAAAAAAAAxAP//AgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD9////AgAAAAAAAAD8////AgAAAAAAAAD7////AgAAAAAAAAD6////AgAAAAAAAAD5////AgAAAAAAAAD4////AgAAAAAAAAD3////AgAAAAAAAAD2////AgAAAAAAAAD1////AgAAAAAAAAD0////AgAAAAAAAADz////AgAAAAAAAADy////AgAAAAAAAADx////AgAAAAAAAADw////AgAAAAAAAADv////AgAAAAAAAADu////AgAAAAAAAADt////AgAAAAAAAADs////AgAAAAAAAADr////AgAAAAAAAADq////AgAAAAAAAAAyAP//AgAAAAAAAAAzAP//AgAAAAAAAAA0AP//AgAAAAAAAAA1AP//AgAAAAAAAAA2AP//AgAAAAAAAAA3AP//AgAAAAAAAAA4AP//AgAAAAAAAAA5AP//AgAAAAAAAAA6AP//AgAAAAAAAAA7AP//AgAAAAAAAAA8AP//AgAAAAAAAAA9AP//AgAAAAAAAAA+AP//AgAAAAAAAAA/AP//AgAAAAAAAABAAP//AgAAAAAAAABBAP//AgAAAAAAAABCAP//AgAAAAAAAABDAP//AgAAAAAAAABEAP//AgAAAAAAAABFAP//AgAAAAAAAABGAP//AgAAAAAAAABHAP//AgAAAAAAAABIAP//AgAAAAAAAABJAP//AgAAAAAAAABKAP//AgAAAAAAAABLAP//AgAAAAAAAAA=")
 tile_map_data = PackedByteArray("AAAHAP7/AQAAAAQAAAAUAP7/AQAAAAQAAAAfAP7/AQAAAAQAAAACAP//AgAAAAAAAAADAP//AgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AgAAAAAAAAAJAP//AgAAAAAAAAAKAP//AgAAAAAAAAALAP//AgAAAAAAAAAMAP//AgAAAAAAAAANAP//AgAAAAAAAAAOAP//AgAAAAAAAAAPAP//AgAAAAAAAAAQAP//AgAAAAAAAAARAP//AgAAAAAAAAASAP//AgAAAAAAAAATAP//AgAAAAAAAAAUAP//AgAAAAAAAAAVAP//AgAAAAAAAAAWAP//AgAAAAAAAAAXAP//AgAAAAAAAAAYAP//AgAAAAAAAAAZAP//AgAAAAAAAAAaAP//AgAAAAAAAAAbAP//AwAAAAAAAAAcAP//AgAAAAAAAAAdAP//AgAAAAAAAAAeAP//AgAAAAAAAAAfAP//AgAAAAAAAAAgAP//AgAAAAAAAAAhAP//AgAAAAAAAAAiAP//AgAAAAAAAAAjAP//AgAAAAAAAAAkAP//AgAAAAAAAAAlAP//AgAAAAAAAAAmAP//AgAAAAAAAAAnAP//AgAAAAAAAAAoAP//AgAAAAAAAAApAP//AgAAAAAAAAAqAP//AgAAAAAAAAArAP//AgAAAAAAAAAsAP//AgAAAAAAAAAtAP//AgAAAAAAAAAuAP//AgAAAAAAAAAvAP//AgAAAAAAAAAwAP//AgAAAAAAAAAxAP//AgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD9////AgAAAAAAAAD8////AgAAAAAAAAD7////AgAAAAAAAAD6////AgAAAAAAAAD5////AgAAAAAAAAD4////AgAAAAAAAAD3////AgAAAAAAAAD2////AgAAAAAAAAD1////AgAAAAAAAAD0////AgAAAAAAAADz////AgAAAAAAAADy////AgAAAAAAAADx////AgAAAAAAAADw////AgAAAAAAAADv////AgAAAAAAAADu////AgAAAAAAAADt////AgAAAAAAAADs////AgAAAAAAAADr////AgAAAAAAAADq////AgAAAAAAAAAyAP//AgAAAAAAAAAzAP//AgAAAAAAAAA0AP//AgAAAAAAAAA1AP//AgAAAAAAAAA2AP//AgAAAAAAAAA3AP//AgAAAAAAAAA4AP//AgAAAAAAAAA5AP//AgAAAAAAAAA6AP//AgAAAAAAAAA7AP//AgAAAAAAAAA8AP//AgAAAAAAAAA9AP//AgAAAAAAAAA+AP//AgAAAAAAAAA/AP//AgAAAAAAAABAAP//AgAAAAAAAABBAP//AgAAAAAAAABCAP//AgAAAAAAAABDAP//AgAAAAAAAABEAP//AgAAAAAAAABFAP//AgAAAAAAAABGAP//AgAAAAAAAABHAP//AgAAAAAAAABIAP//AgAAAAAAAABJAP//AgAAAAAAAABKAP//AgAAAAAAAABLAP//AgAAAAAAAAA=")
 tile_set = SubResource("TileSet_wxt4o")
 
@@ -129,14 +107,13 @@ tile_set = SubResource("TileSet_wxt4o")
 z_index = -1
 position = Vector2(0, 80)
 scale = Vector2(1.3, 1.3)
-tile_map_data = PackedByteArray("AAAKAP7/AQAAAAQAAQAUAP7/AQAAAAQAAQABAP//AwAAAAAAAAACAP//AwAAAAAAAAADAP//AwAAAAAAAAAEAP//AwAAAAAAAAAFAP//AwAAAAAAAAAGAP//AwAAAAAAAAAHAP//AwAAAAAAAAAIAP//AwAAAAAAAAAJAP//AwAAAAAAAAAKAP//AwAAAAAAAAALAP//AwAAAAAAAAAMAP//AwAAAAAAAAANAP//AwAAAAAAAAAOAP//AwAAAAAAAAAPAP//AwAAAAAAAAAQAP//AwAAAAAAAAARAP//AwAAAAAAAAASAP//AwAAAAAAAAATAP//AwAAAAAAAAAUAP//AwAAAAAAAAAVAP//AwAAAAAAAAAWAP//AwAAAAAAAAAXAP//AwAAAAAAAAAYAP//AwAAAAAAAAAZAP//AwAAAAAAAAAaAP//AwAAAAAAAAAbAP//AwAAAAAAAAAcAP//AwAAAAAAAAAdAP//AwAAAAAAAAAeAP//AwAAAAAAAAAfAP//AwAAAAAAAAAgAP//AwAAAAAAAAAhAP//AwAAAAAAAAAiAP//AwAAAAAAAAAjAP//AwAAAAAAAAAkAP//AwAAAAAAAAAlAP//AwAAAAAAAAAmAP//AwAAAAAAAAAnAP//AwAAAAAAAAAoAP//AwAAAAAAAAApAP//AwAAAAAAAAAqAP//AwAAAAAAAAArAP//AwAAAAAAAAAsAP//AwAAAAAAAAAtAP//AwAAAAAAAAAuAP//AwAAAAAAAAAvAP//AwAAAAAAAAAwAP//AwAAAAAAAAAAAP//AwAAAAAAAAD/////AwAAAAAAAAD+////AwAAAAAAAAD9////AwAAAAAAAAD8////AwAAAAAAAAD7////AwAAAAAAAAD6////AwAAAAAAAAD5////AwAAAAAAAAD4////AwAAAAAAAAD3////AwAAAAAAAAD2////AwAAAAAAAAD1////AwAAAAAAAAD0////AwAAAAAAAADz////AwAAAAAAAADy////AwAAAAAAAADx////AwAAAAAAAADw////AwAAAAAAAADv////AwAAAAAAAAAxAP//AwAAAAAAAAAyAP//AwAAAAAAAAAzAP//AwAAAAAAAAA0AP//AwAAAAAAAAA1AP//AwAAAAAAAAA2AP//AwAAAAAAAAA3AP//AwAAAAAAAAA4AP//AwAAAAAAAAA5AP//AwAAAAAAAAA6AP//AwAAAAAAAAA7AP//AwAAAAAAAAA8AP//AwAAAAAAAAA9AP//AwAAAAAAAAA+AP//AwAAAAAAAAA/AP//AwAAAAAAAABAAP//AwAAAAAAAABBAP//AwAAAAAAAABCAP//AwAAAAAAAAA=")
-tile_map_data = PackedByteArray("AAAKAP7/AQAAAAQAAQAUAP7/AQAAAAQAAQABAP//AwAAAAAAAAACAP//AwAAAAAAAAADAP//AwAAAAAAAAAEAP//AwAAAAAAAAAFAP//AwAAAAAAAAAGAP//AwAAAAAAAAAHAP//AwAAAAAAAAAIAP//AwAAAAAAAAAJAP//AwAAAAAAAAAKAP//AwAAAAAAAAALAP//AwAAAAAAAAAMAP//AwAAAAAAAAANAP//AwAAAAAAAAAOAP//AwAAAAAAAAAPAP//AwAAAAAAAAAQAP//AwAAAAAAAAARAP//AwAAAAAAAAASAP//AwAAAAAAAAATAP//AwAAAAAAAAAUAP//AwAAAAAAAAAVAP//AwAAAAAAAAAWAP//AwAAAAAAAAAXAP//AwAAAAAAAAAYAP//AwAAAAAAAAAZAP//AwAAAAAAAAAaAP//AwAAAAAAAAAbAP//AwAAAAAAAAAcAP//AwAAAAAAAAAdAP//AwAAAAAAAAAeAP//AwAAAAAAAAAfAP//AwAAAAAAAAAgAP//AwAAAAAAAAAhAP//AwAAAAAAAAAiAP//AwAAAAAAAAAjAP//AwAAAAAAAAAkAP//AwAAAAAAAAAlAP//AwAAAAAAAAAmAP//AwAAAAAAAAAnAP//AwAAAAAAAAAoAP//AwAAAAAAAAApAP//AwAAAAAAAAAqAP//AwAAAAAAAAArAP//AwAAAAAAAAAsAP//AwAAAAAAAAAtAP//AwAAAAAAAAAuAP//AwAAAAAAAAAvAP//AwAAAAAAAAAwAP//AwAAAAAAAAAAAP//AwAAAAAAAAD/////AwAAAAAAAAD+////AwAAAAAAAAD9////AwAAAAAAAAD8////AwAAAAAAAAD7////AwAAAAAAAAD6////AwAAAAAAAAD5////AwAAAAAAAAD4////AwAAAAAAAAD3////AwAAAAAAAAD2////AwAAAAAAAAD1////AwAAAAAAAAD0////AwAAAAAAAADz////AwAAAAAAAADy////AwAAAAAAAADx////AwAAAAAAAADw////AwAAAAAAAADv////AwAAAAAAAAAxAP//AwAAAAAAAAAyAP//AwAAAAAAAAAzAP//AwAAAAAAAAA0AP//AwAAAAAAAAA1AP//AwAAAAAAAAA2AP//AwAAAAAAAAA3AP//AwAAAAAAAAA4AP//AwAAAAAAAAA5AP//AwAAAAAAAAA6AP//AwAAAAAAAAA7AP//AwAAAAAAAAA8AP//AwAAAAAAAAA9AP//AwAAAAAAAAA+AP//AwAAAAAAAAA/AP//AwAAAAAAAABAAP//AwAAAAAAAABBAP//AwAAAAAAAABCAP//AwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAKAP7/AQAAAAQAAQAUAP7/AQAAAAQAAQABAP//AwAAAAAAAAACAP//AwAAAAAAAAADAP//AwAAAAAAAAAEAP//AwAAAAAAAAAFAP//AwAAAAAAAAAGAP//AwAAAAAAAAAHAP//AwAAAAAAAAAIAP//AwAAAAAAAAAJAP//AwAAAAAAAAAKAP//AwAAAAAAAAALAP//AwAAAAAAAAAMAP//AwAAAAAAAAANAP//AwAAAAAAAAAOAP//AwAAAAAAAAAPAP//AwAAAAAAAAAQAP//AwAAAAAAAAARAP//AwAAAAAAAAASAP//AwAAAAAAAAATAP//AwAAAAAAAAAUAP//AwAAAAAAAAAVAP//AwAAAAAAAAAWAP//AwAAAAAAAAAXAP//AwAAAAAAAAAYAP//AwAAAAAAAAAZAP//AwAAAAAAAAAaAP//AwAAAAAAAAAbAP//AwAAAAAAAAAcAP//AwAAAAAAAAAdAP//AwAAAAAAAAAeAP//AwAAAAAAAAAfAP//AwAAAAAAAAAgAP//AwAAAAAAAAAhAP//AwAAAAAAAAAiAP//AwAAAAAAAAAjAP//AwAAAAAAAAAkAP//AwAAAAAAAAAlAP//AwAAAAAAAAAmAP//AwAAAAAAAAAnAP//AwAAAAAAAAAoAP//AwAAAAAAAAApAP//AwAAAAAAAAAqAP//AwAAAAAAAAArAP//AwAAAAAAAAAsAP//AwAAAAAAAAAtAP//AwAAAAAAAAAuAP//AwAAAAAAAAAvAP//AwAAAAAAAAAwAP//AwAAAAAAAAD/////AwAAAAAAAAD+////AwAAAAAAAAD9////AwAAAAAAAAD8////AwAAAAAAAAD7////AwAAAAAAAAD6////AwAAAAAAAAD5////AwAAAAAAAAD4////AwAAAAAAAAD3////AwAAAAAAAAD2////AwAAAAAAAAD1////AwAAAAAAAAD0////AwAAAAAAAADz////AwAAAAAAAADy////AwAAAAAAAADx////AwAAAAAAAADw////AwAAAAAAAADv////AwAAAAAAAAAxAP//AwAAAAAAAAAyAP//AwAAAAAAAAAzAP//AwAAAAAAAAA0AP//AwAAAAAAAAA1AP//AwAAAAAAAAA2AP//AwAAAAAAAAA3AP//AwAAAAAAAAA4AP//AwAAAAAAAAA5AP//AwAAAAAAAAA6AP//AwAAAAAAAAA7AP//AwAAAAAAAAA8AP//AwAAAAAAAAA9AP//AwAAAAAAAAA+AP//AwAAAAAAAAA/AP//AwAAAAAAAABAAP//AwAAAAAAAABBAP//AwAAAAAAAABCAP//AwAAAAAAAAAAAP//AwAAAAAAAAA=")
 tile_set = SubResource("TileSet_wxt4o")
 
 [node name="Door1" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(752, -333)
 script = ExtResource("5_rbmnj")
-room = null
+node_name = "BathroomASpawn"
 
 [node name="Label" parent="Door1/Control" index="0"]
 text = "Press e to open door"
@@ -148,7 +125,7 @@ shape = SubResource("RectangleShape2D_s01p6")
 [node name="Door2" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(1364, -363)
 script = ExtResource("5_rbmnj")
-room = null
+node_name = "BathroomBSpawn"
 
 [node name="Label" parent="Door2/Control" index="0"]
 text = "Press e to open door"
@@ -160,7 +137,7 @@ shape = SubResource("RectangleShape2D_k1li6")
 [node name="Door3" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(2054, -333)
 script = ExtResource("5_rbmnj")
-room = null
+node_name = ""
 
 [node name="Label" parent="Door3/Control" index="0"]
 text = "Press e to open door"
@@ -172,7 +149,7 @@ shape = SubResource("RectangleShape2D_s01p6")
 [node name="Door4" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(2666, -363)
 script = ExtResource("5_rbmnj")
-room = null
+node_name = ""
 
 [node name="Label" parent="Door4/Control" index="0"]
 text = "Press e to open door"
@@ -184,7 +161,7 @@ shape = SubResource("RectangleShape2D_k1li6")
 [node name="Door5" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(3157, -333)
 script = ExtResource("5_rbmnj")
-room = null
+node_name = ""
 
 [node name="Label" parent="Door5/Control" index="0"]
 text = "Press e to open door"
@@ -196,8 +173,25 @@ shape = SubResource("RectangleShape2D_s01p6")
 [node name="Enemy" parent="." instance=ExtResource("2_gmkme")]
 position = Vector2(-1054, 38)
 
-[node name="Enemy" parent="." instance=ExtResource("2_gmkme")]
-position = Vector2(-1054, 38)
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="Default" type="Node2D" parent="Spawns"]
+position = Vector2(8, -41)
+
+[node name="Door1" type="Node2D" parent="Spawns"]
+position = Vector2(757, -41)
+
+[node name="Door2" type="Node2D" parent="Spawns"]
+position = Vector2(1373, -41)
+
+[node name="Door3" type="Node2D" parent="Spawns"]
+position = Vector2(2066, -41)
+
+[node name="Door4" type="Node2D" parent="Spawns"]
+position = Vector2(2686, -41)
+
+[node name="Door5" type="Node2D" parent="Spawns"]
+position = Vector2(3162, -41)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 

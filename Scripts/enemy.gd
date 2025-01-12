@@ -25,5 +25,4 @@ func _physics_process(delta: float) -> void:
 		velocity.x = SPEED
 
 	if move_and_slide():
-		print("killing")
-		get_tree().reload_current_scene()
+		PlayerProgress.kill()
