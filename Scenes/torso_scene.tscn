@@ -15,30 +15,22 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_2r452")
 
 [node name="String1" parent="." instance=ExtResource("3_ms45g")]
-visible = false
-position = Vector2(-30, 66)
-scale = Vector2(0.6, 0.6)
+position = Vector2(93, 0)
 
 [node name="SelectedSprite" parent="String1" index="0"]
-visible = true
 position = Vector2(-91.6667, -1.66667)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_f2y34")
 
 [node name="String2" parent="." instance=ExtResource("3_ms45g")]
-visible = false
-position = Vector2(4, 59)
-scale = Vector2(0.636, 0.636)
+position = Vector2(0, 2)
 
 [node name="SelectedSprite" parent="String2" index="0"]
-visible = true
-position = Vector2(-117.925, 0)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_1wu08")
 
 [node name="String3" parent="." instance=ExtResource("3_ms45g")]
-position = Vector2(-22, 59)
-scale = Vector2(0.65, 0.65)
+position = Vector2(60, 2)
 
 [node name="SelectedSprite" parent="String3" index="0"]
 position = Vector2(-60, 0)
@@ -47,7 +39,8 @@ texture = ExtResource("6_kr2aw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(9, -8)
-zoom = Vector2(1.65, 1.65)
+zoom = Vector2(2.515, 2.515)
+limit_top = -160
 
 [editable path="String1"]
 [editable path="String2"]
