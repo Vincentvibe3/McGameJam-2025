@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://c0w23mi6tcdkn"]
+[gd_scene load_steps=57 format=4 uid="uid://c0w23mi6tcdkn"]
 
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_5qnhy"]
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="2_prqif"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cd8ubvtdnxcxg" path="res://Sprites/furniture/pianoA.png" id="12_eomly"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="15_rqjju"]
 [ext_resource type="PackedScene" uid="uid://dhpun4oxyckd3" path="res://Scenes/sound_zone.tscn" id="16_8fj31"]
-[ext_resource type="PackedScene" uid="uid://c8vtf0wtb5ixp" path="res://Scenes/TopDownPlayer.tscn" id="16_yqsvm"]
 [ext_resource type="AudioStream" uid="uid://d3s3aieix1ohy" path="res://Audio/piano-music.mp3" id="17_0nbvl"]
 [ext_resource type="Texture2D" uid="uid://dxu6vxr70faai" path="res://Sprites/hand_playing_piano.png" id="18_adupo"]
 [ext_resource type="Script" path="res://Scripts/piano_sound_zone.gd" id="18_vowox"]
@@ -796,13 +795,6 @@ shape = SubResource("RectangleShape2D_48u62")
 position = Vector2(386, -516)
 scale = Vector2(0.170608, 0.170608)
 texture = ExtResource("15_rqjju")
-
-[node name="TopDownPlayerController2" parent="AssetLayer" instance=ExtResource("16_yqsvm")]
-position = Vector2(-274, -145)
-
-[node name="Camera2D" type="Camera2D" parent="AssetLayer/TopDownPlayerController2"]
-scale = Vector2(0.01, 0.01)
-zoom = Vector2(0.91, 0.91)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-97, 540)
