@@ -1,17 +1,57 @@
-[gd_scene load_steps=8 format=3 uid="uid://7t4we2jtyqiq"]
+[gd_scene load_steps=22 format=3 uid="uid://7t4we2jtyqiq"]
 
 [ext_resource type="Script" path="res://Scripts/main_character.gd" id="1_equc0"]
-[ext_resource type="Texture2D" uid="uid://or3qxwm1xxc7" path="res://Sprites/temp_eye.png" id="2_sna5k"]
+[ext_resource type="Texture2D" uid="uid://indmyita6fxb" path="res://Sprites/player_sprite_everything/player_ears.png" id="3_encc5"]
+[ext_resource type="Texture2D" uid="uid://dw0sot8cmc85f" path="res://Sprites/player_sprite_everything/player_torso.png" id="3_xjx8w"]
+[ext_resource type="Texture2D" uid="uid://do42rwuf7tc7s" path="res://Sprites/player_sprite_everything/player_face.png" id="4_scisn"]
+[ext_resource type="Texture2D" uid="uid://1imdataxgk3a" path="res://Sprites/player_sprite_everything/player_eyes_forwards.png" id="5_8ttf0"]
+[ext_resource type="Texture2D" uid="uid://ccasuidg8egfp" path="res://Sprites/player_sprite_everything/player_leg_l.png" id="6_mc8yq"]
+[ext_resource type="Texture2D" uid="uid://crdao2ari0ujn" path="res://Sprites/player_sprite_everything/player_hand_l.png" id="7_ipcmx"]
+[ext_resource type="Texture2D" uid="uid://g33t71mq8wh5" path="res://Sprites/player_sprite_everything/player_leg_r.png" id="7_w0rpw"]
+[ext_resource type="Texture2D" uid="uid://dtahnwgmkafj7" path="res://Sprites/player_sprite_everything/player_foot_l.png" id="8_1pbje"]
+[ext_resource type="Texture2D" uid="uid://q31lbh3r5x1i" path="res://Sprites/player_sprite_everything/player_hand_r.png" id="8_vbqym"]
+[ext_resource type="Texture2D" uid="uid://bnow5xhwohh0p" path="res://Sprites/player_sprite_everything/player_arm_l.png" id="9_4vik7"]
+[ext_resource type="Texture2D" uid="uid://ctur1tckxubyo" path="res://Sprites/player_sprite_everything/player_foot_r.png" id="9_aws7n"]
+[ext_resource type="Texture2D" uid="uid://c0ikoroq3ov7a" path="res://Sprites/player_sprite_everything/player_arm_r.png" id="10_cop3j"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jx1om"]
-atlas = ExtResource("2_sna5k")
-region = Rect2(0, 0, 226, 136)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fdixc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_sdref"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jx1om")
+"texture": ExtResource("6_mc8yq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_awrvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w0rpw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71al1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1pbje")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tlgrh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_aws7n")
 }],
 "loop": true,
 "name": &"default",
@@ -19,47 +59,116 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adb0e"]
-size = Vector2(67, 32.5)
+size = Vector2(22.25, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0kh0"]
-size = Vector2(69, 40.5)
+size = Vector2(30, 54.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25yto"]
-size = Vector2(65, 40)
+size = Vector2(36, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdixc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8ttf0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MainCharacter" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1_equc0")
 
-[node name="Eyes" type="AnimatedSprite2D" parent="."]
-position = Vector2(37, 22)
+[node name="Torso" type="Node2D" parent="."]
+
+[node name="TorsoSprite" type="Sprite2D" parent="Torso"]
+z_index = 1
+position = Vector2(37.7999, 63.0992)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_xjx8w")
+
+[node name="Face" type="Node2D" parent="."]
+position = Vector2(39.1805, 13.5854)
+scale = Vector2(0.04, 0.04)
+
+[node name="FaceSprite" type="Sprite2D" parent="Face"]
+z_index = 1
+position = Vector2(-26.881, 1233.54)
+texture = ExtResource("4_scisn")
+
+[node name="ears" type="Node2D" parent="."]
+
+[node name="PlayerEars" type="Sprite2D" parent="ears"]
+z_index = 2
+position = Vector2(37.9675, 64.1383)
+scale = Vector2(0.0408, 0.0408)
+texture = ExtResource("3_encc5")
+
+[node name="Legs" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(38.007, 63.1977)
+scale = Vector2(0.04, 0.04)
+
+[node name="rightleg" type="AnimatedSprite2D" parent="Legs"]
+z_index = 2
+sprite_frames = SubResource("SpriteFrames_sdref")
+
+[node name="leftleg" type="AnimatedSprite2D" parent="Legs"]
+sprite_frames = SubResource("SpriteFrames_awrvj")
+
+[node name="leftfoot" type="AnimatedSprite2D" parent="Legs"]
+z_index = -2
+sprite_frames = SubResource("SpriteFrames_71al1")
+
+[node name="rightfoot" type="AnimatedSprite2D" parent="Legs"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_tlgrh")
+
+[node name="EyesCollision" type="CollisionShape2D" parent="."]
+position = Vector2(41, 14)
+shape = SubResource("RectangleShape2D_adb0e")
+
+[node name="LegsCollision" type="CollisionShape2D" parent="."]
+position = Vector2(39, 93.25)
+shape = SubResource("RectangleShape2D_h0kh0")
+
+[node name="TorsoCollision" type="CollisionShape2D" parent="."]
+position = Vector2(39, 45)
+shape = SubResource("RectangleShape2D_25yto")
+
+[node name="eyes" type="Node2D" parent="."]
+position = Vector2(32.2609, 48.3539)
+scale = Vector2(0.135, 0.135)
+
+[node name="Eyes" type="AnimatedSprite2D" parent="eyes"]
+z_index = 2
+position = Vector2(41.7015, 7.86472)
 scale = Vector2(0.297567, 0.213235)
 sprite_frames = SubResource("SpriteFrames_fdixc")
 frame_progress = 0.680059
 
-[node name="Face" type="Node2D" parent="."]
-visible = false
+[node name="arms" type="Node2D" parent="."]
 
-[node name="FaceSprite" type="Sprite2D" parent="Face"]
+[node name="PlayerHandL" type="Sprite2D" parent="arms"]
+position = Vector2(37.7785, 62.8424)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_ipcmx")
 
-[node name="Torso" type="Node2D" parent="."]
-visible = false
+[node name="PlayerHandR" type="Sprite2D" parent="arms"]
+position = Vector2(37.7785, 63.123)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("8_vbqym")
 
-[node name="TorsoSprite" type="Sprite2D" parent="Torso"]
+[node name="PlayerArmL" type="Sprite2D" parent="arms"]
+position = Vector2(37.7211, 62.6656)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("9_4vik7")
 
-[node name="Legs" type="Node2D" parent="."]
-visible = false
-
-[node name="LegsSprite" type="AnimatedSprite2D" parent="Legs"]
-
-[node name="EyesCollision" type="CollisionShape2D" parent="."]
-position = Vector2(37, 23.75)
-shape = SubResource("RectangleShape2D_adb0e")
-
-[node name="LegsCollision" type="CollisionShape2D" parent="."]
-position = Vector2(36.5, 100.25)
-shape = SubResource("RectangleShape2D_h0kh0")
-
-[node name="TorsoCollision" type="CollisionShape2D" parent="."]
-position = Vector2(36.5, 61)
-shape = SubResource("RectangleShape2D_25yto")
+[node name="PlayerArmR" type="Sprite2D" parent="arms"]
+z_index = 2
+position = Vector2(38.0171, 62.9307)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("10_cop3j")

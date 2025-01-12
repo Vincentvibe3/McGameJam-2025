@@ -3,6 +3,8 @@ extends Node
 var Leg_enabled = 1
 var Face_enabled = 0
 var Torso_enabled = 0
+var ears_enabled = 0
+var arms_enabled = 0
 
 var spawn = "Default"
 

@@ -6,8 +6,33 @@ class_name TopDownPlayerController
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@onready var legs: Node2D = $Legs
+@onready var torso: Node2D = $Torso
+@onready var face: Node2D = $Face
+@onready var ears: Node2D = $ears
+@onready var arms: Node2D = $arms
 
 func _physics_process(delta: float) -> void:
+	if not PlayerProgress.ears_enabled:
+		ears.visible = false
+	if not PlayerProgress.arms_enabled:
+		arms.visible = false
+	if not PlayerProgress.Leg_enabled:
+		legs.visible = false
+	if not PlayerProgress.Face_enabled:
+		face.visible = false
+	if not PlayerProgress.Torso_enabled:
+		torso.visible = false
+	if PlayerProgress.ears_enabled:
+		ears.visible = true
+	if PlayerProgress.arms_enabled:
+		arms.visible = true
+	if PlayerProgress.Leg_enabled:
+		legs.visible = true
+	if PlayerProgress.Face_enabled:
+		face.visible = true
+	if PlayerProgress.Torso_enabled:
+		torso.visible = true
 	# Add the gravity.
 	# if not is_on_floor():
 	# 	velocity += get_gravity() * delta

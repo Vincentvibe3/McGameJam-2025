@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_h2lf4"]
 [ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="1_oxohe"]
 [ext_resource type="PackedScene" uid="uid://c0w23mi6tcdkn" path="res://Scenes/BedroomA.tscn" id="2_f4tav"]
-[ext_resource type="PackedScene" uid="uid://b3is1q8tklhca" path="res://Scenes/maze.tscn" id="4_16x46"]
+[ext_resource type="PackedScene" uid="uid://b5wv0xm04fr0v" path="res://Scenes/maze.tscn" id="4_16x46"]
 
 [node name="MainTopDown" type="Node2D"]
 script = ExtResource("1_h2lf4")

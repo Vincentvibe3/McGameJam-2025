@@ -10,13 +10,14 @@ const sprint_multiplier = 2
 @onready var face: Node2D = $Face
 @onready var torso_collision: CollisionShape2D = $TorsoCollision
 @onready var legs_collision: CollisionShape2D = $LegsCollision
+@onready var ears: Node2D = $ears
+@onready var arms: Node2D = $arms
 
-		
-	# Handle jump.
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	# if not is_on_floor():
-	# 	velocity += get_gravity() * delta
+	if not PlayerProgress.ears_enabled:
+		ears.visible = false
+	if not PlayerProgress.arms_enabled:
+		arms.visible = false
 	if not PlayerProgress.Leg_enabled:
 		legs.visible = false
 		legs_collision.disabled = true
@@ -25,6 +26,10 @@ func _physics_process(delta: float) -> void:
 	if not PlayerProgress.Torso_enabled:
 		torso.visible = false
 		torso_collision.disabled = true
+	if PlayerProgress.ears_enabled:
+		ears.visible = true
+	if PlayerProgress.arms_enabled:
+		arms.visible = true
 	if PlayerProgress.Leg_enabled:
 		legs.visible = true
 		legs_collision.disabled = false

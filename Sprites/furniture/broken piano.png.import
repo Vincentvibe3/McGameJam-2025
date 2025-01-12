@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c855gb841hmmg"
-path="res://.godot/imported/platform.png-387961ac0446a4e660b1afe61070d755.ctex"
+uid="uid://dhvxrddd0katr"
+path="res://.godot/imported/broken piano.png-4ddecc49f1199943825c984fbdcf040e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/floor/platform.png"
-dest_files=["res://.godot/imported/platform.png-387961ac0446a4e660b1afe61070d755.ctex"]
+source_file="res://Sprites/furniture/broken piano.png"
+dest_files=["res://.godot/imported/broken piano.png-4ddecc49f1199943825c984fbdcf040e.ctex"]
 
 [params]
 

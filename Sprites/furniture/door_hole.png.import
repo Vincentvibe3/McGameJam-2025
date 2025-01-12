@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c855gb841hmmg"
-path="res://.godot/imported/platform.png-387961ac0446a4e660b1afe61070d755.ctex"
+uid="uid://ojk6xm1dysi"
+path="res://.godot/imported/door_hole.png-136056accae88afeeb1af134421f2447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/floor/platform.png"
-dest_files=["res://.godot/imported/platform.png-387961ac0446a4e660b1afe61070d755.ctex"]
+source_file="res://Sprites/furniture/door_hole.png"
+dest_files=["res://.godot/imported/door_hole.png-136056accae88afeeb1af134421f2447.ctex"]
 
 [params]
 
