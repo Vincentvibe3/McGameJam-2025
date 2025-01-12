@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://5ua6v0ngm7a"]
+[gd_scene load_steps=19 format=4 uid="uid://5ua6v0ngm7a"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_7db4v"]
 [ext_resource type="Texture2D" uid="uid://dnquxcf0un6pl" path="res://Sprites/wall assets/wall_100x100.png" id="3_v3jce"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cksoa58e5ia52" path="res://Sprites/wall assets/wall edge_100x100.png" id="7_ba515"]
 [ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_bjhmj"]
 [ext_resource type="Texture2D" uid="uid://gnbmpvo1m06n" path="res://Sprites/mannequin sprite.png" id="8_c5cxq"]
+[ext_resource type="Texture2D" uid="uid://co6k502vxqhww" path="res://Sprites/mannequin sprite without rope.png" id="9_gqc48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntg8b"]
 texture = ExtResource("1_7db4v")
@@ -376,6 +377,9 @@ sources/4 = SubResource("TileSetAtlasSource_r084r")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgllb"]
 size = Vector2(13.4546, 10)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dprqw"]
+size = Vector2(12.9335, 8.43486)
+
 [node name="Node2D2" type="Node2D"]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
@@ -402,6 +406,7 @@ position = Vector2(145, -8)
 collision_layer = 2
 
 [node name="MannequinSprite" type="Sprite2D" parent="AssetLayer/Mannequin"]
+z_index = 1
 position = Vector2(845.5, -251.5)
 scale = Vector2(0.097568, 0.097568)
 texture = ExtResource("8_c5cxq")
@@ -410,3 +415,138 @@ texture = ExtResource("8_c5cxq")
 position = Vector2(847, -128.5)
 scale = Vector2(5.5, 5.5)
 shape = SubResource("RectangleShape2D_tgllb")
+
+[node name="IdleMannequin" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(15, 395)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin2" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(970, 160)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin2"]
+z_index = 2
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin2"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin3" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(-985, -434)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin3"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin3"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin4" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(589, -391)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin4"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin4"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin5" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(-706, -698)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin5"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin5"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin6" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(1028, -758)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin6"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin6"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin7" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(-104, -597)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin7"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin7"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin8" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(899, 113)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin8"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin8"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
+
+[node name="IdleMannequin9" type="StaticBody2D" parent="AssetLayer"]
+position = Vector2(568, 423)
+metadata/_edit_group_ = true
+
+[node name="MannequinSpriteWithoutRope" type="Sprite2D" parent="AssetLayer/IdleMannequin9"]
+z_index = 1
+position = Vector2(558.25, -249.25)
+scale = Vector2(0.0994499, 0.0994499)
+texture = ExtResource("9_gqc48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AssetLayer/IdleMannequin9"]
+position = Vector2(559.5, -120.5)
+scale = Vector2(5.335, 5.335)
+shape = SubResource("RectangleShape2D_dprqw")
