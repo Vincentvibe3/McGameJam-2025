@@ -97,8 +97,8 @@ shape = SubResource("RectangleShape2D_k1li6")
 [node name="Door3" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(2054, -333)
 script = ExtResource("5_rbmnj")
-node_name = ""
-scene_name = ""
+node_name = null
+scene_name = null
 
 [node name="Label" parent="Door3/Control" index="0"]
 text = "Press e to open door"
@@ -123,8 +123,8 @@ shape = SubResource("RectangleShape2D_k1li6")
 [node name="Door5" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(3157, -333)
 script = ExtResource("5_rbmnj")
-node_name = ""
-scene_name = ""
+node_name = null
+scene_name = null
 
 [node name="Label" parent="Door5/Control" index="0"]
 text = "Press e to open door"
@@ -166,6 +166,10 @@ shape = SubResource("WorldBoundaryShape2D_g071d")
 [node name="Interactable" parent="." instance=ExtResource("6_qjosj")]
 position = Vector2(5356, -408)
 script = ExtResource("8_a2rx5")
+node_name = ""
+scene_name = ""
+minigame = false
+minigameExit = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 position = Vector2(20.5, 239.5)
