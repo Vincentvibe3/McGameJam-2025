@@ -1,16 +1,14 @@
 extends Area2D
 
-
 # Called when the node enters the scene tree for the first time.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-@onready var death_anim: AnimationPlayer = $DeathAnim
+# Called every frame. 'delta' is the elaps@expted time since the previous frame.
 @onready var timer: Timer = $Timer
-
+var death_anim : AnimationPlayer
 func _on_body_entered(body: Node2D) -> void:
-	death_anim.play("Death Animation")
-	timer.start()
-
+	if death_anim:
+		death_anim.play("Death Animation")
+		timer.start()
 
 func _on_timer_timeout() -> void:
-	PlayerProgress.move_to("deathSpawn", "res://Scenes/corridor.tscn")
+	PlayerProgress.move_to("Door2", "res://Scenes/corridor.tscn")

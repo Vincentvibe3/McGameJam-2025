@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cktgjyo7rvgk8"]
+[gd_scene load_steps=6 format=3 uid="uid://cktgjyo7rvgk8"]
 
+[ext_resource type="Script" path="res://Scenes/danger_limb_script.gd" id="1_rhbdx"]
 [ext_resource type="Texture2D" uid="uid://ccasuidg8egfp" path="res://Sprites/player_sprite_everything/player_leg_l.png" id="1_wlbml"]
 [ext_resource type="Texture2D" uid="uid://dtahnwgmkafj7" path="res://Sprites/player_sprite_everything/player_foot_l.png" id="2_15at6"]
 [ext_resource type="PackedScene" uid="uid://w8fwoifjira4" path="res://Scenes/limb_area.tscn" id="3_231ki"]
@@ -9,6 +10,7 @@ size = Vector2(282.758, 1612.24)
 
 [node name="DangerLegL" type="Node2D"]
 scale = Vector2(0.145, 0.145)
+script = ExtResource("1_rhbdx")
 
 [node name="PlayerLegL" type="Sprite2D" parent="."]
 position = Vector2(-130, 403.053)
@@ -23,7 +25,6 @@ position = Vector2(-1034.48, 958.621)
 
 [node name="CollisionShape2D" parent="LimbArea" index="0"]
 position = Vector2(1089.65, 49.0515)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rt7hg")
 
 [editable path="LimbArea"]

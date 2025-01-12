@@ -7,6 +7,7 @@ extends Node2D
 @onready var right_arms_anim: AnimationPlayer = $RightArms/RightArmsAnim
 @onready var right_legs_anim: AnimationPlayer = $RightLegs/RightLegsAnim
 @onready var left_legs_anim: AnimationPlayer = $LeftLegs/LeftLegsAnim
+@onready var death_anim: AnimationPlayer = $DeathAnim
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
@@ -20,3 +21,6 @@ func _on_timer_timeout() -> void:
 		right_legs_anim.play("RIGHT LEGS")
 	elif int_to_move == 4:
 		left_legs_anim.play("LEFT LEGS")
+
+func start_anim() -> void:
+	death_anim.play("Death Animation")

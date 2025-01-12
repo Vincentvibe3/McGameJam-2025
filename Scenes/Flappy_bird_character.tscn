@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmolhf7aofnsx"]
+[gd_scene load_steps=8 format=3 uid="uid://dmolhf7aofnsx"]
 
 [ext_resource type="Script" path="res://Scripts/Flappy_bird_main_character.gd" id="1_1u41w"]
 [ext_resource type="Texture2D" uid="uid://or3qxwm1xxc7" path="res://Sprites/temp_eye.png" id="2_ialkc"]
@@ -18,17 +18,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adb0e"]
+size = Vector2(43, 19)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25yto"]
-size = Vector2(160.5, 137)
+size = Vector2(59.5, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0kh0"]
 size = Vector2(69, 40.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_adb0e"]
-size = Vector2(67, 32.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhnud"]
-size = Vector2(68, 39)
 
 [node name="FlappyBirdCharacter" type="CharacterBody2D"]
 script = ExtResource("1_1u41w")
@@ -44,26 +41,22 @@ visible = false
 [node name="FaceSprite" type="Sprite2D" parent="Face"]
 
 [node name="Torso" type="Node2D" parent="."]
-visible = false
 
 [node name="TorsoSprite" type="Sprite2D" parent="Torso"]
 
-[node name="TorsoCollision" type="CollisionShape2D" parent="Torso"]
-position = Vector2(70.75, 135.5)
-shape = SubResource("RectangleShape2D_25yto")
-
 [node name="Legs" type="Node2D" parent="."]
+visible = false
 
 [node name="LegsSprite" type="AnimatedSprite2D" parent="Legs"]
 
-[node name="LegsCollision" type="CollisionShape2D" parent="Legs"]
-position = Vector2(36.5, 100.25)
-shape = SubResource("RectangleShape2D_h0kh0")
-
 [node name="EyesCollision" type="CollisionShape2D" parent="."]
-position = Vector2(37, 23.75)
+position = Vector2(34.5, 21.5)
 shape = SubResource("RectangleShape2D_adb0e")
 
-[node name="FullBodyCollision" type="CollisionShape2D" parent="."]
-position = Vector2(37, 59.5)
-shape = SubResource("RectangleShape2D_hhnud")
+[node name="TorsoCollision" type="CollisionShape2D" parent="."]
+position = Vector2(35, 59)
+shape = SubResource("RectangleShape2D_25yto")
+
+[node name="LegsCollision" type="CollisionShape2D" parent="."]
+position = Vector2(36.5, 100.25)
+shape = SubResource("RectangleShape2D_h0kh0")

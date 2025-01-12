@@ -6,8 +6,6 @@
 size = Vector2(244, 1124.14)
 
 [node name="LimbArea" type="Area2D"]
-collision_layer = 3
-collision_mask = 3
 script = ExtResource("1_rwucy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

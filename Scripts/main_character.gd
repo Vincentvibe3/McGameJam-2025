@@ -11,14 +11,26 @@ var flappy_bird = 0 #use to make alternate controls for flappy_bird
 @onready var torso: Node2D = $Torso
 @onready var face: Node2D = $Face
 var need_to_float = 0
+@onready var torso_collision: CollisionShape2D = $TorsoCollision
+@onready var legs_collision: CollisionShape2D = $LegsCollision
 
 func _physics_process(delta: float) -> void:
+	if not PlayerProgress.Leg_enabled:
+		legs.visible = false
+		legs_collision.disabled = true
+	if not PlayerProgress.Face_enabled:
+		face.visible = false
+	if not PlayerProgress.Torso_enabled:
+		torso.visible = false
+		torso_collision.disabled = true
 	if PlayerProgress.Leg_enabled:
 		legs.visible = true
+		legs_collision.disabled = false
 	if PlayerProgress.Face_enabled:
 		face.visible = true
 	if PlayerProgress.Torso_enabled:
 		torso.visible = true
+		torso_collision.disabled = false
 	
 	
 	# Add the gravity.
