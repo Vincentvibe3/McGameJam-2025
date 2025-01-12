@@ -277,5 +277,3 @@ position = Vector2(101, -224)
 
 [node name="Door" parent="." instance=ExtResource("3_8jbkm")]
 position = Vector2(39, 99)
-node_name = null
-scene_name = null

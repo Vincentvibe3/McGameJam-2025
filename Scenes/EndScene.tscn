@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxpmdmlf3yath"]
+[gd_scene load_steps=9 format=3 uid="uid://cxpmdmlf3yath"]
 
 [ext_resource type="VideoStream" path="res://ending scenes/endend.ogv" id="1_1aaia"]
+[ext_resource type="Script" path="res://Scenes/showEnd.gd" id="1_o5aa1"]
+[ext_resource type="VideoStream" path="res://ending scenes/end_arms.ogv" id="3_a8j4q"]
+[ext_resource type="VideoStream" path="res://ending scenes/end_arms_legs.ogv" id="4_6s18u"]
+[ext_resource type="VideoStream" path="res://ending scenes/end_legs.ogv" id="5_31kqv"]
+[ext_resource type="VideoStream" path="res://ending scenes/end_torso.ogv" id="6_ruuqw"]
+[ext_resource type="VideoStream" path="res://ending scenes/end_torso_arms.ogv" id="7_b7ckk"]
+[ext_resource type="VideoStream" path="res://ending scenes/end_torso_legs.ogv" id="8_ewqtg"]
 
 [node name="EndScene" type="Node2D"]
+script = ExtResource("1_o5aa1")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -10,10 +18,50 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+[node name="realend" type="VideoStreamPlayer" parent="Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_1aaia")
-autoplay = true
-loop = true
+
+[node name="armsonly" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("3_a8j4q")
+
+[node name="armleg" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("4_6s18u")
+
+[node name="leg" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("5_31kqv")
+
+[node name="torso" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("6_ruuqw")
+
+[node name="torsoarm" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("7_b7ckk")
+
+[node name="torsoleg" type="VideoStreamPlayer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("8_ewqtg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

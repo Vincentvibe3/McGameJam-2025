@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ac0fsj05w85" path="res://Sprites/furniture/chairA.png" id="12_4jcn6"]
 [ext_resource type="Texture2D" uid="uid://c0rnbeifu6ssj" path="res://Sprites/furniture/windowB.png" id="13_qeslt"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="14_m2eu6"]
-[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/interactable.tscn" id="15_4lod7"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="15_4lod7"]
 [ext_resource type="Script" path="res://Scripts/InteractGoTo.gd" id="16_ni55q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_08js3"]

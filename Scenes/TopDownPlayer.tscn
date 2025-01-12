@@ -13,12 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://q31lbh3r5x1i" path="res://Sprites/player_sprite_everything/player_hand_r.png" id="11_diynx"]
 [ext_resource type="Texture2D" uid="uid://bnow5xhwohh0p" path="res://Sprites/player_sprite_everything/player_arm_l.png" id="12_im410"]
 [ext_resource type="Texture2D" uid="uid://c0ikoroq3ov7a" path="res://Sprites/player_sprite_everything/player_arm_r.png" id="13_jl3cp"]
-[ext_resource type="Texture2D" uid="uid://c6be0kdgstxja" path="res://Sprites/player_animation runs/player_run_arms_torso.png" id="14_uel8x"]
-[ext_resource type="Texture2D" uid="uid://t53jvggrkfdo" path="res://Sprites/player_animation runs/player_run_arms.png" id="15_lueoq"]
-[ext_resource type="Texture2D" uid="uid://dk17g544eusvk" path="res://Sprites/player_animation runs/player_run_legs.png" id="16_2podd"]
-[ext_resource type="Texture2D" uid="uid://b4r6ylsdjdqqc" path="res://Sprites/player_animation runs/player_run_legs_torso.png" id="17_qjnsv"]
-[ext_resource type="Texture2D" uid="uid://b6flv5yewjoui" path="res://Sprites/player_animation runs/player_run_noTorso.png" id="18_m6t5t"]
-[ext_resource type="Texture2D" uid="uid://dnf7ocg8k3kqq" path="res://Sprites/player_animation runs/player_run_torso.png" id="19_1sqpb"]
+[ext_resource type="Texture2D" uid="uid://17m53wf3wf30" path="res://Sprites/player_animation runs/player_run_arms_torso.png" id="14_uel8x"]
+[ext_resource type="Texture2D" uid="uid://xu5sr7xelsyb" path="res://Sprites/player_animation runs/player_run_arms.png" id="15_lueoq"]
+[ext_resource type="Texture2D" uid="uid://bbiuowc1hijo2" path="res://Sprites/player_animation runs/player_run_legs.png" id="16_2podd"]
+[ext_resource type="Texture2D" uid="uid://cy124ayjij2wf" path="res://Sprites/player_animation runs/player_run_legs_torso.png" id="17_qjnsv"]
+[ext_resource type="Texture2D" uid="uid://dclm5oowh37dd" path="res://Sprites/player_animation runs/player_run_noTorso.png" id="18_m6t5t"]
+[ext_resource type="Texture2D" uid="uid://r2s77wkpnrj" path="res://Sprites/player_animation runs/player_run_torso.png" id="19_1sqpb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l01iq"]
 animations = [{
