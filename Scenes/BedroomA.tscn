@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://c0w23mi6tcdkn"]
+[gd_scene load_steps=52 format=4 uid="uid://c0w23mi6tcdkn"]
 
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_5qnhy"]
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="2_prqif"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://Scenes/hand_job.gd" id="18_vtns5"]
 [ext_resource type="Texture2D" uid="uid://b2nk3p56cfok7" path="res://Sprites/hand_surprised.png" id="19_03cal"]
 [ext_resource type="Texture2D" uid="uid://ct3pchary0rir" path="res://Sprites/hand_running.png" id="20_nqcpe"]
+[ext_resource type="Script" path="res://Scripts/the_good_zone_4_hands.gd" id="22_qgfwh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4wiy"]
 texture = ExtResource("2_prqif")
@@ -623,12 +624,52 @@ tracks/4/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_du28c"]
+resource_name = "ready2obtain"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../handSuprised:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../handrunning:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1ytrw"]
 _data = {
 "RESET": SubResource("Animation_eperd"),
 "handrunning": SubResource("Animation_l0r4g"),
 "handsurprised": SubResource("Animation_unvdq"),
-"playing piano": SubResource("Animation_tdp4g")
+"playing piano": SubResource("Animation_tdp4g"),
+"ready2obtain": SubResource("Animation_du28c")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_db0pl"]
@@ -652,6 +693,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ariwj"]
+size = Vector2(321.5, 92.5)
 
 [node name="Node2D2" type="Node2D"]
 
@@ -749,14 +793,14 @@ position = Vector2(-97, 540)
 script = ExtResource("9_p2nxl")
 node_name = "Door1"
 
-[node name="SoundZone" parent="." instance=ExtResource("16_8fj31")]
+[node name="PianoSoundZone" parent="." instance=ExtResource("16_8fj31")]
 position = Vector2(-84, 194)
 
-[node name="CollisionShape2D" parent="SoundZone" index="0"]
+[node name="CollisionShape2D" parent="PianoSoundZone" index="0"]
 position = Vector2(-383, -562.5)
 shape = SubResource("RectangleShape2D_lwr2o")
 
-[node name="Audio4Zone" parent="SoundZone" index="1"]
+[node name="Audio4Zone" parent="PianoSoundZone" index="1"]
 stream = ExtResource("17_0nbvl")
 parameters/looping = true
 
@@ -803,7 +847,17 @@ sprite_frames = SubResource("SpriteFrames_vfggc")
 autoplay = "default"
 frame_progress = 0.917177
 
+[node name="TheGoodZone4Hands" type="Area2D" parent="."]
+script = ExtResource("22_qgfwh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TheGoodZone4Hands"]
+position = Vector2(341, -360)
+shape = SubResource("RectangleShape2D_ariwj")
+
+[node name="collecthandsarea" type="Area2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="PianoBadZone" to="HandJob" method="_on_piano_bad_zone_body_entered"]
+[connection signal="body_entered" from="TheGoodZone4Hands" to="TheGoodZone4Hands" method="_on_body_entered"]
 
-[editable path="SoundZone"]
+[editable path="PianoSoundZone"]

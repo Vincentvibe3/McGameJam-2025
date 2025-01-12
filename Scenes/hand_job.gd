@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var sound_zone: Area2D = $"../SoundZone"
+@onready var sound_zone: Area2D = $"../PianoSoundZone"
 @onready var piano_bad_zone: Area2D = $"../PianoBadZone"
 
 
