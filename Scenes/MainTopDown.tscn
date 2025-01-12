@@ -1,20 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgfwyd3n5edpj"]
+[gd_scene load_steps=7 format=3 uid="uid://dgfwyd3n5edpj"]
 
 [ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_h2lf4"]
 [ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="1_oxohe"]
 [ext_resource type="PackedScene" uid="uid://c0w23mi6tcdkn" path="res://Scenes/BedroomA.tscn" id="2_f4tav"]
 [ext_resource type="PackedScene" uid="uid://b5wv0xm04fr0v" path="res://Scenes/maze.tscn" id="4_16x46"]
+[ext_resource type="PackedScene" uid="uid://dyhw85pq8xlqc" path="res://Scenes/BedroomB.tscn" id="5_4nd64"]
+[ext_resource type="PackedScene" uid="uid://vvo4dypp2cpj" path="res://Scenes/BathroomB.tscn" id="6_hs84q"]
 
 [node name="MainTopDown" type="Node2D"]
 script = ExtResource("1_h2lf4")
-
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_oxohe")]
-z_index = 1
-position = Vector2(984, 189)
-scale = Vector2(0.1, 0.1)
-
-[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
-zoom = Vector2(0.91, 0.91)
 
 [node name="BathroomA" parent="." instance=ExtResource("2_f4tav")]
 position = Vector2(1392, 283)
@@ -22,10 +16,32 @@ position = Vector2(1392, 283)
 [node name="Spawns" type="Node2D" parent="."]
 
 [node name="BathroomASpawn" type="Node2D" parent="Spawns"]
-position = Vector2(1306, 705)
+position = Vector2(1295.31, 644.419)
 
 [node name="MazeSpawn" type="Node2D" parent="Spawns"]
-position = Vector2(4265, -2904)
+position = Vector2(4248.18, -3223.54)
+
+[node name="BedroomASpawn" type="Node2D" parent="Spawns"]
+position = Vector2(-2267.41, -4582.85)
+
+[node name="BedroomBSpawn" type="Node2D" parent="Spawns"]
+position = Vector2(791.657, -4757.8)
+
+[node name="BathroomBSpawn" type="Node2D" parent="Spawns"]
+position = Vector2(-3795.51, -1470.84)
 
 [node name="Maze" parent="." instance=ExtResource("4_16x46")]
 position = Vector2(4268, -2803)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_oxohe")]
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+
+[node name="BedroomA" parent="." instance=ExtResource("2_f4tav")]
+position = Vector2(-2176, -4960)
+
+[node name="BedroomB" parent="." instance=ExtResource("5_4nd64")]
+position = Vector2(886.998, -5130.2)
+
+[node name="BathroomB" parent="." instance=ExtResource("6_hs84q")]
+position = Vector2(-3595.94, -1869.89)
