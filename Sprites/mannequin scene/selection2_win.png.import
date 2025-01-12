@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dli7d1wy2kmho"
-path="res://.godot/imported/mannequin game scene.png-0301504abd8ea3a9a69d75990afc9d5f.ctex"
+uid="uid://c25sjtb23yeaj"
+path="res://.godot/imported/selection2_win.png-c579b06d32dd2e7efa7078943bee48e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mannequin scene/mannequin scene/mannequin game scene.png"
-dest_files=["res://.godot/imported/mannequin game scene.png-0301504abd8ea3a9a69d75990afc9d5f.ctex"]
+source_file="res://Sprites/mannequin scene/selection2_win.png"
+dest_files=["res://.godot/imported/selection2_win.png-c579b06d32dd2e7efa7078943bee48e8.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7cgp614737ut"
-path="res://.godot/imported/selection1_loss.png-d3e5ff30a7bcf68b30a7bcb4abe66ecf.ctex"
+path="res://.godot/imported/selection1_loss.png-c53fe8d655c272ec80c65c2b101eb3cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mannequin scene/mannequin scene/selection1_loss.png"
-dest_files=["res://.godot/imported/selection1_loss.png-d3e5ff30a7bcf68b30a7bcb4abe66ecf.ctex"]
+source_file="res://Sprites/mannequin scene/selection1_loss.png"
+dest_files=["res://.godot/imported/selection1_loss.png-c53fe8d655c272ec80c65c2b101eb3cc.ctex"]
 
 [params]
 

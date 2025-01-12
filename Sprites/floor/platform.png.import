@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c25sjtb23yeaj"
-path="res://.godot/imported/selection2_win.png-20107ab3c92937728267d863cf5898f3.ctex"
+uid="uid://bnr72eqq2t2cl"
+path="res://.godot/imported/platform.png-387961ac0446a4e660b1afe61070d755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mannequin scene/mannequin scene/selection2_win.png"
-dest_files=["res://.godot/imported/selection2_win.png-20107ab3c92937728267d863cf5898f3.ctex"]
+source_file="res://Sprites/floor/platform.png"
+dest_files=["res://.godot/imported/platform.png-387961ac0446a4e660b1afe61070d755.ctex"]
 
 [params]
 
