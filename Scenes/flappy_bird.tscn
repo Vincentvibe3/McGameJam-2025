@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://h5q0vfi7hewt"]
+[gd_scene load_steps=19 format=3 uid="uid://h5q0vfi7hewt"]
 
 [ext_resource type="Script" path="res://Scenes/flappy_bird.gd" id="1_o7luu"]
+[ext_resource type="Script" path="res://Scenes/setup_top_down.gd" id="1_ue3kh"]
 [ext_resource type="PackedScene" uid="uid://ckh1onhh1c6tn" path="res://Scenes/danger_armL.tscn" id="2_tmpv7"]
 [ext_resource type="PackedScene" uid="uid://b552rnbooexf1" path="res://Scenes/danger_armR.tscn" id="3_g4d8p"]
 [ext_resource type="PackedScene" uid="uid://cktgjyo7rvgk8" path="res://Scenes/danger_LegL.tscn" id="3_gg1hs"]
 [ext_resource type="PackedScene" uid="uid://n6w6sc8g47p0" path="res://Scenes/danger_LegR.tscn" id="4_gmagp"]
 [ext_resource type="PackedScene" uid="uid://dmolhf7aofnsx" path="res://Scenes/Flappy_bird_character.tscn" id="5_t2t5j"]
+[ext_resource type="Texture2D" uid="uid://c3q0gccnea4tb" path="res://Sprites/darkness4eyelids.png" id="8_flums"]
 
 [sub_resource type="Animation" id="Animation_vc8vu"]
 resource_name = "LEFT LEGS"
@@ -173,168 +175,287 @@ _data = {
 "Rotate": SubResource("Animation_5va5d")
 }
 
+[sub_resource type="Animation" id="Animation_4tuoi"]
+resource_name = "Death Animation"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackToFadeTo:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.933333, 1, 1, -0.25, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackToFadeTo:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackToFadeTo:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackToFadeTo:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_w50v2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackToFadeTo:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackToFadeTo:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackToFadeTo:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackToFadeTo:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vph1d"]
+_data = {
+"Death Animation": SubResource("Animation_4tuoi"),
+"RESET": SubResource("Animation_w50v2")
+}
+
 [node name="FlappyBird" type="Node2D"]
-script = ExtResource("1_o7luu")
+script = ExtResource("1_ue3kh")
 
-[node name="LeftArms" type="Node2D" parent="."]
-rotation = 3.14159
-
-[node name="LeftArmsAnim" type="AnimationPlayer" parent="LeftArms"]
-libraries = {
-"": SubResource("AnimationLibrary_rudsk")
-}
-
-[node name="DangerArmL2" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-468.999, -213.001)
-
-[node name="DangerArmL3" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-1773, -174.004)
-
-[node name="DangerArmL5" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-2874, -219.007)
-
-[node name="DangerArmL7" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3699, -193.009)
-
-[node name="DangerArmL9" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-4500, -314.011)
-
-[node name="DangerArmL10" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-4243, -461.011)
-
-[node name="DangerArmL11" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3970, -304.01)
-
-[node name="DangerArmL8" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-3382, -235.009)
-
-[node name="DangerArmL6" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-2276, -205.006)
-
-[node name="DangerArmL4" parent="LeftArms" instance=ExtResource("2_tmpv7")]
-position = Vector2(-1352, -223.003)
-
-[node name="RightArms" type="Node2D" parent="."]
-rotation = 3.14159
-
-[node name="RightArmsAnim" type="AnimationPlayer" parent="RightArms"]
-libraries = {
-"": SubResource("AnimationLibrary_rudsk")
-}
-
-[node name="DangerArmR" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-624, -165.002)
-
-[node name="DangerArmR2" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-772, -206.002)
-
-[node name="DangerArmR3" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-917, -152.002)
-
-[node name="DangerArmR4" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2002, -180.005)
-
-[node name="DangerArmR6" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2944, -109.007)
-
-[node name="DangerArmR7" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-2633, -160.007)
-
-[node name="DangerArmR5" parent="RightArms" instance=ExtResource("3_g4d8p")]
-position = Vector2(-1084, -259.003)
-
-[node name="RightLegs" type="Node2D" parent="."]
-
-[node name="RightLegsAnim" type="AnimationPlayer" parent="RightLegs"]
-libraries = {
-"": SubResource("AnimationLibrary_rudsk")
-}
-
-[node name="DangerLegR" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1038, -335)
-
-[node name="DangerLegR2" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(324, -261)
-
-[node name="DangerLegR3" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1300, -321)
-
-[node name="DangerLegR6" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(2519, -310)
-
-[node name="DangerLegR7" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3604, -279)
-
-[node name="DangerLegR10" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(4449, -207)
-
-[node name="DangerLegR11" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(4238, -12)
-
-[node name="DangerLegR12" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(4083, -116)
-
-[node name="DangerLegR13" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3925, -314)
-
-[node name="DangerLegR8" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3380, -271)
-
-[node name="DangerLegR9" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(3198, -188)
-
-[node name="DangerLegR4" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(1160, -210)
-
-[node name="DangerLegR5" parent="RightLegs" instance=ExtResource("4_gmagp")]
-position = Vector2(872, -318)
-
-[node name="LeftLegs" type="Node2D" parent="."]
-
-[node name="DangerLegL" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(544, -321)
-
-[node name="DangerLegL2" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1486, -217)
-
-[node name="DangerLegL5" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2086, -324)
-
-[node name="DangerLegL7" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2401, -384)
-
-[node name="DangerLegL9" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(3054, -336)
-
-[node name="DangerLegL10" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2751, -346)
-
-[node name="DangerLegL8" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(2267, -261)
-
-[node name="DangerLegL6" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1866, -325)
-
-[node name="DangerLegL3" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(714, -336)
-
-[node name="DangerLegL4" parent="LeftLegs" instance=ExtResource("3_gg1hs")]
-position = Vector2(1592, -262)
-
-[node name="LeftLegsAnim" type="AnimationPlayer" parent="LeftLegs"]
-libraries = {
-"": SubResource("AnimationLibrary_rudsk")
-}
-
-[node name="FlappyBirdCharacter" parent="." instance=ExtResource("5_t2t5j")]
+[node name="MainCharacter" parent="." instance=ExtResource("5_t2t5j")]
 position = Vector2(-37, -54)
 
-[node name="Camera2D" type="Camera2D" parent="FlappyBirdCharacter"]
+[node name="Camera2D" type="Camera2D" parent="MainCharacter"]
 position = Vector2(37, 49)
 limit_top = -296
 limit_bottom = 299
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="theSpawn" type="Node2D" parent="Spawns"]
+
+[node name="LimbsAPlenty" type="Node2D" parent="."]
+script = ExtResource("1_o7luu")
+
+[node name="LeftArms" type="Node2D" parent="LimbsAPlenty"]
+rotation = 3.14159
+
+[node name="LeftArmsAnim" type="AnimationPlayer" parent="LimbsAPlenty/LeftArms"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+
+[node name="DangerArmL2" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-468.999, -213.001)
+
+[node name="DangerArmL3" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-1773, -174.004)
+
+[node name="DangerArmL5" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-2874, -219.007)
+
+[node name="DangerArmL7" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-3699, -193.009)
+
+[node name="DangerArmL9" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-4500, -314.011)
+
+[node name="DangerArmL10" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-4243, -461.011)
+
+[node name="DangerArmL11" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-3970, -304.01)
+
+[node name="DangerArmL8" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-3382, -235.009)
+
+[node name="DangerArmL6" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-2276, -205.006)
+
+[node name="DangerArmL4" parent="LimbsAPlenty/LeftArms" instance=ExtResource("2_tmpv7")]
+position = Vector2(-1352, -223.003)
+
+[node name="RightArms" type="Node2D" parent="LimbsAPlenty"]
+rotation = 3.14159
+
+[node name="RightArmsAnim" type="AnimationPlayer" parent="LimbsAPlenty/RightArms"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+
+[node name="DangerArmR" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-624, -165.002)
+
+[node name="DangerArmR2" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-772, -206.002)
+
+[node name="DangerArmR3" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-917, -152.002)
+
+[node name="DangerArmR4" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-2002, -180.005)
+
+[node name="DangerArmR6" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-2944, -109.007)
+
+[node name="DangerArmR7" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-2633, -160.007)
+
+[node name="DangerArmR5" parent="LimbsAPlenty/RightArms" instance=ExtResource("3_g4d8p")]
+position = Vector2(-1084, -259.003)
+
+[node name="RightLegs" type="Node2D" parent="LimbsAPlenty"]
+
+[node name="RightLegsAnim" type="AnimationPlayer" parent="LimbsAPlenty/RightLegs"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+
+[node name="DangerLegR" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(1038, -335)
+
+[node name="DangerLegR2" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(324, -261)
+
+[node name="DangerLegR3" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(1300, -321)
+
+[node name="DangerLegR6" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(2519, -310)
+
+[node name="DangerLegR7" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(3604, -279)
+
+[node name="DangerLegR10" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(4449, -207)
+
+[node name="DangerLegR11" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(4238, -12)
+
+[node name="DangerLegR12" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(4083, -116)
+
+[node name="DangerLegR13" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(3925, -314)
+
+[node name="DangerLegR8" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(3380, -271)
+
+[node name="DangerLegR9" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(3198, -188)
+
+[node name="DangerLegR4" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(1160, -210)
+
+[node name="DangerLegR5" parent="LimbsAPlenty/RightLegs" instance=ExtResource("4_gmagp")]
+position = Vector2(872, -318)
+
+[node name="LeftLegs" type="Node2D" parent="LimbsAPlenty"]
+
+[node name="DangerLegL" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(544, -321)
+
+[node name="DangerLegL2" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(1486, -217)
+
+[node name="DangerLegL5" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(2086, -324)
+
+[node name="DangerLegL7" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(2401, -384)
+
+[node name="DangerLegL9" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(3054, -336)
+
+[node name="DangerLegL10" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(2751, -346)
+
+[node name="DangerLegL8" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(2267, -261)
+
+[node name="DangerLegL6" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(1866, -325)
+
+[node name="DangerLegL3" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(714, -336)
+
+[node name="DangerLegL4" parent="LimbsAPlenty/LeftLegs" instance=ExtResource("3_gg1hs")]
+position = Vector2(1592, -262)
+
+[node name="LeftLegsAnim" type="AnimationPlayer" parent="LimbsAPlenty/LeftLegs"]
+libraries = {
+"": SubResource("AnimationLibrary_rudsk")
+}
+
+[node name="Timer" type="Timer" parent="LimbsAPlenty"]
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="BlackToFadeTo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 4
+position = Vector2(5166, -245)
+scale = Vector2(102.115, 72.4503)
+texture = ExtResource("8_flums")
+
+[node name="DeathAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vph1d")
+}
+
+[connection signal="timeout" from="LimbsAPlenty/Timer" to="LimbsAPlenty" method="_on_timer_timeout"]
