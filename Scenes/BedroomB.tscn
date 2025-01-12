@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dyhw85pq8xlqc"]
+[gd_scene load_steps=28 format=4 uid="uid://dyhw85pq8xlqc"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_vhcbo"]
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_nhw6l"]
@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://d3l8gyk6ue4kc" path="res://Sprites/floor/floor_tile2 (Custom).png" id="6_1k2xc"]
 [ext_resource type="Texture2D" uid="uid://cnn4upu631owr" path="res://Sprites/walls/tilemapwhitebottomborder.png" id="7_5xkvp"]
 [ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="8_o3ygv"]
-[ext_resource type="PackedScene" uid="uid://b8lva6106chd6" path="res://Scenes/TopDownPlayer.tscn" id="8_r5kgw"]
 [ext_resource type="Texture2D" uid="uid://dge556056omd" path="res://Sprites/furniture/bed_idle.png" id="10_skxji"]
 [ext_resource type="Texture2D" uid="uid://2am5apbt1iqg" path="res://Sprites/furniture/deskA.png" id="11_k37in"]
 [ext_resource type="Texture2D" uid="uid://b7ac0fsj05w85" path="res://Sprites/furniture/chairA.png" id="12_4jcn6"]
 [ext_resource type="Texture2D" uid="uid://c0rnbeifu6ssj" path="res://Sprites/furniture/windowB.png" id="13_qeslt"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="14_m2eu6"]
 [ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="15_4lod7"]
+[ext_resource type="Script" path="res://Scripts/InteractGoTo.gd" id="16_ni55q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_08js3"]
 texture = ExtResource("1_vhcbo")
@@ -370,13 +370,10 @@ size = Vector2(147.5, 344.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xdy7"]
 size = Vector2(126, 135)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kihtj"]
-size = Vector2(87, 66)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l38f"]
+size = Vector2(26.8584, 102)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rchyp"]
-size = Vector2(115, 40)
-
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D5" type="Node2D"]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_o5wml")
@@ -385,14 +382,6 @@ tile_set = SubResource("TileSet_o5wml")
 position = Vector2(15, -76)
 tile_map_data = PackedByteArray("AAD7/wQACQAAAAAAAwD8/wQACQAAAAAAAwD9/wUACQAAAAAAAQAAAAUACQAAAAAAAgD9/wQACwAAAAAAAgAAAAQACwAAAAAAAQD6/wQAAwAAAAAAAwD6/wMACQAAAAAAAQD6/wIACQAAAAAAAQD6/wEACQAAAAAAAQD7/wAACAAAAAAAAAD8/wAACAAAAAAAAAD9/wAACAAAAAAAAAD+/wAACAAAAAAAAAACAAAACAAAAAAAAAACAP//CAAAAAAAAAACAP7/CAAAAAAAAAACAP3/CwAAAAAAAwACAPz/CQAAAAAAAQADAPv/CAAAAAAAAAAEAPv/CAAAAAAAAAAFAPv/CAAAAAAAAAAGAPv/CAAAAAAAAAAHAPv/CAAAAAAAAAADAPn/CAAAAAAAAAADAPr/CAAAAAAAAAAEAPn/CAAAAAAAAAAEAPr/CAAAAAAAAAAFAPr/CAAAAAAAAAAFAPn/CAAAAAAAAAAGAPr/CAAAAAAAAAAGAPn/CAAAAAAAAAAHAPr/CAAAAAAAAAAHAPn/CAAAAAAAAAD8////AQAAAAAAAAD9////AQAAAAAAAAD+////CAAAAAAAAAABAP7/CAAAAAAAAAAAAP7/CAAAAAAAAAD///7/CAAAAAAAAAD+//7/CAAAAAAAAAD9//7/CAAAAAAAAAD8//7/CAAAAAAAAAD7//7/CAAAAAAAAAD7////CAAAAAAAAAAIAPz/CQAAAAAAAgAIAP3/CQAAAAAAAgAIAP7/CQAAAAAAAgAIAP//CQAAAAAAAgAIAAAACQAAAAAAAgAIAAEACQAAAAAAAgAIAAIACQAAAAAAAgAIAAMACQAAAAAAAgABAAQACQAAAAAAAwACAAQACQAAAAAAAwADAAQACQAAAAAAAwAEAAQACQAAAAAAAwAFAAQACQAAAAAAAwAGAAQACQAAAAAAAwAHAAQACQAAAAAAAwAIAAQAAwAAAAAAAgACAPv/CQAAAAAAAQAIAPv/CQAAAAAAAgD6/wAACQAAAAAAAQD7/wIABQAAAAAAAAD7/wMABQAAAAAAAAAHAAMABQAAAAAAAAAGAAMABQAAAAAAAAAFAAMABQAAAAAAAAAEAAMABQAAAAAAAAAFAAEABQAAAAAAAAAEAPz/BQAAAAAAAAAFAPz/BQAAAAAAAAAGAPz/BQAAAAAAAAAGAP3/BQAAAAAAAAAGAP7/BQAAAAAAAAAGAP//BQAAAAAAAAAFAP//BQAAAAAAAAAFAP7/BQAAAAAAAAAFAP3/BQAAAAAAAAAEAP3/BQAAAAAAAAAEAP7/BQAAAAAAAAAEAP//BQAAAAAAAAD/////CAAAAAAAAAD//wAACAAAAAAAAAAAAAAACAAAAAAAAAAAAP//CAAAAAAAAAABAP//CAAAAAAAAAABAAAACAAAAAAAAAD//wMABQAAAAAAAAD//wIABQAAAAAAAAD//wEABQAAAAAAAAD+/wEABQAAAAAAAAD9/wEABQAAAAAAAAD8/wEABQAAAAAAAAD7/wEABQAAAAAAAAD8/wIABQAAAAAAAAD8/wMABQAAAAAAAAD9/wMABQAAAAAAAAD9/wIABQAAAAAAAAD+/wIABQAAAAAAAAD+/wMABQAAAAAAAAD+/wQABQAAAAAAAAD+/wUABQAAAAAAAAD//wUABQAAAAAAAAD//wQABQAAAAAAAAAAAAEABQAAAAAAAAAAAAIABQAAAAAAAAAAAAMABQAAAAAAAAABAAMABQAAAAAAAAABAAIABQAAAAAAAAABAAEABQAAAAAAAAACAAEABQAAAAAAAAACAAIABQAAAAAAAAACAAMABQAAAAAAAAADAAMABQAAAAAAAAADAAIABQAAAAAAAAADAAEABQAAAAAAAAADAAAABQAAAAAAAAADAP//BQAAAAAAAAADAP7/BQAAAAAAAAADAP3/BQAAAAAAAAADAPz/BQAAAAAAAAAEAAAABQAAAAAAAAAEAAEABQAAAAAAAAAEAAIABQAAAAAAAAAFAAIABQAAAAAAAAAGAAIABQAAAAAAAAAGAAEABQAAAAAAAAAGAAAABQAAAAAAAAAFAAAABQAAAAAAAAAHAAAABQAAAAAAAAAHAP//BQAAAAAAAAAHAP7/BQAAAAAAAAAHAP3/BQAAAAAAAAAHAPz/BQAAAAAAAAAHAAEABQAAAAAAAAAHAAIABQAAAAAAAAD7//3/CQAAAAAAAAD8//3/CQAAAAAAAAD9//3/CQAAAAAAAAD+//3/CQAAAAAAAAD///3/CQAAAAAAAAAAAP3/CQAAAAAAAAABAP3/CQAAAAAAAAD6////CQAAAAAAAQD6//7/CQAAAAAAAQACAPr/CQAAAAAAAQACAPn/CQAAAAAAAQAIAPr/CQAAAAAAAgAIAPn/CQAAAAAAAgADAPj/CQAAAAAAAAAEAPj/CQAAAAAAAAAFAPj/CQAAAAAAAAAGAPj/CQAAAAAAAAAHAPj/CQAAAAAAAAAIAPj/AwAAAAAAAAACAPj/AwAAAAAAAQD6//3/AwAAAAAAAQA=")
 tile_set = ExtResource("8_o3ygv")
-
-[node name="TopDownPlayerController" parent="." instance=ExtResource("8_r5kgw")]
-z_index = 1
-position = Vector2(-316, 49)
-scale = Vector2(0.1, 0.1)
-
-[node name="Camera2D" type="Camera2D" parent="TopDownPlayerController"]
-zoom = Vector2(0.91, 0.91)
 
 [node name="AssetLayer" type="Node2D" parent="."]
 
@@ -447,18 +436,15 @@ position = Vector2(25, -121)
 scale = Vector2(0.182713, 0.182713)
 texture = ExtResource("14_m2eu6")
 
-[node name="InteractDoor" parent="." instance=ExtResource("15_4lod7")]
+[node name="Interactable" parent="." instance=ExtResource("15_4lod7")]
+position = Vector2(570, 210)
+scale = Vector2(2.63057, 1)
+script = ExtResource("16_ni55q")
+node_name = ""
+scene_name = "res://Scenes/ComputerGame.tscn"
+minigame = true
+minigameExit = false
 
-[node name="Area2D" type="Area2D" parent="InteractDoor"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDoor/Area2D"]
-position = Vector2(28, 54)
-shape = SubResource("RectangleShape2D_kihtj")
-
-[node name="InteractComputer" parent="." instance=ExtResource("15_4lod7")]
-
-[node name="Area2D" type="Area2D" parent="InteractComputer"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComputer/Area2D"]
-position = Vector2(598, 298)
-shape = SubResource("RectangleShape2D_rchyp")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(14.9498, 36)
+shape = SubResource("RectangleShape2D_3l38f")

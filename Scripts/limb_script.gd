@@ -11,4 +11,4 @@ func _on_body_entered(body: Node2D) -> void:
 		timer.start()
 
 func _on_timer_timeout() -> void:
-	PlayerProgress.move_to("Door2", "res://Scenes/corridor.tscn")
+	PlayerProgress.move_to("Door2",null, "res://Scenes/corridor.tscn", false)

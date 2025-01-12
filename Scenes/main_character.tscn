@@ -13,12 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://bnow5xhwohh0p" path="res://Sprites/player_sprite_everything/player_arm_l.png" id="9_4vik7"]
 [ext_resource type="Texture2D" uid="uid://ctur1tckxubyo" path="res://Sprites/player_sprite_everything/player_foot_r.png" id="9_aws7n"]
 [ext_resource type="Texture2D" uid="uid://c0ikoroq3ov7a" path="res://Sprites/player_sprite_everything/player_arm_r.png" id="10_cop3j"]
-[ext_resource type="Texture2D" uid="uid://b6flv5yewjoui" path="res://Sprites/player_animation runs/player_run_noTorso.png" id="14_f1y7y"]
-[ext_resource type="Texture2D" uid="uid://c6be0kdgstxja" path="res://Sprites/player_animation runs/player_run_arms_torso.png" id="14_lcjoq"]
-[ext_resource type="Texture2D" uid="uid://dnf7ocg8k3kqq" path="res://Sprites/player_animation runs/player_run_torso.png" id="15_sv2i4"]
-[ext_resource type="Texture2D" uid="uid://t53jvggrkfdo" path="res://Sprites/player_animation runs/player_run_arms.png" id="15_x1kpa"]
-[ext_resource type="Texture2D" uid="uid://dk17g544eusvk" path="res://Sprites/player_animation runs/player_run_legs.png" id="16_dnd7c"]
-[ext_resource type="Texture2D" uid="uid://b4r6ylsdjdqqc" path="res://Sprites/player_animation runs/player_run_legs_torso.png" id="17_uqdfj"]
+[ext_resource type="Texture2D" uid="uid://dclm5oowh37dd" path="res://Sprites/player_animation runs/player_run_noTorso.png" id="14_f1y7y"]
+[ext_resource type="Texture2D" uid="uid://17m53wf3wf30" path="res://Sprites/player_animation runs/player_run_arms_torso.png" id="14_lcjoq"]
+[ext_resource type="Texture2D" uid="uid://r2s77wkpnrj" path="res://Sprites/player_animation runs/player_run_torso.png" id="15_sv2i4"]
+[ext_resource type="Texture2D" uid="uid://xu5sr7xelsyb" path="res://Sprites/player_animation runs/player_run_arms.png" id="15_x1kpa"]
+[ext_resource type="Texture2D" uid="uid://bbiuowc1hijo2" path="res://Sprites/player_animation runs/player_run_legs.png" id="16_dnd7c"]
+[ext_resource type="Texture2D" uid="uid://cy124ayjij2wf" path="res://Sprites/player_animation runs/player_run_legs_torso.png" id="17_uqdfj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sdref"]
 animations = [{
@@ -258,6 +258,7 @@ animations = [{
 }]
 
 [node name="MainCharacter" type="CharacterBody2D"]
+scale = Vector2(2.89, 2.89)
 collision_mask = 3
 script = ExtResource("1_equc0")
 
@@ -293,6 +294,7 @@ scale = Vector2(0.04, 0.04)
 
 [node name="rightleg" type="AnimatedSprite2D" parent="Legs"]
 z_index = 2
+scale = Vector2(1.18, 1)
 sprite_frames = SubResource("SpriteFrames_sdref")
 
 [node name="leftleg" type="AnimatedSprite2D" parent="Legs"]
