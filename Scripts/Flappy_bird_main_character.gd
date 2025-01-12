@@ -3,7 +3,7 @@ extends Player
 
 const BASE_SPEED = 300.0
 const LEG_SPEED = 400
-
+@onready var SPEED
 @onready var legs: Node2D = $Legs
 @onready var torso: Node2D = $Torso
 @onready var face: Node2D = $Face
@@ -11,11 +11,18 @@ const LEG_SPEED = 400
 @onready var legs_collision: CollisionShape2D = $LegsCollision
 @onready var ears: Node2D = $ears
 @onready var arms: Node2D = $arms
+@onready var animations: Node2D = $animations
+@onready var animated_sprite_2d: AnimatedSprite2D = $animations/AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	var SPEED = 1
+
+func _ready() -> void:
+	animations.visible = false
 	if not PlayerProgress.ears_enabled:
 		ears.visible = false
+	if PlayerProgress.Face_enabled:
+		face.visible = true
+	if PlayerProgress.ears_enabled:
+		ears.visible = true
 	if not PlayerProgress.arms_enabled:
 		arms.visible = false
 	if not PlayerProgress.Leg_enabled:
@@ -27,19 +34,19 @@ func _physics_process(delta: float) -> void:
 	if not PlayerProgress.Torso_enabled:
 		torso.visible = false
 		torso_collision.disabled = true
-	if PlayerProgress.ears_enabled:
-		ears.visible = true
+
 	if PlayerProgress.arms_enabled:
 		arms.visible = true
 	if PlayerProgress.Leg_enabled:
 		SPEED = LEG_SPEED
 		legs.visible = true
 		legs_collision.disabled = false
-	if PlayerProgress.Face_enabled:
-		face.visible = true
+
 	if PlayerProgress.Torso_enabled:
 		torso.visible = true
 		torso_collision.disabled = false
+
+func _physics_process(delta: float) -> void:
 	# # Handle jump.
 	# if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 	# 	velocity.y = JUMP_VELOCITY
