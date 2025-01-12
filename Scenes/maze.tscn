@@ -55,4 +55,9 @@ position = Vector2(3089, -2501)
 position = Vector2(9, -7)
 shape = SubResource("RectangleShape2D_p8wxd")
 
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="Default" type="Node2D" parent="Spawns"]
+position = Vector2(2, -227)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

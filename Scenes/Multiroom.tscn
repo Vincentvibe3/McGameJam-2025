@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://5ua6v0ngm7a"]
+[gd_scene load_steps=22 format=4 uid="uid://5ua6v0ngm7a"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_7db4v"]
 [ext_resource type="Texture2D" uid="uid://dnquxcf0un6pl" path="res://Sprites/wall assets/wall_100x100.png" id="3_v3jce"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://gnbmpvo1m06n" path="res://Sprites/mannequin sprite.png" id="8_c5cxq"]
 [ext_resource type="Texture2D" uid="uid://co6k502vxqhww" path="res://Sprites/mannequin sprite without rope.png" id="9_gqc48"]
 [ext_resource type="Texture2D" uid="uid://bh7ds1pgee58s" path="res://Sprites/anim/door_idle1.png" id="10_auj83"]
+[ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="10_f0cx1"]
+[ext_resource type="Script" path="res://Scripts/InteractGoTo.gd" id="11_5su8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntg8b"]
 texture = ExtResource("1_7db4v")
@@ -380,6 +382,9 @@ size = Vector2(13.4546, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dprqw"]
 size = Vector2(12.9335, 8.43486)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ie3vf"]
+size = Vector2(133, 406)
+
 [node name="Node2D4" type="Node2D"]
 
 [node name="Foreground" type="TileMapLayer" parent="."]
@@ -550,3 +555,16 @@ position = Vector2(418, -955)
 position = Vector2(25, -121)
 scale = Vector2(0.182713, 0.182713)
 texture = ExtResource("10_auj83")
+
+[node name="Interactable" parent="." instance=ExtResource("10_f0cx1")]
+position = Vector2(984, -448)
+script = ExtResource("11_5su8x")
+node_name = "MazeSpawn"
+scene_name = "res://Scenes/MainTopDown.tscn"
+minigame = false
+minigameExit = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+z_index = 1
+position = Vector2(-1.5, 228)
+shape = SubResource("RectangleShape2D_ie3vf")

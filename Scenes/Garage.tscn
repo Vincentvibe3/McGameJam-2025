@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://c3luqnp1sfr4"]
+[gd_scene load_steps=27 format=4 uid="uid://c3luqnp1sfr4"]
 
 [ext_resource type="Texture2D" uid="uid://qyr34knt8g24" path="res://Sprites/walls/obj.png" id="1_3mc8l"]
 [ext_resource type="Texture2D" uid="uid://cuyukrpckli2b" path="res://Sprites/Placeholder_atlas.webp" id="2_urjt1"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dnquxcf0un6pl" path="res://Sprites/wall assets/wall_100x100.png" id="8_gfy6c"]
 [ext_resource type="Texture2D" uid="uid://cksoa58e5ia52" path="res://Sprites/wall assets/wall edge_100x100.png" id="9_v53t0"]
 [ext_resource type="TileSet" uid="uid://bpud7rap6w3q4" path="res://Scenes/top_down_tileset.tres" id="10_o4ra1"]
-[ext_resource type="Texture2D" uid="uid://dpp1m7e1t3s3" path="res://Sprites/furniture/car.png" id="11_x3miq"]
+[ext_resource type="Texture2D" uid="uid://k5ch0itpcsac" path="res://Sprites/furniture/car.png" id="11_x3miq"]
 [ext_resource type="Texture2D" uid="uid://cb2xltttckf4j" path="res://Sprites/anim/hanged_feet.png" id="13_5ltxa"]
 [ext_resource type="PackedScene" uid="uid://bosolwaqsd64g" path="res://Scenes/Interactable.tscn" id="14_whmkc"]
 [ext_resource type="Script" path="res://Scripts/GiveLegs.gd" id="15_gffr3"]
