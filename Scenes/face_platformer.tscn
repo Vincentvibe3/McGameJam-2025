@@ -22,7 +22,7 @@ mass = 1.0
 can_sleep = true
 
 [node name="MainCharacter" parent="." instance=ExtResource("3_ntb2q")]
-position = Vector2(125, 387)
+position = Vector2(900, -2000)
 collision_mask = 7
 
 [node name="Camera2D" type="Camera2D" parent="MainCharacter"]
@@ -34,10 +34,19 @@ collision_mask = 4
 mass = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1640, -699)
 script = ExtResource("4_tkr8e")
-node_name = "Default"
-scene_name = "res://Scenes/corridor.tscn"
+scene_name = "res://Scenes/BathroomB.tscn"
+minigame = true
+minigameExit = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1711, -677)
+position = Vector2(3, 10)
 shape = SubResource("RectangleShape2D_u0ev2")
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="Spawn" type="Node2D" parent="Spawns"]
+position = Vector2(0, 575)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

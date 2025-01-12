@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://csm7mux247bqd"]
+[gd_scene load_steps=6 format=3 uid="uid://dwmvgxqvsvqdt"]
 
 [ext_resource type="Texture2D" uid="uid://b2b2vsdn6chp7" path="res://Placeholder/Tileset.png" id="1_rlbhp"]
 [ext_resource type="PackedScene" uid="uid://7t4we2jtyqiq" path="res://Scenes/main_character.tscn" id="2_de78i"]
-[ext_resource type="PackedScene" uid="uid://dtvvh30iwliow" path="res://Scenes/door.tscn" id="3_8jbkm"]
+[ext_resource type="PackedScene" uid="uid://cwieq2ag2rshf" path="res://Scenes/door.tscn" id="3_8jbkm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uscu6"]
 texture = ExtResource("1_rlbhp")
@@ -277,3 +277,5 @@ position = Vector2(101, -224)
 
 [node name="Door" parent="." instance=ExtResource("3_8jbkm")]
 position = Vector2(39, 99)
+node_name = null
+scene_name = null

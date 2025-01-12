@@ -32,6 +32,9 @@ func kill():
 	spawn = "Default"
 	get_tree().change_scene_to_file("res://Scenes/corridor.tscn")
 
-func move_to(spawn_name, scene):
+func move_to(spawn_name, lastPos ,scene, is_return):
+	if spawn_name == null and !is_return:
+		print(lastPos)
+		lastPosition = lastPos
 	spawn = spawn_name
 	get_tree().change_scene_to_file(scene)
